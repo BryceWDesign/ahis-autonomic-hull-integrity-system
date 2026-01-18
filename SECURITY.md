@@ -14,7 +14,7 @@ Out of scope:
 - Any request to weaponize the project or provide instructions for harmful use.
 
 ## How to report a vulnerability
-**Do not open a public GitHub issue** for suspected vulnerabilities.
+Do **not** open a public GitHub issue for suspected vulnerabilities.
 
 Use one of the following:
 1) **GitHub Private Vulnerability Reporting / Security Advisories**  
