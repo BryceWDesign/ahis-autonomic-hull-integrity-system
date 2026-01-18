@@ -1,0 +1,74 @@
+AHIS EVALUATION-ONLY LICENSE (NO COMMERCIAL PROFIT)
+Version 1.0 — 2026-01-18
+
+Copyright (c) 2026 Bryce Lovell.
+All rights reserved except as expressly granted below.
+
+PURPOSE
+This license is designed to allow broad technical review, experimentation, and testing of the AHIS repository
+while prohibiting any commercial/profit-making use unless the user obtains a separate written license from the Licensor.
+
+1) DEFINITIONS
+“Work” means this repository and all associated code, documentation, schematics, and related files.
+
+“Non-Commercial” means use that is not primarily intended for or directed toward commercial advantage,
+revenue generation, profit, paid services, production deployment, or monetization of any kind.
+
+“Commercial Use” includes (non-exhaustive):
+(a) using the Work (or derivatives) in any product, vehicle, service, manufacturing, or operational environment for profit;
+(b) selling, licensing, sublicensing, renting, leasing, or otherwise commercializing the Work (or derivatives);
+(c) offering the Work (or derivatives) as a paid service, SaaS/API, consulting deliverable, or bundled solution;
+(d) internal use that materially supports a profit-making product or paid service.
+
+“Licensor” means Bryce Lovell.
+
+2) GRANT OF RIGHTS (TESTING + EVALUATION)
+Permission is hereby granted, free of charge, to any person or organization obtaining a copy of the Work to:
+(a) view, download, and internally copy the Work;
+(b) modify the Work for the purpose of Non-Commercial testing and evaluation;
+(c) run experiments, build proof-of-concept prototypes, and perform internal technical reviews;
+(d) publish Non-Commercial test results, critiques, and analysis derived from the Work,
+    provided that the Work itself is not redistributed beyond the limits in Section 3.
+
+3) REDISTRIBUTION (ALLOWED WITH NOTICE; NO COMMERCIAL DISTRIBUTION)
+(a) You may share unmodified copies of the Work for Non-Commercial evaluation only, provided you include this license text in full.
+(b) You may publish patches or pull requests intended to improve the Work, provided they include attribution and do not remove license notices.
+(c) You may not sell or commercially distribute the Work or derivatives in any form.
+
+4) COMMERCIAL USE REQUIRES A SEPARATE AGREEMENT
+Any Commercial Use is prohibited unless you have a separate written license agreement signed by the Licensor.
+This is where consulting/hand-off arrangements are defined.
+
+5) ATTRIBUTION
+You must retain this license text and all copyright notices in any copies and derivatives.
+If you publish Non-Commercial test results or public critiques referencing the Work, attribution to “Bryce Lovell” is required.
+
+6) NO PATENT LICENSE
+No patent license is granted under this license. Any patent rights, if any, are reserved by the Licensor unless granted in a separate written agreement.
+
+7) SAFETY / RELIANCE NOTICE
+The Work is a research and evaluation artifact. It is not certified for safety-critical use.
+You must not represent the Work as “flight-ready,” “crew-safe,” or “validated” without independent testing and documentation.
+
+8) DISCLAIMER OF WARRANTY
+THE WORK IS PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, SAFETY, OR REGULATORY COMPLIANCE.
+
+9) LIMITATION OF LIABILITY
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE WORK OR THE USE OR OTHER DEALINGS IN THE WORK,
+INCLUDING ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES.
+
+10) EXPORT / REGULATORY COMPLIANCE
+You are solely responsible for complying with all applicable laws and regulations (including export controls).
+No representation is made that the Work is suitable for any particular jurisdiction or regulatory regime.
+
+11) TERMINATION
+This license terminates automatically if you violate any term. Upon termination, you must stop using the Work and destroy all copies in your possession or control.
+
+12) GOVERNING LAW
+This license shall be governed by the laws of the State of Arizona, USA, excluding conflict-of-law principles.
+
+CONTACT
+For commercial licensing, deployment permission, or consulting/hand-off arrangements, contact the Licensor:
+Bryce Lovell.
