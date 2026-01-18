@@ -1,4 +1,5 @@
 # AHIS CODEOWNERS
+# Root placement is supported by GitHub and keeps visibility high.
 # Primary maintainer / required reviewer for changes.
 
 * @BryceWDesign
