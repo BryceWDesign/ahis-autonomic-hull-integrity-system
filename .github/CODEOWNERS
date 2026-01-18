@@ -1,0 +1,15 @@
+# AHIS CODEOWNERS
+# Primary maintainer / required reviewer for changes.
+
+* @BryceWDesign
+
+# Docs
+/docs/ @BryceWDesign
+README.md @BryceWDesign
+LICENSE @BryceWDesign
+
+# Proof-of-concept build + test artifacts
+/BOM/ @BryceWDesign
+/hardware/ @BryceWDesign
+/src/ @BryceWDesign
+/results/ @BryceWDesign
