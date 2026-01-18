@@ -25,6 +25,7 @@ This is the repository’s “audit spine.” For every claim or requirement, th
 - **T-PRS-*** : Pressure / leak tests
 - **T-SHM-*** : SHM-specific diagnostics
 - **T-EMI-*** : EMI/ESD robustness tests
+- **T-CTL-*** : Active control / damping tests (Mode E)
 - **T-QA-***  : Documentation / reproducibility checks
 
 Baseline condition:
@@ -143,6 +144,46 @@ Baseline condition:
 
 ---
 
+### T-CTL-080 — Modal baseline FRF identification (Mode E prerequisite)
+- **Maps to:** Mode E gating requirement (plant identification)
+- **Metric:** FRF magnitude/phase; identified mode frequency (Hz); repeatability variance
+- **Method:** FRF measurement using base excitation, impact hammer, or calibrated actuator input
+- **Instrumentation:** accelerometer/strain sensor; DAQ; excitation measurement channel
+- **Data products:** FRF tables + plots; repeat runs; boundary condition photos
+- **Acceptance:** FRF must be repeatable within declared variance; target mode must be identifiable
+
+---
+
+### T-CTL-081 — Shunt damping effectiveness (Mode E1)
+- **Maps to:** Active Control Module (Mode E outcomes)
+- **Metric:** Δζ (damping ratio increase) and/or transmissibility reduction (dB) near target mode
+- **Method:** apply shunt network tuned to target mode; compare FRF/transmissibility baseline vs shunted
+- **Instrumentation:** FRF setup; temperature logging (tuning drift)
+- **Data products:** before/after FRF plots; tuning parameters; drift notes
+- **Acceptance:** TBD after baseline; must show repeatable improvement with documented tuning sensitivity
+
+---
+
+### T-CTL-082 — Feedback control stability and effect (Mode E2/E3)
+- **Maps to:** Control architecture and stability requirements
+- **Metric:** stability margins (GM/PM or equivalent); transmissibility reduction (dB); Δζ (if estimated)
+- **Method:** implement band-limited controller; measure open-loop response where possible; verify closed-loop behavior under disturbances
+- **Instrumentation:** DAQ; actuator driver; response sensors; logging of command saturation
+- **Data products:** controller config; stability margin estimates; before/after response; oscillation checks
+- **Acceptance:** PM/GM targets are TBD PoC thresholds; must demonstrate stable operation and repeatable response improvement
+
+---
+
+### T-CTL-083 — Power/thermal and saturation characterization (Mode E)
+- **Maps to:** Actuator authority and power budget requirements
+- **Metric:** power draw (W), peak current (A), temperature rise (°C), saturation events (count/log)
+- **Method:** run control/actuation under defined duration; log power and temperatures if measured
+- **Instrumentation:** current/voltage measurement; temperature sensor/IR measurement (if available); event logging
+- **Data products:** power/thermal logs; saturation incident log; duration and duty cycle notes
+- **Acceptance:** TBD; mandatory is accurate accounting and reporting (no inference)
+
+---
+
 ### T-QA-090 — Reproducibility package check
 - **Maps to:** RQ-060
 - **Metric:** “rebuildability” of results from raw data (pass/fail)
@@ -165,6 +206,12 @@ PoC acceptance thresholds are set after baseline characterization and must not b
 - Requirements: `docs/03_Requirements_and_Acceptance_Criteria.md`
 - Failure modes: `docs/06_Failure_Modes_and_Risks.md`
 - PoC procedures: `docs/09_PoC_Test_Procedures.md`
+- Mode E docs:
+  - `docs/18_Active_Control_Module.md`
+  - `docs/19_Control_Architecture_and_Stability.md`
+  - `docs/20_Modal_Testing_FRF_Method.md`
+  - `docs/21_Actuator_Authority_and_Power_Budget.md`
+  - `docs/22_EMI_EMC_Design_Rules.md`
 
 ---
 End of test matrix.
