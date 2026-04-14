@@ -56,7 +56,7 @@ Avoid:
 - Risk transparency: are new risks documented?
 
 ## License and permission
-By submitting contributions, you agree your changes may be incorporated under the repository’s licensing terms. If you cannot accept that, do not submit a contribution.
+By submitting a contribution to this repository, you agree that your contribution will be licensed under the Apache License 2.0, unless you explicitly state otherwise in writing before submission.
 
 ## Reporting security issues
 See `SECURITY.md`. Do not open public issues for vulnerabilities.
