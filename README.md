@@ -152,7 +152,7 @@ See `LICENSE` for the full license text.
 ---
 
 ## Contact
-For commercial licensing, deployment permission, or consulting/hand-off discussions:
+For consulting, technical collaboration, implementation support, or hand-off discussions:
 **Bryce Lovell**
 
 ---
