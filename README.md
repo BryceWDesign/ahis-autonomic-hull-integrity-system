@@ -144,12 +144,10 @@ AHIS is designed so each risk maps to a test protocol and acceptance criteria.
 
 ---
 
-## Licensing (testing allowed; no profit)
-AHIS is released under an **evaluation-only, non-commercial** license:
-- anyone may read, test, and critique
-- **no commercial/profit use** is permitted without a separate written agreement with the maintainer
+## Licensing
+AHIS is released under the **Apache License 2.0**.
 
-See `LICENSE`.
+See `LICENSE` for the full license text.
 
 ---
 
