@@ -1,0 +1,15 @@
+{
+  "version": "3.0.0",
+  "status": "AWAITING_PHYSICAL_VALIDATION",
+  "p1_low_energy_autonomous_leak_seal_demonstrated": false,
+  "ionomer_puncture_sealing_demonstrated": false,
+  "microvascular_structural_repair_demonstrated": false,
+  "vitrimer_structural_repair_demonstrated": false,
+  "sma_mmc_structural_repair_demonstrated": false,
+  "self_restoring_sensor_network_demonstrated": false,
+  "restored_structural_strength_demonstrated": false,
+  "pressure_hull_survivability_demonstrated": false,
+  "operational_return_to_service_authorized": false,
+  "certification_claimed": false,
+  "note": "Software/HIL qualification cannot promote these fields. Promotion requires measured physical evidence and explicit human review."
+}

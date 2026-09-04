@@ -1,0 +1,100 @@
+{
+  "as_of": "2026-09-03",
+  "rule": "External performance values are technical basis only; they are never converted into AHIS measured performance without AHIS physical evidence.",
+  "component_sources": [
+    {
+      "id": "RPI-PICO2-SC1631",
+      "url": "https://pip.raspberrypi.com/categories/1005-raspberry-pi-pico-2",
+      "used_for": "Pico 2 identity and platform traceability"
+    },
+    {
+      "id": "ADAFRUIT-1150",
+      "url": "https://www.adafruit.com/product/1150",
+      "used_for": "12 V peristaltic pump current, tubing and flow-range procurement basis"
+    },
+    {
+      "id": "ADAFRUIT-5648",
+      "url": "https://www.adafruit.com/product/5648",
+      "used_for": "MOSFET pump-driver electrical capability"
+    },
+    {
+      "id": "ADAFRUIT-5974",
+      "url": "https://www.adafruit.com/product/5974",
+      "used_for": "HX711 load-cell ADC reference"
+    },
+    {
+      "id": "ADAFRUIT-4540",
+      "url": "https://www.adafruit.com/product/4540",
+      "used_for": "1 kg load-cell reference"
+    },
+    {
+      "id": "MPX5010-REV14",
+      "url": "https://www.nxp.com/docs/en/data-sheet/MPX5010.pdf",
+      "used_for": "0-10 kPa operating range, nominal 5 V supply, output range and recommended decoupling/filtering"
+    },
+    {
+      "id": "POLOLU-2482",
+      "url": "https://www.pololu.com/product/2482",
+      "used_for": "12 V SPDT relay-carrier reference and fail-deenergized actuator-bus design"
+    },
+    {
+      "id": "POLOLU-2858",
+      "url": "https://www.pololu.com/product/2858",
+      "used_for": "5 V regulator reference"
+    },
+    {
+      "id": "AUTOMATIONDIRECT-GCX1131",
+      "url": "https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/emergency_stop_pushbuttons/gcx1131",
+      "used_for": "twist-release normally-closed E-stop hardware"
+    },
+    {
+      "id": "JOHN-GUEST-PI1208S-US",
+      "url": "https://www.johnguest.com/us/en/od-tube-fittings/acetal-gray/bulkhead/bulkhead-union",
+      "used_for": "1/4 inch OD bulkhead-union identity and mounting-hole basis"
+    },
+    {
+      "id": "SIGMA-A2033",
+      "url": "https://www.sigmaaldrich.com/US/en/product/sigma/a2033",
+      "used_for": "sodium-alginate identity for P1 research surrogate"
+    },
+    {
+      "id": "SIGMA-C3881",
+      "url": "https://www.sigmaaldrich.com/US/en/product/sigald/c3881",
+      "used_for": "calcium-chloride-dihydrate identity for P1 research surrogate"
+    }
+  ],
+  "research_sources": [
+    {
+      "id": "MARTIN-TURICEK-PATRICK-2025",
+      "title": "Integrated damage sensing and self-healing in polymers and composites: Progress and opportunities",
+      "doi": "10.1177/1045389X251346315",
+      "url": "https://journals.sagepub.com/doi/10.1177/1045389X251346315",
+      "used_for": "integrated sensing/healing autonomy framing and explicit statement that simultaneous repeatable in-situ autonomic sensing/healing remains challenging"
+    },
+    {
+      "id": "NASA-NTRS-20110015319",
+      "title": "Puncture Self-Healing Polymers for Aerospace Applications",
+      "url": "https://ntrs.nasa.gov/citations/20110015319",
+      "used_for": "puncture-healing polymer research lane and distinction between puncture healing and structural engineering qualification"
+    },
+    {
+      "id": "NASA-LAR-TOPS-224",
+      "title": "Puncture-healing Engineered Polymer Blends",
+      "url": "https://technology.nasa.gov/patent/LAR-TOPS-224",
+      "used_for": "engineered puncture-healing polymer-blend research lane"
+    },
+    {
+      "id": "NASA-KSC-TOPS-80",
+      "title": "Self-Healing Aluminum Metal Matrix Composite",
+      "url": "https://technology.nasa.gov/patent/KSC-TOPS-80",
+      "used_for": "SMA plus low-melting-phase metal-matrix repair research lane"
+    },
+    {
+      "id": "COMPOSITES-A-2025-109226",
+      "title": "Novel microvascular channel method for developing self-healing functions of composite structures",
+      "doi": "10.1016/j.compositesa.2025.109226",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1359835X25005202",
+      "used_for": "microvascular structural-healing research lane and need to characterize channel/manufacturing effects"
+    }
+  ]
+}

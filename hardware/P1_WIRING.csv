@@ -1,0 +1,26 @@
+net_id,from,to,wire_or_component,verification
+W01,12 V supply positive,Littelfuse 3 A MINI fuse holder,18 AWG red,Open fuse must remove voltage from all downstream 12 V branches
+W02,Fused 12 V,Pololu D24V22F5 VIN,18 AWG red,Regulator output measures 5.0 V within manufacturer tolerance
+W03,Pololu D24V22F5 5 V,Raspberry Pi Pico 2 VSYS,22 AWG red,Pico remains powered when E-stop is pressed
+W04,Pololu D24V22F5 5 V,MPX5010DP VS,22 AWG red,Sensor receives regulated 5 V
+W05,Fused 12 V,AutomationDirect E-stop NC-A input,18 AWG red,NC-A opens electrically when operator is pressed
+W06,E-stop NC-A output,Pololu 2482 VDD,18 AWG red,Pressing E-stop removes relay-coil supply independent of firmware
+W07,Common 0 V,Pololu 2482 GND,18 AWG black,Common return continuity verified
+W08,Pico GP6,Pololu 2482 EN,22 AWG signal,GP6 high commands relay only while NC-A still supplies coil power
+W09,Fused 12 V,Pololu 2482 COM,18 AWG red,Relay COM is fused supply
+W10,Pololu 2482 NO,Actuator bus positive,18 AWG red,Actuator bus is dead with relay de-energized
+W11,Actuator bus positive,Pump A positive,18 AWG red,Pump A receives 12 V only when relay is energized
+W12,Pump A negative,Adafruit 5648 A OUT,18 AWG black,Driver switches pump A low side
+W13,Adafruit 5648 A GND,Common 0 V,18 AWG black,Driver ground continuity verified
+W14,Pico GP2,Adafruit 5648 A IN,22 AWG signal,3.3 V logic controls driver A
+W15,Actuator bus positive,Pump B positive,18 AWG red,Pump B receives 12 V only when relay is energized
+W16,Pump B negative,Adafruit 5648 B OUT,18 AWG black,Driver switches pump B low side
+W17,Adafruit 5648 B GND,Common 0 V,18 AWG black,Driver ground continuity verified
+W18,Pico GP3,Adafruit 5648 B IN,22 AWG signal,3.3 V logic controls driver B
+W19,E-stop NC-B,Pico GP15 to common 0 V,22 AWG signal,Healthy NC contact pulls GP15 low; pressed/open lets internal pull-up read high
+W20,MPX5010DP VOUT,10.0 kOhm divider upper resistor,22 AWG signal,No direct 5 V sensor output connection to Pico ADC
+W21,10.0 kOhm lower node/Pico GP26,22.0 kOhm to common 0 V,22 AWG signal,Divider ratio is 0.6875 before calibrated ADC conversion
+W22,Pico 3V3,Adafruit HX711 logic supply,22 AWG red,HX711 logic operates from 3.3 V
+W23,Pico GP4,Adafruit HX711 DOUT,22 AWG signal,HX711 data continuity verified
+W24,Pico GP5,Adafruit HX711 CLK,22 AWG signal,HX711 clock continuity verified
+W25,Pico GND,HX711 GND/common 0 V,22 AWG black,Common return continuity verified

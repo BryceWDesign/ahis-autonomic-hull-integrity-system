@@ -1,106 +1,21 @@
-# AHIS — Project Charter
-**Project:** Autonomic Hull Integrity System (AHIS)  
-**Maintainer:** Bryce Lovell  
-**Status:** Proof-of-Concept (PoC) engineering repository (not flight-qualified, not crew-rated)  
-**Date:** 2026-01-12
+# AHIS v3 Project Charter
 
----
+## Mission
+AHIS v3 is an evaluation-licensed research platform for **autonomic structural-integrity management**. It separates five functions that are often incorrectly collapsed into one claim:
 
-## 1) Mission
-Build an **auditable, measurement-first** proof-of-concept for a hull protection stack that combines:
-- **Passive, rate-dependent load/energy management** (PressureX lineage), and
-- **Electromechanical Structural Health Monitoring (SHM)** using PVDF-based sensing/diagnostic excitation (Thaed lineage, reframed into standard engineering terms),
+1. detect and localize damage;
+2. contain or isolate propagation;
+3. select a physically compatible repair or sealing mechanism;
+4. command bounded hardware while accounting for finite resources; and
+5. independently verify what, if anything, was recovered.
 
-to improve detection, localization, and mitigation planning for hull damage that can compromise structural integrity and pressure boundaries.
+The repository intentionally refuses to equate software success with physical healing, structural-strength recovery, hull survivability, certification, or return-to-service authority.
 
----
+## Canonical physical article
+The first buildable article is `AHIS-P1-LOW-ENERGY-LEAK-SEAL-CELL`. P1 is a gravity-head, transparent bench cell used to test the complete autonomic loop with a sodium-alginate/calcium-chloride sealing surrogate. P1 is **not** a structural-hull material qualification and grants zero structural-strength credit.
 
-## 2) Primary objective
-Produce a repository that a technical reviewer can evaluate without trust:
-- Every claimed mechanism maps to **metrics + units**
-- Every metric maps to a **test method + instrumentation**
-- Every test has **pass/fail acceptance criteria**
-- Every limitation is explicitly stated
+## Software authority
+The software/HIL layer may become GREEN when compilation, tests, deterministic campaigns, status artifacts and manifest integrity pass. Physical claim fields remain false until measured data from the required physical procedure is ingested and reviewed.
 
----
-
-## 3) Scope (PoC)
-### In scope
-- Layer-stack definition (materials + interfaces) for coupon-scale panels
-- Passive layer concept evaluation via mechanical testing
-- PVDF-based SHM concept evaluation via:
-  - strain/impact sensing
-  - multi-tone/chirp excitation for diagnostics
-  - impedance/admittance or FRF tracking for change detection
-  - localization methods with explicit error bounds
-- Documentation: requirements, threat model, risks, test matrix, and results templates
-
-### Explicitly out of scope (unless added later with dedicated testing)
-- Crew-rating / certification / safety guarantees
-- Hypervelocity MMOD protection claims
-- Full radiation qualification
-- Production manufacturing process qualification
-- Any nonstandard physics framing (no “nullification,” no numerology-based claims)
-
----
-
-## 4) Engineering principles (repo rules)
-1) **No claim without a metric.**  
-   If it cannot be measured, it is labeled **Hypothesis**.
-2) **No safety claims without evidence.**  
-   “Crew-safe” and “flight-ready” language is prohibited in PoC docs.
-3) **Conservative terminology only.**  
-   Use standard terms: SHM, modal analysis, FRF, impedance/admittance, guided waves, damping ratio, transmissibility.
-4) **Normalization is mandatory.**  
-   Report performance per **areal density (kg/m²)** and **thickness (mm)**.
-5) **Traceability is mandatory.**  
-   All major content must map to either legacy sources (PressureX / Thaed) or clearly labeled new work.
-
----
-
-## 5) Success criteria (what “done” looks like at PoC stage)
-AHIS PoC is considered successful when the repo contains:
-- A coherent architecture describing subsystems, interfaces, and assumptions
-- A complete test matrix mapping each claim → measurement → instrument → pass/fail threshold
-- A build walkthrough that yields a repeatable coupon panel configuration
-- At least one end-to-end results package (simulated or measured, clearly labeled) using the repo’s templates, including:
-  - peak strain / acceleration under controlled impact or vibration
-  - SHM change detection outputs and localization error (if localization is attempted)
-  - documented failure modes and limitations
-
----
-
-## 6) Key risks to manage (must be tracked)
-- Temperature dependence of rate-dependent layers (viscosity drift / freezing / softening)
-- Vacuum compatibility / outgassing of polymers, adhesives, encapsulants
-- Bondline durability under cyclic strain and thermal gradients
-- PVDF aging/depolarization and baseline drift
-- Electrode integrity (cracking/corrosion/delamination) and EMI/ESD susceptibility
-- Contamination / maintenance risk from any fluid-like layer or encapsulation breach
-
-Each risk must map to a verification plan or be explicitly deferred.
-
----
-
-## 7) Deliverables (repo artifacts)
-Minimum deliverables to maintain engineering credibility:
-- Threat model + environments
-- Requirements + acceptance criteria
-- Architecture overview
-- Science basis documents for passive and SHM subsystems
-- Failure modes and risks (FMEA-lite)
-- Test matrix + test procedures
-- PoC build walkthrough
-- Data/results reporting templates
-- Source traceability map (legacy → AHIS)
-
----
-
-## 8) Change control
-All major changes must:
-- Identify affected claims/metrics/tests
-- Update acceptance criteria and the test matrix if needed
-- Preserve traceability to legacy sources or explain the deviation
-
----
-End of charter.
+## Ownership and licensing
+Copyright (c) 2026 Bryce Lovell. AHIS v3 is licensed under `AHIS EVALUATION LICENSE 1.0`. Commercial, operational, production, manufacturing, integration, paid consulting and redistribution uses require separate written permission. Preferred contact: https://www.linkedin.com/in/brycewdesign/

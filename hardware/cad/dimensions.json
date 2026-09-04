@@ -1,0 +1,139 @@
+{
+  "authority": "AHIS_P1_LOW_ENERGY_FIXTURE_ONLY",
+  "back_plate": {
+    "bulkhead_center_xy": [
+      0,
+      35
+    ],
+    "bulkhead_diameter": 17.0,
+    "fastener_hole_diameter": 5.5,
+    "height": 150,
+    "thickness": 6,
+    "width": 150
+  },
+  "bolt_coordinates_xy": [
+    [
+      -50,
+      -60
+    ],
+    [
+      0,
+      -60
+    ],
+    [
+      50,
+      -60
+    ],
+    [
+      -50,
+      60
+    ],
+    [
+      0,
+      60
+    ],
+    [
+      50,
+      60
+    ],
+    [
+      -60,
+      -50
+    ],
+    [
+      -60,
+      0
+    ],
+    [
+      -60,
+      50
+    ],
+    [
+      60,
+      -50
+    ],
+    [
+      60,
+      0
+    ],
+    [
+      60,
+      50
+    ]
+  ],
+  "estop_panel": {
+    "height": 70,
+    "mount_centers_xy": [
+      [
+        -40,
+        -25
+      ],
+      [
+        40,
+        -25
+      ],
+      [
+        -40,
+        25
+      ],
+      [
+        40,
+        25
+      ]
+    ],
+    "mount_hole_diameter": 4.5,
+    "operator_hole_diameter": 22.5,
+    "thickness": 3,
+    "width": 100
+  },
+  "front_plate": {
+    "fastener_hole_diameter": 5.5,
+    "height": 150,
+    "orifice_diameter": 1.5,
+    "thickness": 6,
+    "width": 150
+  },
+  "gasket": {
+    "cavity_height": 100,
+    "cavity_width": 100,
+    "height": 150,
+    "thickness": 1.5,
+    "width": 150
+  },
+  "nozzle_bracket": {
+    "height": 20,
+    "mount_centers_xy": [
+      [
+        -20,
+        0
+      ],
+      [
+        20,
+        0
+      ]
+    ],
+    "mount_hole_diameter": 4.5,
+    "thickness": 8,
+    "tube_bore_diameter": 4.3,
+    "tube_centers_xy": [
+      [
+        -3,
+        0
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "width": 50
+  },
+  "schema_version": "1.0",
+  "spacer": {
+    "cavity_height": 100,
+    "cavity_width": 100,
+    "height": 150,
+    "thickness": 10,
+    "width": 150
+  },
+  "units": "mm"
+}

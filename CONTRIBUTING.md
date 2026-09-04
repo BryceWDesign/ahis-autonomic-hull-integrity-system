@@ -1,65 +1,28 @@
-# Contributing to AHIS
+# Contributing to AHIS v3
 
-AHIS is an engineering proof-of-concept (PoC) repository focused on **measurable, testable** hull protection concepts. Contributions are welcome if they improve scientific clarity, verification quality, or implementation rigor.
+AHIS v3 is source-available evaluation software, not an open-source project. Contributions are accepted only under terms compatible with the repository's `LICENSE`.
 
-## Core contribution rules (non-negotiable)
-1) **No unmeasurable claims.**  
-   Any performance statement must include: a metric, units, a test method, and acceptance criteria.
-2) **No “crew-safe / flight-ready” language.**  
-   This repo is PoC. Safety claims require independent validation outside this repository.
-3) **No nonstandard physics framing.**  
-   Avoid terms like “nullification,” “Tesla 3-6-9,” “field cancellation,” etc. Use standard language: SHM, modal analysis, FRF, impedance/admittance, guided waves, damping ratio, transmissibility.
-4) **No hidden assumptions.**  
-   If you assume environment, boundary conditions, material properties, or sensor placement—state it explicitly.
+## Before submitting
 
-## What to contribute
-Good contributions include:
-- Clarifying architecture and subsystem interfaces
-- Improving requirements and acceptance criteria
-- Adding or refining test protocols (with instrumentation requirements and pass/fail thresholds)
-- Adding analysis scripts that produce repeatable outputs (plots/tables) from provided data templates
-- Tightening definitions, terminology, and failure-mode documentation (FMEA-lite)
+- Open an issue or contact Bryce Lovell before substantial work.
+- Do not submit proprietary third-party material, confidential data or content you do not have the right to contribute.
+- Do not add simulated data that can be mistaken for physical evidence.
+- Do not weaken `PHYSICAL_STATUS.json`, claim boundaries, hardware interlocks or evidence provenance.
+- New physical-performance statements require actual measured evidence and must remain explicitly scoped.
 
-Avoid:
-- “Marketing” language or speculative promises
-- Large refactors that reduce traceability to legacy sources without providing a mapping
+## Code requirements
 
-## Contribution format standards
-### Documentation
-- Use plain Markdown (`.md`).
-- Keep statements falsifiable.
-- Every doc that asserts a mechanism should include:
-  - **Inputs**
-  - **Outputs**
-  - **Assumptions**
-  - **Failure modes**
-  - **Verification method**
+Run:
 
-### Code / scripts
-- Prefer readability over cleverness.
-- Include:
-  - minimal dependencies
-  - clear argument handling
-  - deterministic outputs where possible
-  - comments explaining units and assumptions
-- Do not include API keys, tokens, or secrets.
+```bash
+python -m pip install -e '.[dev]'
+python check_green.py
+```
 
-### Data and results
-- Do not fabricate results.
-- If data is simulated, label it **SIMULATED** and include the model assumptions.
-- Use the repository’s results template when adding any “result package.”
+A contribution must preserve the authoritative release gate, deterministic campaign behavior and physical-evidence firewall.
 
-## Review criteria (what maintainers will check)
-- Scientific correctness and standard terminology
-- Traceability: can a reviewer see where a concept came from and what changed?
-- Verification readiness: does the change improve testability or interpretability?
-- Risk transparency: are new risks documented?
+## Contribution license
 
-## License and permission
-By submitting a contribution to this repository, you agree that your contribution will be licensed under the Apache License 2.0, unless you explicitly state otherwise in writing before submission.
+Unless Bryce Lovell agrees otherwise in writing before submission, by intentionally submitting a contribution you represent that you have the right to submit it and agree that the contribution may be incorporated into AHIS and distributed by Bryce Lovell under the AHIS Evaluation License 1.0 and under separate commercial or other licenses offered by Bryce Lovell.
 
-## Reporting security issues
-See `SECURITY.md`. Do not open public issues for vulnerabilities.
-
----
-Maintainer: Bryce Lovell
+Submitting a contribution does not grant you commercial, operational, manufacturing, redistribution or sublicensing rights to AHIS beyond the rights in the repository license.

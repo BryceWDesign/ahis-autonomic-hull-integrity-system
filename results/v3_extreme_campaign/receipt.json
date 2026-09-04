@@ -1,0 +1,6 @@
+{
+  "all_pass_conditions": true,
+  "artifact": "campaign.json",
+  "authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
+  "sha256_canonical_json": "1991c991b5fbbc3d9275abfb4e1e8f7d6c610a6ac07714f616dd6df8b5911977"
+}

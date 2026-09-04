@@ -1,0 +1,151 @@
+{
+  "authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
+  "campaign": "AHIS-V3-AUTONOMIC-REPAIR-SOFTWARE-HIL-CAMPAIGN",
+  "fusion": {
+    "accepted": true,
+    "disagreement": 0.0691550925925926,
+    "effective_weight": 3.6,
+    "fused_damage_score": 0.8416606585969649,
+    "reason": "multimodal evidence accepted"
+  },
+  "hil": {
+    "baseline_frame": {
+      "estop_closed": true,
+      "head_mm": 500.0,
+      "leak_ml_min": 60.0,
+      "pressure_kpa": 4.9,
+      "sensor_valid": true,
+      "supply_v": 12.0,
+      "timestamp_s": 0.0
+    },
+    "delivered_a_ml": 14.0,
+    "delivered_b_ml": 14.0,
+    "leak_reduction_fraction": 0.8262260565495548,
+    "post_frame": {
+      "estop_closed": true,
+      "head_mm": 500.0,
+      "leak_ml_min": 10.42643660702671,
+      "pressure_kpa": 4.9,
+      "sensor_valid": true,
+      "supply_v": 12.0,
+      "timestamp_s": 40.0
+    }
+  },
+  "localization": {
+    "accepted": true,
+    "confidence_radius_m": 0.0,
+    "effective_sensor_weight": 6.0,
+    "error_m": 0.0,
+    "event_time_s": 0.02,
+    "reason": "accepted anisotropic grid solution",
+    "weighted_rms_s": 0.0,
+    "x_m": 0.35,
+    "y_m": 0.65
+  },
+  "negative_controls": {
+    "damaged_twin": {
+      "accepted": false,
+      "failed_channels": [
+        "modal",
+        "strain",
+        "leak"
+      ],
+      "leak_absolute_error_ml_min": 11.5,
+      "modal_max_fraction_error": 0.08333333333333333,
+      "strain_fraction_error": 0.18
+    },
+    "estop": {
+      "allowed": false,
+      "reasons": [
+        "estop_open"
+      ]
+    },
+    "overpressure": {
+      "allowed": false,
+      "reasons": [
+        "pressure_limit_exceeded"
+      ]
+    },
+    "resource_depletion": {
+      "allowed": false,
+      "reason": "resource deficit: agent_a_ml,agent_b_ml,electrical_energy_j,actuator_cycles_remaining"
+    }
+  },
+  "pass_conditions": {
+    "anisotropic_localization_accepted": true,
+    "depleted_resources_fail_closed": true,
+    "estop_fails_closed": true,
+    "finite_resources_consumed": true,
+    "hil_response_exceeds_recipe_target": true,
+    "history_chain_valid": true,
+    "localization_within_20_mm": true,
+    "multimodal_fusion_accepted": true,
+    "overpressure_fails_closed": true,
+    "physical_credit_remains_zero": true,
+    "repair_plan_allowed_when_safe": true,
+    "rul_has_uncertainty_bounds": true,
+    "twin_damage_detected": true,
+    "twin_nominal_accepted": true,
+    "uncertainty_reported": true
+  },
+  "prognostics": {
+    "lower_cycles": 30933,
+    "nominal_cycles": 38666,
+    "status": "SCREEN_ONLY_UNCERTIFIED",
+    "upper_cycles": 51555
+  },
+  "repair_plan": {
+    "allowed": true,
+    "commands": [
+      {
+        "channel": "agent_a",
+        "runtime_s": 18.666666666666668
+      },
+      {
+        "channel": "agent_b",
+        "runtime_s": 18.666666666666668
+      }
+    ],
+    "reason": "repair command sequence allowed by resource and hardware gates",
+    "remaining_resources": {
+      "actuator_cycles_remaining": 18,
+      "agent_a_ml": 36.0,
+      "agent_b_ml": 36.0,
+      "electrical_energy_j": 4500.0,
+      "thermal_headroom_c": 40.0
+    }
+  },
+  "schema_version": "3.0.0",
+  "structural_history": [
+    {
+      "event_hash": "f87d5ab98fb05e873029cf430cea5d84599d001abfde764d6d76469ed4939cc3",
+      "event_type": "damage_detected",
+      "payload": {
+        "score": 0.841661
+      },
+      "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sequence": 0,
+      "timestamp_utc": "2026-09-03T18:00:00Z"
+    },
+    {
+      "event_hash": "6550e8379a53fec8557169b7e1c9509df68c0db7870fcfb9fdec2aaafb3dc984",
+      "event_type": "repair_commanded",
+      "payload": {
+        "recipe": "P1-HIL-TWO-AGENT"
+      },
+      "previous_hash": "f87d5ab98fb05e873029cf430cea5d84599d001abfde764d6d76469ed4939cc3",
+      "sequence": 1,
+      "timestamp_utc": "2026-09-03T18:00:01Z"
+    },
+    {
+      "event_hash": "a4ca93bbd0826f8c379d39b99b030bcc93a8a407b96235504faa34068495d6e3",
+      "event_type": "hil_verified",
+      "payload": {
+        "leak_reduction_fraction": 0.826226
+      },
+      "previous_hash": "6550e8379a53fec8557169b7e1c9509df68c0db7870fcfb9fdec2aaafb3dc984",
+      "sequence": 2,
+      "timestamp_utc": "2026-09-03T18:00:40Z"
+    }
+  ]
+}

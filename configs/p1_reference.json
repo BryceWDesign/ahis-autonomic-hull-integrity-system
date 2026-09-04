@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "article_id": "AHIS-P1-LOW-ENERGY-LEAK-SEAL-CELL",
+  "authority": "LOW_ENERGY_AUTONOMOUS_LEAK_SEAL_RESEARCH_SURROGATE__NO_STRUCTURAL_STRENGTH_OR_HULL_SURVIVABILITY_CREDIT",
+  "cell": {
+    "overall_width_mm": 150.0,
+    "overall_height_mm": 150.0,
+    "front_plate_thickness_mm": 6.0,
+    "back_plate_thickness_mm": 6.0,
+    "spacer_thickness_mm": 10.0,
+    "cavity_width_mm": 100.0,
+    "cavity_height_mm": 100.0,
+    "gasket_thickness_each_mm": 1.5,
+    "damage_orifice_diameter_mm": 1.5,
+    "damage_orifice_tolerance_mm": 0.05,
+    "fastener": "M5 x 35 mm A2-70 stainless, 12 positions",
+    "fastener_hole_diameter_mm": 5.5,
+    "bulkhead_hole_diameter_mm": 17.0
+  },
+  "hydrostatic": {
+    "nominal_head_mm": 500.0,
+    "hard_max_head_mm": 800.0,
+    "hard_max_pressure_kpa": 8.0,
+    "source": "open-to-atmosphere gravity reservoir only",
+    "compressed_gas_prohibited": true,
+    "pump_pressurization_prohibited": true
+  },
+  "repair_surrogate": {
+    "agent_a": "2.0 percent w/v sodium alginate in deionized water",
+    "agent_b": "5.0 percent w/v calcium chloride dihydrate in deionized water",
+    "agent_a_target_volume_ml": 8.0,
+    "agent_b_target_volume_ml": 8.0,
+    "maximum_single_pump_runtime_s": 30.0,
+    "post_delivery_dwell_s": 60.0,
+    "structural_strength_credit": 0.0
+  },
+  "measurement": {
+    "baseline_window_s": 20.0,
+    "post_repair_window_s": 20.0,
+    "minimum_baseline_leak_ml_min": 20.0,
+    "minimum_leak_reduction_fraction": 0.8,
+    "canonical_campaign_runs": 3,
+    "required_passing_runs": 2,
+    "water_density_g_ml_for_flow_conversion": 0.997,
+    "minimum_flow_fit_r_squared": 0.95,
+    "minimum_samples_per_window": 20
+  }
+}

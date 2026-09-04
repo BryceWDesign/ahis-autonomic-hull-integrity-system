@@ -1,159 +1,136 @@
-# AHIS — Autonomic Hull Integrity System
-**Repository:** ahis-autonomic-hull-integrity-system  
-**Author/Maintainer:** Bryce Lovell  
-**Status:** Engineering proof-of-concept (PoC). Not flight-qualified. Not crew-rated.
+# AHIS — Autonomic Hull Integrity System v3.0.0
 
-## Purpose
-AHIS is a consolidated design and verification repository for a **hull protection stack** intended to improve survivability against:
-- **Impulsive mechanical loads** (impact/shock, debris strike, handling damage)
-- **Fatigue and delamination growth** under cyclic loading
-- **Pressure boundary compromise** (crack initiation, puncture propagation, leak onset)
-- **Operational environments** relevant to spacecraft and high-performance marine structures
+**Evaluation-licensed autonomic structural-repair and survivability research testbed.**
 
-AHIS integrates two engineering directions:
-1) **Passive, rate-dependent energy management** (PressureX lineage): a layer concept intended to increase resistance under high strain-rate events to reduce peak strain and spread load.
-2) **Electromechanical structural health monitoring (SHM)** (Thaed lineage, scientifically reframed): PVDF-based sensing and diagnostic excitation for damage detection/localization and (optionally) bounded vibration attenuation.
+AHIS v3 advances the original passive protection + structural-health-monitoring proof of concept into an executable closed-loop research architecture:
 
-This repo is written to be **auditable**: every claim must map to a measurable quantity and a test method.
+`detect -> localize -> fuse evidence -> assess uncertainty -> check resources/interlocks -> command bounded repair -> measure response -> verify -> retain structural history`
 
----
+The release includes a concrete low-energy physical reference article, **AHIS-P1**, so the repository can be taken beyond software/HIL into reproducible bench testing without claiming results that have not been measured.
 
-## What AHIS is (and is not)
-### AHIS is
-- A **system architecture** for hull protection with clear subsystem boundaries (materials, sensing, electronics, verification).
-- A **PoC build + test workflow** that produces repeatable data: strain, acceleration, leakage, and SHM metrics.
-- A **measurement-first** framework for comparing designs by **mass, thickness, and performance deltas**.
+## Current status
 
-### AHIS is not
-- Not “force fields,” “mass nullification,” “Tesla 3-6-9,” or any untestable mechanism.
-- Not a certification package.
-- Not an operational safety guarantee.
+- Repository/software release gate: see `GREEN_STATUS.json` and `FINAL_STATUS.md`.
+- Physical status: `PHYSICAL_STATUS.json` remains **AWAITING_PHYSICAL_VALIDATION**.
+- P1 physical leak-seal performance: **not demonstrated by this repository release**.
+- Structural self-healing strength recovery: **not demonstrated**.
+- Full-scale hull survivability, operational return-to-service, depth rating and certification: **not claimed**.
 
----
+Synthetic/HIL results never receive physical credit.
 
-## System concept (high-level)
-AHIS is a layered stack with a verification harness:
+## What v3 contains
 
-### A) Passive protection (rate-dependent layer)
-A rate-dependent interlayer (e.g., shear-thickening / viscoelastic concept) is used to:
-- Increase effective stiffness/viscosity during high strain-rate events
-- Reduce peak strain transmitted to the structural substrate
-- Spread impulse over a larger area and time window
+### Autonomic control and assurance
+- finite repair-agent, electrical-energy, thermal-margin and actuator-cycle accounting;
+- fail-closed hardware interlocks;
+- bounded repair recipes and executable repair planning;
+- deterministic HIL rig and negative-control campaign;
+- strict host/Pico JSONL hardware protocol;
+- hard E-stop architecture that physically removes actuator relay-coil power while the controller remains alive to report the fault;
+- paired repair-agent delivery with independent measured pump calibrations.
 
-**Primary measurable outputs:**
-- Peak strain reduction (%)
-- Peak acceleration reduction (g)
-- Energy absorption / impulse spreading metrics (derived from force/accel/strain)
-- Post-event damage extent (area, delamination indicators)
+### Structural intelligence
+- anisotropic damage localization with an explicit uncertainty radius;
+- quality-weighted multimodal evidence fusion;
+- digital-twin discrepancy checks;
+- uncertainty-bounded relative remaining-life screening;
+- tamper-evident SHA-256 structural event history.
 
-### B) SHM skin (PVDF electromechanical layer)
-PVDF and conductive electrodes are used for:
-- **Sensing:** strain/impact → electrical response (direct piezoelectric effect)
-- **Diagnostics:** injected waveforms → measured response (impedance/FRF/guided-wave methods)
-- **Localization:** estimating damage region based on change in transfer functions/time-of-flight (if implemented)
+These are research tools. The digital twin and prognostics are not certified life predictions.
 
-**Primary measurable outputs:**
-- Detection time (ms / s)
-- Localization error (cm)
-- Sensitivity/false positive rates (PoC statistical reporting)
-- Environmental drift (temperature/vacuum cycling impact on baselines)
+### AHIS-P1 physical reference article
+P1 is a deliberately low-energy gravity-head leak-seal demonstrator. It includes:
 
-### C) Optional vibration attenuation / resonance control (bounded, experimental)
-Vibration attenuation is treated as engineering control, not a guarantee. AHIS supports:
-- Passive **shunt damping** (piezo + tuned electrical networks)
-- **Feedback control** (sensor → controller → actuator), within realistic power budgets
+- procurement BOM: `BOM/AHIS-P1-procurement.csv`;
+- generated STEP/STL fixture CAD under `hardware/cad/`;
+- dimensional build traveler and inspection record;
+- exact wiring netlist and Pico 2 firmware;
+- pressure, load-cell and actual-agent pump calibration tools;
+- live physical run controller with no synthetic mode;
+- raw telemetry hashing and evidence receipts;
+- objective per-run acceptance and a fixed three-run campaign rule.
 
-This capability is formally scoped under the **Active Control Module (Mode E)** with explicit
-stability/authority/power/EMI discipline:
-- `docs/18_Active_Control_Module.md`
-- `docs/19_Control_Architecture_and_Stability.md`
-- `docs/20_Modal_Testing_FRF_Method.md`
-- `docs/21_Actuator_Authority_and_Power_Budget.md`
-- `docs/22_EMI_EMC_Design_Rules.md`
+P1 uses sodium alginate + calcium chloride as a **system-level sealing surrogate**. Passing P1 would demonstrate only the bounded low-energy autonomous leak-seal response. It does not establish structural-strength restoration or hull self-healing.
 
-**Primary measurable outputs:**
-- Δζ (damping ratio increase) per targeted mode
-- Transmissibility reduction (dB) at resonance
-- Power draw (W) and thermal rise (°C)
-- (Mode E) stability margins (gain/phase) and saturation logging
+## Repair research programs
 
----
+The repository separately defines physical validation programs for:
 
-## Threat model (PoC scope)
-AHIS does not claim hypervelocity MMOD protection unless explicitly tested with appropriate facilities.
-PoC scope targets:
-- **Low-velocity impacts** representative of handling damage / tool strikes / suborbital debris regimes
-- **Fatigue cycling** to observe delamination/crack growth trends
-- **Pressure boundary integrity** (leak initiation and leak rate under defined damage)
+1. puncture-responsive ionomer/self-sealing layers;
+2. replenishable microvascular composite repair;
+3. electrothermal vitrimer repair;
+4. SMA + low-melting-phase metal-matrix repair;
+5. recovery of damaged sensing/electrical networks.
 
-**Out of PoC scope unless added later:**
-- Hypervelocity impact (true MMOD)
-- Flight certification and crew-rating requirements
-- Full radiation qualification
+They remain at zero physical claim credit until their own specimens and measurements exist. See `docs/09_Repair_Mechanism_Research_Programs.md` and `provenance/TECHNICAL_BASIS_V3_2026.json`.
 
----
+## Software verification
 
-## Proof-of-Concept (PoC) deliverables (what this repo is structured to produce)
-1) **A build recipe** for a small coupon panel (materials stack, bonding, electrode routing, PVDF placement)
-2) **Instrumentation harness** (sensing + DAQ + optional excitation driver)
-3) **A test matrix** mapping every claim → measurement → instrument → pass/fail thresholds
-4) **Repeatable data packages** in a standard structure with plots and raw logs
-5) **A performance delta report** normalized by areal density (kg/m²) and thickness (mm), generated from real logs
+Python 3.11+:
 
----
+```bash
+python -m pip install -e '.[dev]'
+python -m pytest -q
+python scripts/run_v3_campaign.py
+python check_green.py
+```
 
-## Repository structure
-- `BOM/` — consolidated bill of materials and procurement placeholders
-- `docs/` — architecture, requirements, threat model, science basis, risk/FMEA-lite, test matrix, PoC walkthroughs
-- `src/analysis/` — analysis scripts (impact peaks, leak metrics, normalization, delta report generation)
-- `results/` — strict evidence packages (raw + processed + calibration + photos)
+`check_green.py` is the release authority for repository/software status. It verifies compilation, tests, deterministic campaign behavior and claim boundary, evaluation-license boundary, P1 BOM/CAD/status integrity, absence of release junk/unresolved markers, and the complete SHA-256 manifest.
 
-> Note: any historical material imported later should be placed under a `legacy/` folder with clear disclaimers.
-AHIS claims are defined by the canonical `docs/` set and evidence in `results/`.
+## Building and running P1
 
----
+Read in this order:
 
-## Engineering rules for this repo
-- **No claim ships without a metric.** If it can’t be measured, it is labeled “Hypothesis.”
-- **No safety claims without test evidence.** “Crew-safe” language is prohibited in PoC docs.
-- **All outcomes must include failure modes.** If a mechanism can fail, it is documented.
-- **All results are normalized.** Performance is reported per kg/m² and per mm thickness.
+1. `docs/02_Claim_Boundary.md`
+2. `docs/03_P1_Reference_Design.md`
+3. `BOM/README.md`
+4. `docs/04_P1_Fabrication_Traveler.md`
+5. `docs/05_P1_Wiring_and_Electronics.md`
+6. `docs/06_P1_Calibration.md`
+7. `docs/07_P1_Autonomous_Test_Procedure.md`
+8. `docs/08_Physical_Acceptance_and_Promotion.md`
 
----
+Physical host dependency:
 
-## Known technical risks (must be addressed)
-- **Rate-dependent layer behavior vs temperature** (viscosity drift, freezing, softening)
-- **Vacuum compatibility / outgassing** of polymers, adhesives, and STF carriers (if vacuum is relevant)
-- **Bondline durability** under thermal gradients and cyclic strain
-- **PVDF aging/depolarization** and baseline drift under environment
-- **Electrode integrity** (cracking, corrosion, delamination) and EMI/ESD susceptibility
-- **Contamination / maintenance hazards** from any fluid-like layer or encapsulant
+```bash
+python -m pip install -e '.[hardware]'
+```
 
-AHIS is designed so each risk maps to a test protocol and acceptance criteria.
+A live run requires an actual Pico serial port and measured calibration artifacts:
 
----
+```bash
+python scripts/p1_run_controller.py \
+  --port <physical-serial-port> \
+  --run-id P1-RUN-001 \
+  --sensor-calibration sensor-calibration.json \
+  --pump-calibration pump-calibration.json \
+  --fixture-leak-check pass
+```
 
-## How to read this repo (engineer-first path)
-1) `docs/02_Threat_Model_and_Environments.md`
-2) `docs/03_Requirements_and_Acceptance_Criteria.md`
-3) `docs/01_Architecture_Overview.md`
-4) `docs/06_Failure_Modes_and_Risks.md`
-5) `docs/07_Test_Matrix.md`
-6) `docs/08_PoC_Build_Walkthrough.md` and `docs/09_PoC_Test_Procedures.md`
-7) `docs/17_Analysis_Pipeline_Walkthrough.md`
+There is intentionally no HIL/synthetic switch in the physical-run controller.
 
----
+## License
 
-## Licensing
-AHIS is released under the **Apache License 2.0**.
+**AHIS v3.0.0 and later in this release are source-available for evaluation under `LICENSE`; they are not open source.**
 
-See `LICENSE` for the full license text.
+Commercial, operational, manufacturing, integration, deployment, paid-consulting and redistribution uses require separate written permission from **Bryce Lovell**.
 
----
+Preferred licensing contact: <https://www.linkedin.com/in/brycewdesign/>
 
-## Contact
-For consulting, technical collaboration, implementation support, or hand-off discussions:
-**Bryce Lovell**
+Earlier copies that were actually distributed under Apache License 2.0 retain the rights granted with those copies. The historical Apache text is retained in `LICENSES/Apache-2.0-historical.txt`; it does not license v3.
 
----
-**Bottom line:** AHIS is a measurement-first hull protection PoC repository. It is intentionally conservative in claims and explicit about what must be proven before any operational use.
+## Repository map
+
+- `src/ahis/` — executable AHIS logic
+- `tests/` — unit and invariant tests
+- `scripts/` — campaigns, calibration, physical evidence and release tooling
+- `hardware/` — P1 CAD, wiring, build record and Pico firmware
+- `BOM/` — canonical P1 procurement list
+- `configs/` — reference article configuration
+- `docs/` — architecture, fabrication, testing, safety, licensing and validation path
+- `provenance/` — technical basis/source traceability
+- `results/v3_extreme_campaign/` — deterministic software/HIL evidence only
+
+## Core rule
+
+**Software can prove software behavior. Hardware measurements can prove only what was actually measured. Neither is allowed to silently promote the other.**

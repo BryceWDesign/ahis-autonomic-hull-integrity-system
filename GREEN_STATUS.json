@@ -1,0 +1,16 @@
+{
+  "project": "AHIS — Autonomic Hull Integrity System",
+  "version": "3.0.0",
+  "license": "AHIS Evaluation License 1.0",
+  "local_repository_quality": "GREEN",
+  "pytest_passed": 112,
+  "campaign": "AHIS-V3-AUTONOMIC-REPAIR-SOFTWARE-HIL-CAMPAIGN",
+  "campaign_status": "PASS",
+  "campaign_authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
+  "campaign_receipt_sha256": "1991c991b5fbbc3d9275abfb4e1e8f7d6c610a6ac07714f616dd6df8b5911977",
+  "manifest_status": "PASS",
+  "github_actions_status": "NOT_RUN_UNTIL_PUSHED",
+  "physical_status": "AWAITING_PHYSICAL_VALIDATION",
+  "p1_reference_build": "COMPLETE_REFERENCE_PACKAGE__PHYSICAL_RESULT_NOT_YET_MEASURED",
+  "claim_boundary": "GREEN validates repository logic, deterministic software/HIL evidence and release integrity only. It does not grant physical self-healing, structural-strength, hull-survivability, return-to-service or certification credit."
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AHIS-P1 Pico sensor calibration",
+  "type": "object",
+  "required": [
+    "source_kind",
+    "pressure_kpa_per_adc_fraction",
+    "pressure_offset_kpa",
+    "loadcell_counts_per_g",
+    "loadcell_zero_counts",
+    "calibration_sha256"
+  ],
+  "properties": {
+    "source_kind": {"const": "PHYSICAL_CALIBRATION"},
+    "pressure_kpa_per_adc_fraction": {"type": "number"},
+    "pressure_offset_kpa": {"type": "number"},
+    "loadcell_counts_per_g": {"type": "number", "not": {"const": 0}},
+    "loadcell_zero_counts": {"type": "number"},
+    "calibration_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

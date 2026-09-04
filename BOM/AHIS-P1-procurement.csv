@@ -1,0 +1,55 @@
+item_id,subsystem,qty,manufacturer_or_standard,part_number_or_spec,description,required_characteristic,source_url
+P1-M01,cell,1,Industrial plastics supplier,Clear polycarbonate 150 x 150 x 6 mm,Front cell plate,Machine hardware/cad/AHIS-P1-front-plate.step; center orifice 1.50 +/-0.05 mm,
+P1-M02,cell,1,Industrial plastics supplier,Clear polycarbonate 150 x 150 x 6 mm,Back cell plate,Machine hardware/cad/AHIS-P1-back-plate.step; 17.0 mm fluid bulkhead opening at registered position,
+P1-M03,cell,1,Industrial plastics supplier,Clear polycarbonate 150 x 150 x 10 mm,Cell spacer,Machine hardware/cad/AHIS-P1-spacer.step; 100 x 100 mm through cavity,
+P1-M04,cell,2,Industrial gasket supplier,Silicone sheet 150 x 150 x 1.5 mm; Shore A 40-60,Flat gaskets,Cut per hardware/cad/AHIS-P1-gasket.step,
+P1-M05,cell,12,ISO metric fastener,A2-70 M5 x 35 socket-head screw,Cell clamp fastener,Stainless; 12 canonical positions,
+P1-M06,cell,24,ISO metric fastener,M5 stainless flat washer,Load-spreading washers,One under each screw head and nut,
+P1-M07,cell,12,ISO metric fastener,M5 stainless nylon-insert locknut,Cell clamp nuts,Replace if nylon locking action degrades,
+P1-M08,fluid,1,John Guest,PI1208S-US,1/4 in OD bulkhead union,0.67 in mounting hole; cell inlet,https://www.johnguest.com/us/en/od-tube-fittings/acetal-gray/bulkhead/bulkhead-union
+P1-M09,fluid,2 m,Laboratory tubing supplier,1/4 in OD PTFE tubing,Gravity water line,Fits KIMAX reservoir quick-release outlet hardware and John Guest 1/4 in OD fittings,
+P1-M10,fluid,1,DWK Life Sciences KIMBLE KIMAX,14612F-2000,2 L reservoir bottle with bottom valve outlet,Operate with top open/vented; bottom outlet supports rigid 1/4 in OD PTFE with supplied O-ring/cap; never pressurize,https://www.grainger.com/product/KIMBLE-Reservoir-Bottle-2-L-26CV96
+P1-M11,fluid,1,Laboratory support stand or shelf system,Load rating >=5 kg; vertical adjustment >=850 mm; rigid anti-tip base,Reservoir elevation support,Secure reservoir so measured water head can be set 0-800 mm above orifice; calibrated pressure determines head,
+P1-M12,fluid,0.5 m,Laboratory tubing supplier,3/16 in ID silicone tubing,Dry air-leg pressure line,Route continuously upward from water-line tee; sensor mounted above maximum water level,
+P1-M13,fluid,1,Potable-water fitting supplier,1/4 in OD union tee plus leak-tight adapter to 3/16 in ID silicone line,Pressure branch,Leak-tight at <=8 kPa; no intentional wetting of pressure sensor,
+P1-M14,repair,2,Adafruit,1150,12 V peristaltic liquid pump,"One pump per agent; calibrate installed pump with assigned final agent, tubing and nozzle",https://www.adafruit.com/product/1150
+P1-M15,repair,2 x 1 m,Tubing supplier,4 mm OD x 2 mm ID silicone tubing,Independent repair-agent lines,No shared wetted path before the external convergence zone,
+P1-M16,repair,1,Repository CAD,hardware/cad/AHIS-P1-nozzle-bracket.step,Two-line nozzle bracket,Print PETG >=4 perimeters and >=40% infill or machine equivalent; verify 4.3 mm tube bores,
+P1-M17,repair,1,Laboratory stand supplier,Small articulated clamp/stand; reach >=100 mm,Nozzle-bracket support,Hold nozzle bracket 2.0 +/-0.5 mm from front plate without touching cell or load-cell collection path,
+P1-E01,control,1,Raspberry Pi,SC1631 Raspberry Pi Pico 2,Reference microcontroller,Use MicroPython and repository firmware,https://pip.raspberrypi.com/categories/1005-raspberry-pi-pico-2
+P1-E02,actuator,2,Adafruit,5648,MOSFET driver board,Low-side pump switching; 1.5 A continuous rating exceeds published pump running current,https://www.adafruit.com/product/5648
+P1-E03,power,1,Adafruit,352,12 V 5 A switching power supply,Main isolated bench supply; downstream P1 fuse is 3 A,https://www.adafruit.com/product/352
+P1-E04,power,1,Pololu,2858 D24V22F5,12 V to 5 V step-down regulator,Power Pico VSYS and 5 V pressure sensor branch,https://www.pololu.com/product/2858
+P1-E05,safety,1,AutomationDirect,GCX1131,22 mm twist-release emergency-stop operator,Hard-stop user interface,https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/emergency_stop_pushbuttons/gcx1131
+P1-E06,safety,1 pack,AutomationDirect,ECX1030-2,Additional normally-closed contact blocks,One NC path hard-interrupts relay-coil power; second NC path is monitored by Pico,https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/pushbutton_-z-_switch_-z-_indicator_accessories/contact_blocks_-z-_mounting_flanges/ecx1030-2
+P1-E07,safety,1,Pololu,2482,Basic SPDT relay carrier with 12 V relay,VDD supplied through hard E-stop; Pico GP6 drives EN; relay NO feeds actuator bus,https://www.pololu.com/product/2482
+P1-E08,safety,1,Littelfuse,0FHM0001XP / FHM1BP,MINI inline fuse holder,Install 3 A MINI fuse before P1 downstream branches,https://www.littelfuse.com/
+P1-E09,safety,2,Littelfuse,0297003,3 A MINI blade fuse,One installed plus one spare; 32 V MINI series,
+P1-E10,pressure,1,NXP/Freescale legacy part; authorized distributor,MPX5010DP,0-10 kPa differential pressure sensor,Measure trapped dry-air leg; nominal 5 V supply; do not intentionally wet ports,https://www.nxp.com/part/MPX5010DP
+P1-E11,pressure,1,IEC resistor,10.0 kOhm 1% 0.25 W,ADC divider upper resistor,Sensor output to ADC node,
+P1-E12,pressure,1,IEC resistor,22.0 kOhm 1% 0.25 W,ADC divider lower resistor,ADC node to ground; divider ratio 0.6875,
+P1-E13,pressure,1,IEC capacitor,1.0 uF >=10 V ceramic,MPX5010 supply decoupling,Install at sensor supply pins,
+P1-E14,pressure,1,IEC capacitor,0.01 uF >=10 V ceramic,MPX5010 supply decoupling,Install at sensor supply pins,
+P1-E15,pressure,1,IEC capacitor,470 pF >=10 V ceramic,MPX5010 output filter,Install sensor output to ground before ADC divider,
+P1-E16,leak,1,Adafruit,4540,1 kg four-wire strain-gauge load cell,Catch-cup mass measurement; calibrate after final mechanical mounting,https://www.adafruit.com/product/4540
+P1-E17,leak,1,Adafruit,5974,HX711 24-bit ADC breakout,Load-cell digitizer; operate logic at 3.3 V; P1 sampling at 10 SPS device setting,https://www.adafruit.com/product/5974
+P1-E18,wiring,3 m,Electronics supplier,18 AWG stranded copper red/black,12 V power wiring,"Supply, fuse, relay and pump-power paths",
+P1-E19,wiring,5 m,Electronics supplier,22-24 AWG stranded hookup wire,Signal and low-current wiring,Use proper ferrules/crimps/soldered terminations for selected connector,
+P1-E20,wiring,10,WAGO,221-413,3-conductor lever connector,Low-voltage distribution; fully enclosed conductor termination,https://www.wago.com/
+P1-E21,enclosure,1,Electrical enclosure supplier,Polycarbonate enclosure >=200 x 120 x 75 mm,Controller enclosure,Keep wet plumbing outside enclosure; provide strain relief,
+P1-E22,enclosure,1,Repository CAD,hardware/cad/AHIS-P1-estop-panel.step,22 mm E-stop panel,Machine/print per CAD; deburr; mount where immediately reachable,
+P1-C01,chemistry,1,MilliporeSigma,A2033-100G,Sodium alginate medium viscosity,Agent A; prepare 2.00 g then dilute with DI water to final volume 100.0 mL,https://www.sigmaaldrich.com/US/en/product/sigma/a2033
+P1-C02,chemistry,1,MilliporeSigma,C3881-500G,Calcium chloride dihydrate ReagentPlus >=99%,Agent B; prepare 5.00 g then dilute with DI water to final volume 100.0 mL,https://www.sigmaaldrich.com/US/en/product/sigald/c3881
+P1-C03,chemistry,2 L,ASTM Type II or equivalent,Deionized water,Cell fluid and solution make-up,Use clean room-temperature water,
+P1-T01,measurement,1,Metrology supplier,Digital caliper resolution 0.01 mm; accuracy <=0.03 mm,Dimensional inspection,"Verify plates, holes, gasket stack and assembled gap",
+P1-T02,measurement,1 pair,Metrology supplier,1.45 mm GO and 1.55 mm NO-GO pin gauges,Damage-orifice inspection,1.45 mm must pass; 1.55 mm must not pass,
+P1-T03,measurement,1 set,Metrology supplier,"Class M1 or better masses: 100 g, 300 g, 500 g",Load-cell calibration references,Record certificate values or traceably verified actual mass values,
+P1-T04,measurement,1,Laboratory supplier,25 mL Class A graduated cylinder or calibrated syringe; resolution <=0.2 mL,Pump delivery calibration,Use actual final agents and installed tubing/nozzle,
+P1-T05,measurement,1,Laboratory supplier,500 mL polypropylene catch cup,Leak collection,Cup plus collected liquid must remain below 50% of 1 kg load-cell capacity,
+P1-T06,assembly,1,Drill-tool supplier,1.50 mm HSS drill,Controlled-orifice fabrication,Use drill press; verify with GO/NO-GO gauges,
+P1-T07,assembly,1,Drill-tool supplier,5.50 mm HSS drill,Fastener-hole fabrication,Deburr without chamfering sealing face,
+P1-T08,assembly,1,Drill-tool supplier,17.0 mm step drill or reamer,Bulkhead-hole fabrication,Verify bulkhead fit before final assembly,
+P1-T09,safety,1,ANSI Z87.1,Impact-rated safety glasses,Eye protection,"Required during machining, chemistry handling and testing",
+P1-T10,safety,1 box,ASTM D6319 or equivalent,Nitrile disposable gloves,Chemistry/cleanup PPE,Use clean gloves during agent preparation,
+P1-T11,safety,1,Laboratory supplier,Secondary spill tray >=5 L,Fluid containment,Entire cell/wet plumbing boundary positioned inside tray; electronics remain outside wet zone,
+P1-T12,measurement,1,Digital multimeter supplier,CAT-rated DMM; DC range >=20 V; continuity mode,Electrical inspection,Verify hard E-stop removes actuator-bus voltage before pumps are connected,
