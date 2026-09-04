@@ -37,6 +37,7 @@ def build_manifest(root: Path, *, exclude: set[str] | None = None) -> list[tuple
             or ".ruff_cache" in parts
             or ".mypy_cache" in parts
             or ".venv" in parts
+            or any(part.endswith(".egg-info") for part in parts)
         ):
             continue
         rows.append((sha256_file(path), rel))

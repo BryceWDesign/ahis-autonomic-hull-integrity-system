@@ -19,7 +19,7 @@ def main() -> int:
     out.mkdir(parents=True, exist_ok=True)
     campaign = run_campaign()
     campaign_path = out / "campaign.json"
-    campaign_path.write_text(json.dumps(campaign, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    campaign_path.write_bytes((json.dumps(campaign, indent=2, sort_keys=True) + "\n").encode("utf-8"))
     receipt = {
         "artifact": "campaign.json",
         "sha256_canonical_json": digest_json(campaign),
@@ -27,7 +27,7 @@ def main() -> int:
         "all_pass_conditions": all(campaign["pass_conditions"].values()),
     }
     receipt_path = out / "receipt.json"
-    receipt_path.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    receipt_path.write_bytes((json.dumps(receipt, indent=2, sort_keys=True) + "\n").encode("utf-8"))
     print(f"campaign={campaign_path.relative_to(ROOT)}")
     print(f"receipt={receipt_path.relative_to(ROOT)}")
     print(f"all_pass_conditions={receipt['all_pass_conditions']}")

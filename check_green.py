@@ -34,6 +34,9 @@ def cleanup_runtime_junk() -> None:
             shutil.rmtree(path, ignore_errors=True)
     for name in (".pytest_cache", ".ruff_cache", ".mypy_cache"):
         shutil.rmtree(ROOT / name, ignore_errors=True)
+    for path in ROOT.rglob("*.egg-info"):
+        if path.is_dir():
+            shutil.rmtree(path, ignore_errors=True)
 
 
 def run(cmd: list[str]) -> subprocess.CompletedProcess[str]:
