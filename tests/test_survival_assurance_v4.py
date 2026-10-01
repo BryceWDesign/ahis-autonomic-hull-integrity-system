@@ -74,6 +74,13 @@ def test_replay_survives_json_roundtrip():
     b = json.loads(json.dumps(b))
     assert audit(b, trusted_digest=b["sha256"])["passed"]
 
+    # Optimizer diagnostics may vary across supported numerical platforms
+    # without changing the authorized decision or safety evidence.
+    b["result"]["plan"]["iterations"] += 1
+    b["result"]["plan"]["solver_message"] = "platform-specific solver diagnostic"
+    b["sha256"] = digest({k: v for k, v in b.items() if k != "sha256"})
+    assert audit(b)["passed"]
+
 
 @pytest.mark.parametrize("field", ["state", "physical_credit", "commands", "history", "controllability"])
 def test_rehashed_result_tampering_still_fails_replay(field):

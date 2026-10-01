@@ -6,7 +6,7 @@
       "actual": "RECOVERED_LIMITED",
       "audit_pass": true,
       "case": "nominal",
-      "digest": "ac1158822ee4a85bd16341127c9d87df0c892e57e5267632f38475ca53989dd2",
+      "digest": "5adef42f895ea80b3b93f7c1e73c40592ba8761696e923ebd55be8d72d46be5e",
       "expected": "RECOVERED_LIMITED",
       "passed": true,
       "reasons": []
@@ -15,7 +15,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "estop_open",
-      "digest": "269636a21f6cb1a5e547ea2265efaa99610361a3e5fbfc713ff5887ba353069c",
+      "digest": "cdfceb829046a4278baf4af047d461a69a32e89743de9ace9d76d20b93608f94",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -26,7 +26,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "overpressure",
-      "digest": "65052b4727abfa7dae1bc98879f642e61cc838df0d59ae9f95dee50c326cba3b",
+      "digest": "56ba0eb53c0c9cc90de77bc4d55dc37008e00d44af281171417503eef5ed5b7b",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -37,7 +37,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "planning_sensor_failed",
-      "digest": "ae0ee4651b06475fd920877c251c0b6019edb7b04ec6b8da74211844c4f297ee",
+      "digest": "2b4b5d90fd2a5f86ada880a753e6f0a9b9854bd934ea2a5a4fff92b4d2c4db8c",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -48,7 +48,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "arrival_network_failed",
-      "digest": "7ecf351c8ad6a5877ac9dd31e1b6e9e8180e7614196390c3a1be411ca540bd2e",
+      "digest": "b34413ea45ecf6a1e2f9a3ca66705e77729a3fc461f8675df150cec82e559234",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -59,7 +59,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "fusion_insufficient",
-      "digest": "613bf31cfe3f7f6d9faf260406f3598d65da60f5e045e036d073aa4d3aabf833",
+      "digest": "a8e5b552383f6449cc4ab658ffa8ffcae7c238fe53b0d805b5c4d2a774afe18b",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -70,7 +70,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "containment_unconfirmed",
-      "digest": "946d22a1c988b9005d09ddbf1b0069052a9c51730e156318c0f0806365c14107",
+      "digest": "2bd1535217461082f02d74e4e11d9c4b7c094e15b92dbe7ad785c9af0e4afc24",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -81,7 +81,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "barrier_failure",
-      "digest": "e10723f524c6478f3b32b58056c2d4729eb438a6cf3c58f6b0488f39c8ced394",
+      "digest": "03ec2cee95b5185582bfada70ba861e9dcf4da672220afcb083b5ef2b6072f75",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -92,7 +92,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "seal_actuator_lost",
-      "digest": "ffe9aa4adf886c32dc7cc132a5768d1deb26ce33c3b139c1e650ef640f1e7350",
+      "digest": "da3d8caafcfad71eb7f76299b74f3fc633c1ce06bb43086134920e7a2921c577",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -104,7 +104,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "damping_actuator_lost",
-      "digest": "5214394bc3d0b2be2fc052b603199911e06aabb1cf2629326bce8678ba19dd3e",
+      "digest": "00ff88c8ca16ee0ee2cbcc4641964718ec69bfb7be2e6203769fbf1b75d69be1",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -116,7 +116,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "all_actuators_lost",
-      "digest": "cc10c953a65d2352faef4424a58697e9763c4927a1e539cb2bcca619a8f244c8",
+      "digest": "a3ba8b5f60abfe7d8d9c3a7161a76eb0895b4b1f69e4e3b6da4edda78564f12c",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -128,7 +128,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "agent_depleted",
-      "digest": "e6298d25ec616217264d996469897fa7bc75d6f0a86956d45184ec908226498d",
+      "digest": "9d5f99d76dc5bc1b519088d12c5dd338d6e17950f07c0c2e153b48cee11da16f",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -140,7 +140,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "electrical_depleted",
-      "digest": "2524a6ee69347ad628fa1d208ec571fb331dd6994e74b1077ee5011ad8da390e",
+      "digest": "d6bd344b22ab50dd11074ac4eeb35d0d2b31d953620e4ad3bdf3b68ede6236b9",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -152,7 +152,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "cycles_depleted",
-      "digest": "cf0b8c821eb7ef6860f08eddf7f6f1b829678be14366a5d77ac744a520741bfa",
+      "digest": "0239498459579878da1ffcc3153b8cfd133a57e34063b917abe315171b1193c0",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -163,7 +163,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "no_safe_heater",
-      "digest": "39972a6216915351cfe6a380e0423c0aba4c3bfc5b1c18f6403175185d051b37",
+      "digest": "caa824527cadd9e45cef98195423676b3aab93e0442db25712428c3c916ccf3f",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -175,7 +175,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "exact_lock_blocks_repair",
-      "digest": "30a0124f36ffe84c023a4eebc7147c4d1c8459afbb78df2c231ff009ffb24cec",
+      "digest": "8f618801455cdd95d2c2e9f4ed68965872864b46730269b076a0935fac19d4f3",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -187,7 +187,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "robustness_failure",
-      "digest": "8f33cec6842f73c637cdc940157430255605b233364a25c19851a1e79b11ba8d",
+      "digest": "6c7717c4d7f415a7e0acf3c8de9fe6887aa0f270932e8a86a7173127f5c34af5",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -199,7 +199,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "solver_iteration_limit",
-      "digest": "161d9865fa746fa8a0b842ab5141cc77f8a2e62fee0808505d2bf43eb520b06e",
+      "digest": "0c93b7c4c8f829fe560c2bf5aac25c4f72a4b524dd31dceffa2f30f437cb6939",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -211,7 +211,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "heldout_failed",
-      "digest": "28862761de2abcdeafc5548f1e2791147dedfbe2ff312953f8c7cbd99955ed25",
+      "digest": "d00fc3b87e5cd31ae56c250be50beec796d5fd15e1b001dc6961690abf16d201",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -222,7 +222,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "heldout_unavailable",
-      "digest": "d8148e6f2cbc620e003815809561e22e06cdbad4abc7b04b266dc2b4c455dc00",
+      "digest": "3455cf535933c89c8e4a5bfe097d3af4081c74bcc61d3076e274e17200693439",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -233,7 +233,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "heldout_reuses_planning_sensor",
-      "digest": "1a276c176ea7236e484b77c93cef4dc57649445f7ac1c9772efde9e0e5c26e17",
+      "digest": "a72ff0ef8cd9ea085abb40ed4dcd29fe9bbec20bc24679e42379d65eb9921eeb",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -244,7 +244,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "heldout_reuses_acquisition_group",
-      "digest": "09d34c8d51abc747329e8e9b898622a00d1ed187d62ef2af327ea5068ab47c0a",
+      "digest": "369714e3c07092594d9cc1eaa10291691a5fdb59a2bc9ed65db5faba922978aa",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -255,7 +255,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "mass_nonclosure",
-      "digest": "1e34be969d9637cff6fcb766fefd3f140ba4580a92c6b0cc04da65b0d3ec0e49",
+      "digest": "3ff25269922e5f5017020a0b0045f4bc3fdd5a208bb7a43a0f8869a780a61b6a",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -266,7 +266,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "energy_nonclosure",
-      "digest": "b0a79ae61c25990fcd28066d697b60a288950181e8cf341a2619b8079c4e8a4c",
+      "digest": "dc1b4ed6628876a59504ad1a9c28733c236340459d63de4596947134ad73bdd6",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -277,7 +277,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "executed_command_mismatch",
-      "digest": "7f4dbccf6a1aa57f7a8f5424652bb3e8141e06e563fc019a4bcc79b11641a878",
+      "digest": "5f78a180d47630f83a6fe2d37762c733ff67b24b4a4f0e1019f0edf3a140effa",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -288,7 +288,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "consumption_mismatch",
-      "digest": "a8348fc5d570c4b9b4bb4f28fead5ff58fe4ff457df422436eddd5578fdba377",
+      "digest": "ebc04e38e189b523ee90018ddbad6da1a158a35b79775ccff47ed1a8cddb83f1",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -299,7 +299,7 @@
       "actual": "ISOLATED",
       "audit_pass": true,
       "case": "resource_overdraw",
-      "digest": "3e34711c01e5e0535c6035b4116942cf567359f87f7d388e0c2010f2c9a89914",
+      "digest": "3ee8ffbc5595c2d2e591a234ad9904d0851a52d6a6b1e4e73545d234b37c859c",
       "expected": "ISOLATED",
       "passed": true,
       "reasons": [
@@ -311,7 +311,7 @@
       "actual": "RECOVERED_LIMITED",
       "audit_pass": true,
       "case": "isolation_substitutes_for_seal",
-      "digest": "1849f56c35390d28210426154a32cc0e6382c978612ac085e52550f26ffe7f64",
+      "digest": "8a133faa8505e608d2033d1f9eaebaf8df45e916218b32fa1ae489d6083202ac",
       "expected": "RECOVERED_LIMITED",
       "passed": true,
       "reasons": []
@@ -320,7 +320,7 @@
       "actual": "RECOVERED_LIMITED",
       "audit_pass": true,
       "case": "heldout_weak_response",
-      "digest": "1ecafdc9376db67a1ce8044b0904f983d45416ef6269f320e8382e7b7bf87d92",
+      "digest": "5475d291cd83a857295036611c971aea255b0e54d7d8571b2895e09f8ce469a4",
       "expected": "RECOVERED_LIMITED",
       "passed": true,
       "reasons": []

@@ -37,7 +37,12 @@ def record(request):
     return bundle
 
 
+NON_AUTHORITATIVE_REPLAY_PATHS = {"result.plan.iterations", "result.plan.solver_message"}
+
+
 def differences(a, b, path="result"):
+    if path in NON_AUTHORITATIVE_REPLAY_PATHS:
+        return []
     if isinstance(a, dict) and isinstance(b, dict):
         if a.keys() != b.keys():
             return [path + ":keys"]

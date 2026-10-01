@@ -7,9 +7,9 @@
         "incoming": 50.0,
         "relative_tolerance": 1e-06,
         "terms": {
-          "delivered": 14.531617811418734,
+          "delivered": 14.53161781141846,
           "measured_loss": 0.0,
-          "remaining": 35.468382188581266
+          "remaining": 35.46838218858154
         }
       },
       "agent_b_g": {
@@ -17,9 +17,9 @@
         "incoming": 50.0,
         "relative_tolerance": 1e-06,
         "terms": {
-          "delivered": 14.531617811418734,
+          "delivered": 14.53161781141846,
           "measured_loss": 0.0,
-          "remaining": 35.468382188581266
+          "remaining": 35.46838218858154
         }
       },
       "electrical_j": {
@@ -27,9 +27,9 @@
         "incoming": 500.0,
         "relative_tolerance": 1e-06,
         "terms": {
-          "consumed": 171.81779197181385,
+          "consumed": 171.81779197179563,
           "measured_loss": 0.0,
-          "remaining": 328.18220802818615
+          "remaining": 328.1822080282044
         }
       },
       "impact_j": {
@@ -418,14 +418,14 @@
         1.0
       ],
       "consumed_resources": [
-        14.531617811418734,
-        14.531617811418734,
-        171.81779197181385
+        14.53161781141846,
+        14.53161781141846,
+        171.81779197179563
       ],
       "executed_command": [
-        14.531617811418734,
-        0.05189091406908799,
-        0.5648333333330796,
+        14.53161781141846,
+        0.05189091406909102,
+        0.5648333333328719,
         0.0
       ]
     },
@@ -549,7 +549,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.2,
-        "value": 0.16260160250261713
+        "value": 0.16260160250262268
       },
       {
         "coordinate": "vibration_ratio",
@@ -560,7 +560,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.4,
-        "value": 0.37055554644476235
+        "value": 0.370555546444749
       },
       {
         "coordinate": "temperature_c",
@@ -571,7 +571,7 @@
         "required": true,
         "unit": "degC",
         "upper": 65.0,
-        "value": 42.360127312545096
+        "value": 42.36012731253888
       },
       {
         "coordinate": "strain_ratio",
@@ -582,7 +582,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.7,
-        "value": 0.6611000000001522
+        "value": 0.6611000000002769
       }
     ]
   },
@@ -594,9 +594,9 @@
         "residual": 0.0,
         "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
         "terms": {
-          "delivered": 14.531617811418734,
+          "delivered": 14.53161781141846,
           "measured_loss": 0.0,
-          "remaining": 35.468382188581266
+          "remaining": 35.46838218858154
         },
         "tolerance": 5.099999999999999e-05
       },
@@ -606,9 +606,9 @@
         "residual": 0.0,
         "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
         "terms": {
-          "delivered": 14.531617811418734,
+          "delivered": 14.53161781141846,
           "measured_loss": 0.0,
-          "remaining": 35.468382188581266
+          "remaining": 35.46838218858154
         },
         "tolerance": 5.099999999999999e-05
       },
@@ -618,9 +618,9 @@
         "residual": 0.0,
         "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
         "terms": {
-          "consumed": 171.81779197181385,
+          "consumed": 171.81779197179563,
           "measured_loss": 0.0,
-          "remaining": 328.18220802818615
+          "remaining": 328.1822080282044
         },
         "tolerance": 0.000501
       },
@@ -689,54 +689,54 @@
     "hardware_authority": false,
     "history": [
       {
-        "event_hash": "54ed5bb473a4a53f133569bb8eb3977e0cc0db2fedc51e039b4607dd48839a6d",
+        "event_hash": "ce4322772029eed791adee9c3c7e89ea2ffc1eda1c043cf26810f7d8e88bd644",
         "event_type": "raw_evidence",
         "payload": {
           "event_id": "robustness_failure",
-          "request_digest": "c2ebf1e1dfd570db41d8914421e6725b91bfb8d29f31bc55eeed13836e381f35"
+          "request_digest": "11e83a2d87c8376f3696a58bbbade2d323e582b37b6c418f1cb567ff6c255f14"
         },
         "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
         "sequence": 0,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "e67eb8f9a1d7da359f092e02a21dfbf079cb33427c71c406cdcb2eb3bf252bf8",
+        "event_hash": "1350bb3a30ee45b62e91bd4939efddc63286a7003db0e009eee8c603e9d2a914",
         "event_type": "survival_transition",
         "payload": {
           "event": "stress",
           "from": "NOMINAL",
           "to": "PRESERVATION"
         },
-        "previous_hash": "54ed5bb473a4a53f133569bb8eb3977e0cc0db2fedc51e039b4607dd48839a6d",
+        "previous_hash": "ce4322772029eed791adee9c3c7e89ea2ffc1eda1c043cf26810f7d8e88bd644",
         "sequence": 1,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "f388b6a45ffc46a0aaa43c2ec4135902e7556da19071620116467b67d8d1ab4f",
+        "event_hash": "57b524c4fbe894c1e4458ebc55496e04ac1243cbf93914b5571f027eca2336e1",
         "event_type": "survival_transition",
         "payload": {
           "event": "containment_confirmed",
           "from": "PRESERVATION",
           "to": "CONTAINED"
         },
-        "previous_hash": "e67eb8f9a1d7da359f092e02a21dfbf079cb33427c71c406cdcb2eb3bf252bf8",
+        "previous_hash": "1350bb3a30ee45b62e91bd4939efddc63286a7003db0e009eee8c603e9d2a914",
         "sequence": 2,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "73d87fdac8d158bd51502190ee5b2a151a9c56a8f6eb406c90fe1bb6fbdc6f4a",
+        "event_hash": "8ea42bc1f5bc188548bf83a9b98c766c5abce071d6282baf50bef45ce0cec0df",
         "event_type": "survival_transition",
         "payload": {
           "event": "plan_rejected",
           "from": "CONTAINED",
           "to": "ISOLATED"
         },
-        "previous_hash": "f388b6a45ffc46a0aaa43c2ec4135902e7556da19071620116467b67d8d1ab4f",
+        "previous_hash": "57b524c4fbe894c1e4458ebc55496e04ac1243cbf93914b5571f027eca2336e1",
         "sequence": 3,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "aceb2abf2da09a6d3a2eadef2fb00a4f583b9f5f3c74d5b62b82af673c1de098",
+        "event_hash": "c8e732a59d6155267eeb7b9e1c2e1d6289ff2d2f08408a869eda45f3e8ce2b29",
         "event_type": "verdict",
         "payload": {
           "reasons": [
@@ -745,7 +745,7 @@
           ],
           "state": "ISOLATED"
         },
-        "previous_hash": "73d87fdac8d158bd51502190ee5b2a151a9c56a8f6eb406c90fe1bb6fbdc6f4a",
+        "previous_hash": "8ea42bc1f5bc188548bf83a9b98c766c5abce071d6282baf50bef45ce0cec0df",
         "sequence": 4,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       }
@@ -777,13 +777,13 @@
       ],
       "cycle_demand": 4,
       "hardware_authority": false,
-      "iterations": 20,
-      "objective": 41.549669634181065,
+      "iterations": 13,
+      "objective": 41.5496989163605,
       "optimality_scope": "LOCAL_CONSTRAINED_SOLUTION__NO_GLOBAL_OPTIMUM_CLAIM",
       "proposal": [
-        14.308049172835906,
-        0.049335712885092614,
-        0.9999999999999994,
+        14.308060151035704,
+        0.049335786142890935,
+        1.0,
         0.0
       ],
       "reasons": [
@@ -791,9 +791,9 @@
         "SURVIVAL_ENVELOPE_UNSATISFIED"
       ],
       "resource_demand": [
-        14.308049172835906,
-        14.308049172835906,
-        204.33153595970572
+        14.308060151035704,
+        14.308060151035704,
+        204.3316384368638
       ],
       "resource_remaining": [
         50.0,
@@ -803,29 +803,29 @@
       "robustness": {
         "all_pass": false,
         "fixed_command": [
-          14.308049172835906,
-          0.049335712885092614,
-          0.9999999999999994,
+          14.308060151035704,
+          0.049335786142890935,
+          1.0,
           0.0
         ],
         "scenarios": [
           {
             "id": "nominal",
             "state": [
-              0.16720977007020066,
-              0.3821831598026242,
-              55.394685703080725,
-              0.40000000000000036
+              0.1672095406125751,
+              0.38218281556559835,
+              55.39468628914313,
+              0.4
             ],
             "violations": []
           },
           {
             "id": "weak_response",
             "state": [
-              0.20495648083349371,
-              0.41192208463002916,
-              53.35521713277265,
-              0.4650000000000003
+              0.20495623387789907,
+              0.41192173184490055,
+              53.35521766022882,
+              0.46499999999999997
             ],
             "violations": [
               "leak_ratio",
@@ -835,20 +835,20 @@
           {
             "id": "hot_response",
             "state": [
-              0.16720977007020066,
-              0.3821831598026242,
-              61.394685703080725,
-              0.3400000000000004
+              0.1672095406125751,
+              0.38218281556559835,
+              61.39468628914313,
+              0.33999999999999997
             ],
             "violations": []
           },
           {
             "id": "severely_weak",
             "state": [
-              0.5389952718160735,
-              0.70509413512001,
-              42.15787428123229,
-              0.8100000000000002
+              0.5389950034017574,
+              0.7050937820954915,
+              42.15787451565725,
+              0.81
             ],
             "violations": [
               "leak_ratio",
@@ -975,19 +975,19 @@
       "hardware_authority": false,
       "ranking": [
         {
-          "covariance_determinant_ratio": 0.5642608231203468,
+          "covariance_determinant_ratio": 0.5642608231199796,
           "id": "A7",
-          "logdet_gain": 0.572238682041166
+          "logdet_gain": 0.5722386820418168
         },
         {
-          "covariance_determinant_ratio": 0.5714108053825449,
+          "covariance_determinant_ratio": 0.5714108053826905,
           "id": "A6",
-          "logdet_gain": 0.5596468789992913
+          "logdet_gain": 0.5596468789990363
         },
         {
-          "covariance_determinant_ratio": 0.640952415820648,
+          "covariance_determinant_ratio": 0.6409524158201133,
           "id": "A8",
-          "logdet_gain": 0.44480005910612896
+          "logdet_gain": 0.4448000591069632
         }
       ],
       "recommended": "A7"
@@ -1013,7 +1013,7 @@
     "verification": null
   },
   "schema": "ahis.survival/4.0",
-  "sha256": "8f33cec6842f73c637cdc940157430255605b233364a25c19851a1e79b11ba8d",
+  "sha256": "6c7717c4d7f415a7e0acf3c8de9fe6887aa0f270932e8a86a7173127f5c34af5",
   "software": {
     "dependencies": {
       "numpy": "2.3.5",
@@ -1055,13 +1055,13 @@
       "survival/numeric.py": "ed8f726c2bd1ce77ba1479b7b8218896fdbfe115d2aa5aefe032c4c46d97e2e7",
       "survival/propagation.py": "c217fdecbaf71f129f240de9eb09f30205c1c7c8b2e2d626361618077b2ea6ac",
       "survival/protection_stack.py": "d37057bc69ce9f90599bf2facce3fdfe865cf73506e212e54f1b989adb13afb7",
-      "survival/replay_audit.py": "cb17e86e42b223f9aeabc8c663476f72cc2a1c185379ca7ce7405d7e99465953",
+      "survival/replay_audit.py": "5659cb716a6b00fbfe5076bdd7b3e125a5c0acd23e8ee52bb2b0115304aef734",
       "survival/research_programs.py": "30759b7a96ee14213721a6836fbba9f998516d0cd573748719413f5add4416e0",
       "survival/survival_envelope.py": "46647c6c22e4d11144c103f3bb1e88b1866ed3c98c48d724c1811de4fa77977b",
       "survival/survival_optimizer.py": "89411d9c3f6ded68e99014c93177a36385ccaa5e14c7df34efa08c86c5efc2e1",
       "survival/uncertainty.py": "322b952b0f441a103671740e6f0f1d6ebfd7801436938a5e9a6c4b15a8c8be63",
       "verification.py": "c48319770ce589b7710a3b05fa5ca6ea2e4ce2f1a70a46219595b4c91b310c93"
     },
-    "source_sha256": "38a46ed431d7e1ab7064468f9bdc5a326dab7f09ebefc4263796330900441cf2"
+    "source_sha256": "01f54fe38c0ca4ff4721544c8d489f72d8d8decd3f02b5148200af423b80da9b"
   }
 }

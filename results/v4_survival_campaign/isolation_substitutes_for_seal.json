@@ -27,9 +27,9 @@
         "incoming": 500.0,
         "relative_tolerance": 1e-06,
         "terms": {
-          "consumed": 85.38003466532312,
+          "consumed": 85.38003466566732,
           "measured_loss": 0.0,
-          "remaining": 414.61996533467686
+          "remaining": 414.6199653343327
         }
       },
       "impact_j": {
@@ -420,13 +420,13 @@
       "consumed_resources": [
         0.0,
         0.0,
-        85.38003466532312
+        85.38003466566732
       ],
       "executed_command": [
         0.0,
-        0.051890914068759876,
-        0.5648333333315241,
-        0.9938395061683073
+        0.05189091406908362,
+        0.5648333333333223,
+        0.9938395061728269
       ]
     },
     "schema": "ahis.survival/4.0",
@@ -534,7 +534,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.2,
-        "value": 0.1055444444485234
+        "value": 0.10554444444445577
       },
       {
         "coordinate": "vibration_ratio",
@@ -545,7 +545,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.4,
-        "value": 0.37055554644620836
+        "value": 0.3705555464447817
       },
       {
         "coordinate": "temperature_c",
@@ -556,7 +556,7 @@
         "required": true,
         "unit": "degC",
         "upper": 65.0,
-        "value": 42.3601273124958
+        "value": 42.360127312552336
       },
       {
         "coordinate": "strain_ratio",
@@ -567,7 +567,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.7,
-        "value": 0.6611000000010856
+        "value": 0.6611000000000067
       }
     ]
   },
@@ -603,9 +603,9 @@
         "residual": 0.0,
         "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
         "terms": {
-          "consumed": 85.38003466532312,
+          "consumed": 85.38003466566732,
           "measured_loss": 0.0,
-          "remaining": 414.61996533467686
+          "remaining": 414.6199653343327
         },
         "tolerance": 0.000501
       },
@@ -626,9 +626,9 @@
     },
     "authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
     "commands": {
-      "damping_delta_zeta": 0.051890914068759876,
-      "heater_fraction": 0.5648333333315241,
-      "isolation_fraction": 0.9938395061683073,
+      "damping_delta_zeta": 0.05189091406908362,
+      "heater_fraction": 0.5648333333333223,
+      "isolation_fraction": 0.9938395061728269,
       "paired_agent_ml": 0.0
     },
     "controllability": {
@@ -674,84 +674,84 @@
     "hardware_authority": false,
     "history": [
       {
-        "event_hash": "5a9ee968cce8b2b93389ea9154eb7045a13bc8b68c70c7ec2b3c4b935b59cdd7",
+        "event_hash": "7fdcd4aabe654bed2d31a329663bd036c16ef6b02dc9874e81d3c1419865d9a8",
         "event_type": "raw_evidence",
         "payload": {
           "event_id": "AHIS-V4-SYNTHETIC-001",
-          "request_digest": "5833cb76cc29f2ead354416ef27263108431c2d7a69c11b4d650530736a41716"
+          "request_digest": "5afdfd0a0c4bf0d70335f44c195fe7e962d14c8c881334e380b5991fef0280a2"
         },
         "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
         "sequence": 0,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "72b9d37cee051665c39852141789385b2b95ba66bff93fef9d025a5ceb2e2ad5",
+        "event_hash": "1274fa3fb9c4b080e9a629d4d0c6a36bd51de4f259df663e62c846b25af79503",
         "event_type": "survival_transition",
         "payload": {
           "event": "stress",
           "from": "NOMINAL",
           "to": "PRESERVATION"
         },
-        "previous_hash": "5a9ee968cce8b2b93389ea9154eb7045a13bc8b68c70c7ec2b3c4b935b59cdd7",
+        "previous_hash": "7fdcd4aabe654bed2d31a329663bd036c16ef6b02dc9874e81d3c1419865d9a8",
         "sequence": 1,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "cbd6cd4bc8571bd164af7c7433a13d53b342377f8a82ac34ec61ab599940a77e",
+        "event_hash": "f7767e75ab428843723516d331112bd24809ff3a56cdbe11ef89699aead25c85",
         "event_type": "survival_transition",
         "payload": {
           "event": "containment_confirmed",
           "from": "PRESERVATION",
           "to": "CONTAINED"
         },
-        "previous_hash": "72b9d37cee051665c39852141789385b2b95ba66bff93fef9d025a5ceb2e2ad5",
+        "previous_hash": "1274fa3fb9c4b080e9a629d4d0c6a36bd51de4f259df663e62c846b25af79503",
         "sequence": 2,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "e433d73f76698bc7335dfa5d55568c3aaaf2c8c3475f45303f6b1646895f91d4",
+        "event_hash": "4c1f6bf0bbd422fb200e18f48c2f499a03ab22e10ae9d5eda3b9dad222bb924a",
         "event_type": "survival_transition",
         "payload": {
           "event": "plan_accepted",
           "from": "CONTAINED",
           "to": "REPAIRING"
         },
-        "previous_hash": "cbd6cd4bc8571bd164af7c7433a13d53b342377f8a82ac34ec61ab599940a77e",
+        "previous_hash": "f7767e75ab428843723516d331112bd24809ff3a56cdbe11ef89699aead25c85",
         "sequence": 3,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "db0b1e1acb0d3f8b62c0b3bee3f07055ffe6f90235cd37b073416599c891c957",
+        "event_hash": "face651db484e736233e66b43257f6e334380de8b3d6a4689b4286542066e997",
         "event_type": "survival_transition",
         "payload": {
           "event": "response_recorded",
           "from": "REPAIRING",
           "to": "VERIFYING"
         },
-        "previous_hash": "e433d73f76698bc7335dfa5d55568c3aaaf2c8c3475f45303f6b1646895f91d4",
+        "previous_hash": "4c1f6bf0bbd422fb200e18f48c2f499a03ab22e10ae9d5eda3b9dad222bb924a",
         "sequence": 4,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "a5e4b2a5765aa2b915cf193cf23572dd70f029498316d2c319a06ed192d7feb2",
+        "event_hash": "e8b3fc944b62d52d67073749eafcb6d0050d3ba8bde94a1c8f4fc0f654efacb8",
         "event_type": "survival_transition",
         "payload": {
           "event": "held_out_pass",
           "from": "VERIFYING",
           "to": "RECOVERED_LIMITED"
         },
-        "previous_hash": "db0b1e1acb0d3f8b62c0b3bee3f07055ffe6f90235cd37b073416599c891c957",
+        "previous_hash": "face651db484e736233e66b43257f6e334380de8b3d6a4689b4286542066e997",
         "sequence": 5,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "5dfaa8990b73e0ee2a9febd0c54d3c897d876f4e5f8a984933f8caffaae80f91",
+        "event_hash": "577c84202c4b59e586b416b3623f323ef6e224a13249cde42b560240fc0d3378",
         "event_type": "verdict",
         "payload": {
           "reasons": [],
           "state": "RECOVERED_LIMITED"
         },
-        "previous_hash": "a5e4b2a5765aa2b915cf193cf23572dd70f029498316d2c319a06ed192d7feb2",
+        "previous_hash": "e8b3fc944b62d52d67073749eafcb6d0050d3ba8bde94a1c8f4fc0f654efacb8",
         "sequence": 6,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       }
@@ -777,68 +777,68 @@
       "accepted": true,
       "authorized_command": [
         0.0,
-        0.051890914068759876,
-        0.5648333333315241,
-        0.9938395061683073
+        0.05189091406908362,
+        0.5648333333333223,
+        0.9938395061728269
       ],
       "cycle_demand": 3,
       "hardware_authority": false,
       "iterations": 8,
-      "objective": 29.584548196894325,
+      "objective": 29.584548197031477,
       "optimality_scope": "LOCAL_CONSTRAINED_SOLUTION__NO_GLOBAL_OPTIMUM_CLAIM",
       "proposal": [
         0.0,
-        0.051890914068759876,
-        0.5648333333315241,
-        0.9938395061683073
+        0.05189091406908362,
+        0.5648333333333223,
+        0.9938395061728269
       ],
       "reasons": [],
       "resource_demand": [
         0.0,
         0.0,
-        85.38003466532312
+        85.38003466566732
       ],
       "resource_remaining": [
         50.0,
         50.0,
-        414.61996533467686
+        414.6199653343327
       ],
       "robustness": {
         "all_pass": true,
         "fixed_command": [
           0.0,
-          0.051890914068759876,
-          0.5648333333315241,
-          0.9938395061683073
+          0.05189091406908362,
+          0.5648333333333223,
+          0.9938395061728269
         ],
         "scenarios": [
           {
             "id": "nominal",
             "state": [
-              0.1055444444485234,
-              0.37055554644620836,
-              42.3601273124958,
-              0.6611000000010856
+              0.10554444444445577,
+              0.3705555464447817,
+              42.360127312552336,
+              0.6611000000000067
             ],
             "violations": []
           },
           {
             "id": "weak_response",
             "state": [
-              0.19999000000367106,
-              0.399990000001477,
-              41.624114581246225,
-              0.699990000000977
+              0.19999000000001022,
+              0.399990000000011,
+              41.62411458129711,
+              0.699990000000006
             ],
             "violations": []
           },
           {
             "id": "hot_response",
             "state": [
-              0.1055444444485234,
-              0.37055554644620836,
-              47.054627312490375,
-              0.6272100000011941
+              0.10554444444445577,
+              0.3705555464447817,
+              47.05462731255231,
+              0.6272100000000072
             ],
             "violations": []
           }
@@ -950,7 +950,7 @@
     "resource_remaining": [
       50.0,
       50.0,
-      414.61996533467686
+      414.6199653343327
     ],
     "return_to_service_allowed": false,
     "schema": "ahis.survival/4.0",
@@ -958,19 +958,19 @@
       "hardware_authority": false,
       "ranking": [
         {
-          "covariance_determinant_ratio": 0.5642608231203468,
+          "covariance_determinant_ratio": 0.5642608231199796,
           "id": "A7",
-          "logdet_gain": 0.572238682041166
+          "logdet_gain": 0.5722386820418168
         },
         {
-          "covariance_determinant_ratio": 0.5714108053825449,
+          "covariance_determinant_ratio": 0.5714108053826905,
           "id": "A6",
-          "logdet_gain": 0.5596468789992913
+          "logdet_gain": 0.5596468789990363
         },
         {
-          "covariance_determinant_ratio": 0.640952415820648,
+          "covariance_determinant_ratio": 0.6409524158201133,
           "id": "A8",
-          "logdet_gain": 0.44480005910612896
+          "logdet_gain": 0.4448000591069632
         }
       ],
       "recommended": "A7"
@@ -1013,7 +1013,7 @@
     }
   },
   "schema": "ahis.survival/4.0",
-  "sha256": "1849f56c35390d28210426154a32cc0e6382c978612ac085e52550f26ffe7f64",
+  "sha256": "8a133faa8505e608d2033d1f9eaebaf8df45e916218b32fa1ae489d6083202ac",
   "software": {
     "dependencies": {
       "numpy": "2.3.5",
@@ -1055,13 +1055,13 @@
       "survival/numeric.py": "ed8f726c2bd1ce77ba1479b7b8218896fdbfe115d2aa5aefe032c4c46d97e2e7",
       "survival/propagation.py": "c217fdecbaf71f129f240de9eb09f30205c1c7c8b2e2d626361618077b2ea6ac",
       "survival/protection_stack.py": "d37057bc69ce9f90599bf2facce3fdfe865cf73506e212e54f1b989adb13afb7",
-      "survival/replay_audit.py": "cb17e86e42b223f9aeabc8c663476f72cc2a1c185379ca7ce7405d7e99465953",
+      "survival/replay_audit.py": "5659cb716a6b00fbfe5076bdd7b3e125a5c0acd23e8ee52bb2b0115304aef734",
       "survival/research_programs.py": "30759b7a96ee14213721a6836fbba9f998516d0cd573748719413f5add4416e0",
       "survival/survival_envelope.py": "46647c6c22e4d11144c103f3bb1e88b1866ed3c98c48d724c1811de4fa77977b",
       "survival/survival_optimizer.py": "89411d9c3f6ded68e99014c93177a36385ccaa5e14c7df34efa08c86c5efc2e1",
       "survival/uncertainty.py": "322b952b0f441a103671740e6f0f1d6ebfd7801436938a5e9a6c4b15a8c8be63",
       "verification.py": "c48319770ce589b7710a3b05fa5ca6ea2e4ce2f1a70a46219595b4c91b310c93"
     },
-    "source_sha256": "38a46ed431d7e1ab7064468f9bdc5a326dab7f09ebefc4263796330900441cf2"
+    "source_sha256": "01f54fe38c0ca4ff4721544c8d489f72d8d8decd3f02b5148200af423b80da9b"
   }
 }

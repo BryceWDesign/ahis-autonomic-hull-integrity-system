@@ -7,9 +7,9 @@
         "incoming": 50.0,
         "relative_tolerance": 1e-06,
         "terms": {
-          "delivered": 14.531617811418734,
+          "delivered": 14.53161781141846,
           "measured_loss": 0.0,
-          "remaining": 35.468382188581266
+          "remaining": 35.46838218858154
         }
       },
       "agent_b_g": {
@@ -17,9 +17,9 @@
         "incoming": 50.0,
         "relative_tolerance": 1e-06,
         "terms": {
-          "delivered": 14.531617811418734,
+          "delivered": 14.53161781141846,
           "measured_loss": 0.0,
-          "remaining": 35.468382188581266
+          "remaining": 35.46838218858154
         }
       },
       "electrical_j": {
@@ -27,9 +27,9 @@
         "incoming": 500.0,
         "relative_tolerance": 1e-06,
         "terms": {
-          "consumed": 171.81779197181385,
+          "consumed": 171.81779197179563,
           "measured_loss": 0.0,
-          "remaining": 328.18220802818615
+          "remaining": 328.1822080282044
         }
       },
       "impact_j": {
@@ -418,14 +418,14 @@
         1.0
       ],
       "consumed_resources": [
-        14.531617811418734,
-        14.531617811418734,
-        171.81779197181385
+        14.53161781141846,
+        14.53161781141846,
+        171.81779197179563
       ],
       "executed_command": [
-        14.531617811418734,
-        0.05189091406908799,
-        0.5648333333330796,
+        14.53161781141846,
+        0.05189091406909102,
+        0.5648333333328719,
         0.0
       ]
     },
@@ -534,7 +534,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.2,
-        "value": 0.16260160250261713
+        "value": 0.16260160250262268
       },
       {
         "coordinate": "vibration_ratio",
@@ -545,7 +545,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.4,
-        "value": 0.37055554644476235
+        "value": 0.370555546444749
       },
       {
         "coordinate": "temperature_c",
@@ -556,7 +556,7 @@
         "required": true,
         "unit": "degC",
         "upper": 65.0,
-        "value": 42.360127312545096
+        "value": 42.36012731253888
       },
       {
         "coordinate": "strain_ratio",
@@ -567,7 +567,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.7,
-        "value": 0.6611000000001522
+        "value": 0.6611000000002769
       }
     ]
   },
@@ -579,9 +579,9 @@
         "residual": 0.0,
         "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
         "terms": {
-          "delivered": 14.531617811418734,
+          "delivered": 14.53161781141846,
           "measured_loss": 0.0,
-          "remaining": 35.468382188581266
+          "remaining": 35.46838218858154
         },
         "tolerance": 5.099999999999999e-05
       },
@@ -591,9 +591,9 @@
         "residual": 0.0,
         "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
         "terms": {
-          "delivered": 14.531617811418734,
+          "delivered": 14.53161781141846,
           "measured_loss": 0.0,
-          "remaining": 35.468382188581266
+          "remaining": 35.46838218858154
         },
         "tolerance": 5.099999999999999e-05
       },
@@ -603,9 +603,9 @@
         "residual": 0.0,
         "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
         "terms": {
-          "consumed": 171.81779197181385,
+          "consumed": 171.81779197179563,
           "measured_loss": 0.0,
-          "remaining": 328.18220802818615
+          "remaining": 328.1822080282044
         },
         "tolerance": 0.000501
       },
@@ -626,10 +626,10 @@
     },
     "authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
     "commands": {
-      "damping_delta_zeta": 0.05189091406908799,
-      "heater_fraction": 0.5648333333330796,
+      "damping_delta_zeta": 0.05189091406909102,
+      "heater_fraction": 0.5648333333328719,
       "isolation_fraction": 0.0,
-      "paired_agent_ml": 14.531617811418734
+      "paired_agent_ml": 14.53161781141846
     },
     "controllability": {
       "assessed_objectives": [
@@ -674,78 +674,78 @@
     "hardware_authority": false,
     "history": [
       {
-        "event_hash": "d47ba3e05eccad621200a02de5ac568079c98946e31e51af20673a2bef85ea02",
+        "event_hash": "91def251eaabb64e557cd7d675e79c1badcb6f98cbb47dec043c749777324251",
         "event_type": "raw_evidence",
         "payload": {
           "event_id": "energy_nonclosure",
-          "request_digest": "112cd25931a2948f3cff30e65f9b8d34f36babdfb627804a30a995e658fd94f3"
+          "request_digest": "22fbed2291c4826bea49db8cdcbbb075ab4441a0d569c4f3fa6b814423f6d612"
         },
         "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
         "sequence": 0,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "12b4865eeb672055b95a648c257021aca86002a23fac112553569b7a2a51b3ef",
+        "event_hash": "00d32bc9524ca52fe76787c5599c243e63048cc25c0a99bec7ff06a44e0c36ad",
         "event_type": "survival_transition",
         "payload": {
           "event": "stress",
           "from": "NOMINAL",
           "to": "PRESERVATION"
         },
-        "previous_hash": "d47ba3e05eccad621200a02de5ac568079c98946e31e51af20673a2bef85ea02",
+        "previous_hash": "91def251eaabb64e557cd7d675e79c1badcb6f98cbb47dec043c749777324251",
         "sequence": 1,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "4d17518da48d6a7b936936af0dab67503cf7e8b5db15d4d4cbfa7198f8a99cff",
+        "event_hash": "e662c8d8c4bacf8e672e63f27c007fb08bf092ebdb34dd79649f1075269ee465",
         "event_type": "survival_transition",
         "payload": {
           "event": "containment_confirmed",
           "from": "PRESERVATION",
           "to": "CONTAINED"
         },
-        "previous_hash": "12b4865eeb672055b95a648c257021aca86002a23fac112553569b7a2a51b3ef",
+        "previous_hash": "00d32bc9524ca52fe76787c5599c243e63048cc25c0a99bec7ff06a44e0c36ad",
         "sequence": 2,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "e7afcff0b002ef844354e12fb7fcba7e19a158032f52118a3a5e531b90c4f754",
+        "event_hash": "80ebada12cc7082673cb4e6e8efe82556a1367d28081ac9939c6d429d51f6ca0",
         "event_type": "survival_transition",
         "payload": {
           "event": "plan_accepted",
           "from": "CONTAINED",
           "to": "REPAIRING"
         },
-        "previous_hash": "4d17518da48d6a7b936936af0dab67503cf7e8b5db15d4d4cbfa7198f8a99cff",
+        "previous_hash": "e662c8d8c4bacf8e672e63f27c007fb08bf092ebdb34dd79649f1075269ee465",
         "sequence": 3,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "23e8a238fdbec8bb9e9814dcb8e9cc17ad468765b6f217759cc4b264b6abf0cd",
+        "event_hash": "483436eed8f72765f65a2d17e57cb6512ec74a3e531dbca21ec327419d4b69c9",
         "event_type": "survival_transition",
         "payload": {
           "event": "response_recorded",
           "from": "REPAIRING",
           "to": "VERIFYING"
         },
-        "previous_hash": "e7afcff0b002ef844354e12fb7fcba7e19a158032f52118a3a5e531b90c4f754",
+        "previous_hash": "80ebada12cc7082673cb4e6e8efe82556a1367d28081ac9939c6d429d51f6ca0",
         "sequence": 4,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "813eeb18ddd7c58bde50aae3acee537e55ed87bce6f4dcdd7a21555f90b238ed",
+        "event_hash": "a24f2e7f0460bb49cd5d9f35b0ab2ca744fde0fd221713f4108521a19b2362fe",
         "event_type": "survival_transition",
         "payload": {
           "event": "accounting_failed",
           "from": "VERIFYING",
           "to": "ISOLATED"
         },
-        "previous_hash": "23e8a238fdbec8bb9e9814dcb8e9cc17ad468765b6f217759cc4b264b6abf0cd",
+        "previous_hash": "483436eed8f72765f65a2d17e57cb6512ec74a3e531dbca21ec327419d4b69c9",
         "sequence": 5,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "2f14937d4b16a39b5d81822d037eaac14bbdee4a1f7b707c49f5a12f97f719c1",
+        "event_hash": "1869cb3a1458daaac909a8a7a83638b40fcd109b36d148c1dd3614870005aa93",
         "event_type": "verdict",
         "payload": {
           "reasons": [
@@ -753,7 +753,7 @@
           ],
           "state": "ISOLATED"
         },
-        "previous_hash": "813eeb18ddd7c58bde50aae3acee537e55ed87bce6f4dcdd7a21555f90b238ed",
+        "previous_hash": "a24f2e7f0460bb49cd5d9f35b0ab2ca744fde0fd221713f4108521a19b2362fe",
         "sequence": 6,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       }
@@ -778,69 +778,69 @@
     "plan": {
       "accepted": true,
       "authorized_command": [
-        14.531617811418734,
-        0.05189091406908799,
-        0.5648333333330796,
+        14.53161781141846,
+        0.05189091406909102,
+        0.5648333333328719,
         0.0
       ],
       "cycle_demand": 4,
       "hardware_authority": false,
-      "iterations": 8,
-      "objective": 38.770993696410905,
+      "iterations": 12,
+      "objective": 38.77099369640899,
       "optimality_scope": "LOCAL_CONSTRAINED_SOLUTION__NO_GLOBAL_OPTIMUM_CLAIM",
       "proposal": [
-        14.531617811418734,
-        0.05189091406908799,
-        0.5648333333330796,
+        14.53161781141846,
+        0.05189091406909102,
+        0.5648333333328719,
         0.0
       ],
       "reasons": [],
       "resource_demand": [
-        14.531617811418734,
-        14.531617811418734,
-        171.81779197181385
+        14.53161781141846,
+        14.53161781141846,
+        171.81779197179563
       ],
       "resource_remaining": [
-        35.468382188581266,
-        35.468382188581266,
-        328.18220802818615
+        35.46838218858154,
+        35.46838218858154,
+        328.1822080282044
       ],
       "robustness": {
         "all_pass": true,
         "fixed_command": [
-          14.531617811418734,
-          0.05189091406908799,
-          0.5648333333330796,
+          14.53161781141846,
+          0.05189091406909102,
+          0.5648333333328719,
           0.0
         ],
         "scenarios": [
           {
             "id": "nominal",
             "state": [
-              0.16260160250261713,
-              0.37055554644476235,
-              42.360127312545096,
-              0.6611000000001522
+              0.16260160250262268,
+              0.370555546444749,
+              42.36012731253888,
+              0.6611000000002769
             ],
             "violations": []
           },
           {
             "id": "weak_response",
             "state": [
-              0.19999000000000666,
-              0.3999899999999913,
-              41.624114581290584,
-              0.699990000000137
+              0.19999000000001266,
+              0.3999899999999776,
+              41.62411458128499,
+              0.6999900000002491
             ],
             "violations": []
           },
           {
             "id": "hot_response",
             "state": [
-              0.16260160250261713,
-              0.37055554644476235,
-              47.05462731254433,
-              0.6272100000001675
+              0.16260160250262268,
+              0.370555546444749,
+              47.054627312537505,
+              0.6272100000003045
             ],
             "violations": []
           }
@@ -952,9 +952,9 @@
       "CONSERVATION_ACCOUNTING_FAILED"
     ],
     "resource_remaining": [
-      35.468382188581266,
-      35.468382188581266,
-      328.18220802818615
+      35.46838218858154,
+      35.46838218858154,
+      328.1822080282044
     ],
     "return_to_service_allowed": false,
     "schema": "ahis.survival/4.0",
@@ -962,19 +962,19 @@
       "hardware_authority": false,
       "ranking": [
         {
-          "covariance_determinant_ratio": 0.5642608231203468,
+          "covariance_determinant_ratio": 0.5642608231199796,
           "id": "A7",
-          "logdet_gain": 0.572238682041166
+          "logdet_gain": 0.5722386820418168
         },
         {
-          "covariance_determinant_ratio": 0.5714108053825449,
+          "covariance_determinant_ratio": 0.5714108053826905,
           "id": "A6",
-          "logdet_gain": 0.5596468789992913
+          "logdet_gain": 0.5596468789990363
         },
         {
-          "covariance_determinant_ratio": 0.640952415820648,
+          "covariance_determinant_ratio": 0.6409524158201133,
           "id": "A8",
-          "logdet_gain": 0.44480005910612896
+          "logdet_gain": 0.4448000591069632
         }
       ],
       "recommended": "A7"
@@ -1017,7 +1017,7 @@
     }
   },
   "schema": "ahis.survival/4.0",
-  "sha256": "b0a79ae61c25990fcd28066d697b60a288950181e8cf341a2619b8079c4e8a4c",
+  "sha256": "dc1b4ed6628876a59504ad1a9c28733c236340459d63de4596947134ad73bdd6",
   "software": {
     "dependencies": {
       "numpy": "2.3.5",
@@ -1059,13 +1059,13 @@
       "survival/numeric.py": "ed8f726c2bd1ce77ba1479b7b8218896fdbfe115d2aa5aefe032c4c46d97e2e7",
       "survival/propagation.py": "c217fdecbaf71f129f240de9eb09f30205c1c7c8b2e2d626361618077b2ea6ac",
       "survival/protection_stack.py": "d37057bc69ce9f90599bf2facce3fdfe865cf73506e212e54f1b989adb13afb7",
-      "survival/replay_audit.py": "cb17e86e42b223f9aeabc8c663476f72cc2a1c185379ca7ce7405d7e99465953",
+      "survival/replay_audit.py": "5659cb716a6b00fbfe5076bdd7b3e125a5c0acd23e8ee52bb2b0115304aef734",
       "survival/research_programs.py": "30759b7a96ee14213721a6836fbba9f998516d0cd573748719413f5add4416e0",
       "survival/survival_envelope.py": "46647c6c22e4d11144c103f3bb1e88b1866ed3c98c48d724c1811de4fa77977b",
       "survival/survival_optimizer.py": "89411d9c3f6ded68e99014c93177a36385ccaa5e14c7df34efa08c86c5efc2e1",
       "survival/uncertainty.py": "322b952b0f441a103671740e6f0f1d6ebfd7801436938a5e9a6c4b15a8c8be63",
       "verification.py": "c48319770ce589b7710a3b05fa5ca6ea2e4ce2f1a70a46219595b4c91b310c93"
     },
-    "source_sha256": "38a46ed431d7e1ab7064468f9bdc5a326dab7f09ebefc4263796330900441cf2"
+    "source_sha256": "01f54fe38c0ca4ff4721544c8d489f72d8d8decd3f02b5148200af423b80da9b"
   }
 }
