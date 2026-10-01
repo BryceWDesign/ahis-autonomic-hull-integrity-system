@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "4.0.0",
   "status": "AWAITING_PHYSICAL_VALIDATION",
   "p1_low_energy_autonomous_leak_seal_demonstrated": false,
   "ionomer_puncture_sealing_demonstrated": false,
@@ -11,5 +11,10 @@
   "pressure_hull_survivability_demonstrated": false,
   "operational_return_to_service_authorized": false,
   "certification_claimed": false,
-  "note": "Software/HIL qualification cannot promote these fields. Promotion requires measured physical evidence and explicit human review."
+  "note": "Software/HIL qualification cannot promote these fields. Promotion requires measured physical evidence and explicit human review.",
+  "stress_adaptive_interphase_demonstrated": false,
+  "multilayer_impact_protection_demonstrated": false,
+  "adaptive_architecture_demonstrated": false,
+  "resilient_sensor_network_physically_validated": false,
+  "charged_particle_shielding_demonstrated": false
 }

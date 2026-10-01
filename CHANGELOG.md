@@ -1,3 +1,7 @@
+# AHIS v4.0.0, 2026-10-01
+
+Added the integrated Adaptive Survival Envelope software/HIL research path, bounded four-action reference model, SVD authority and safe-mode diagnostics, fixed-command robustness, active sensing, preservation/isolation state policy, hazard graphs, conservation ledgers, policy-bound held-out verification, source-bound replay and research completeness gates. Retained P1 hardware/CAD/firmware/calibration and v3 campaign. Added pinned validation dependencies and a Linux/Windows CI matrix. All physical capabilities remain unvalidated.
+
 # Changelog
 
 ## 3.0.0 — Autonomic Structural Repair & Survivability Testbed

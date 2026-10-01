@@ -105,3 +105,10 @@ results/**/.cache/
 *.p12
 *.pfx
 secrets/
+
+# Release validation records are intentional artifacts.
+!results/validation/*.log
+
+# The build distribution license is a required dependency notice.
+!BOM/third_party_notices/build/
+!BOM/third_party_notices/build/**

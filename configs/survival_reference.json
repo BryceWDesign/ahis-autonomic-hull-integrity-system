@@ -1,0 +1,571 @@
+{
+  "accounting": {
+    "agent_a_g": {
+      "absolute_tolerance": 1e-06,
+      "incoming": 50.0,
+      "relative_tolerance": 1e-06,
+      "terms": {
+        "delivered": 14.531617811418734,
+        "measured_loss": 0.0,
+        "remaining": 35.468382188581266
+      }
+    },
+    "agent_b_g": {
+      "absolute_tolerance": 1e-06,
+      "incoming": 50.0,
+      "relative_tolerance": 1e-06,
+      "terms": {
+        "delivered": 14.531617811418734,
+        "measured_loss": 0.0,
+        "remaining": 35.468382188581266
+      }
+    },
+    "electrical_j": {
+      "absolute_tolerance": 1e-06,
+      "incoming": 500.0,
+      "relative_tolerance": 1e-06,
+      "terms": {
+        "consumed": 171.81779197181385,
+        "measured_loss": 0.0,
+        "remaining": 328.18220802818615
+      }
+    },
+    "impact_j": {
+      "absolute_tolerance": 1.0,
+      "incoming": 1000.0,
+      "relative_tolerance": 0.001,
+      "terms": {
+        "bumper_deformation": 200.0,
+        "fracture": 250.0,
+        "residual_debris": 100.0,
+        "thermal": 150.0,
+        "transmitted": 300.0
+      }
+    }
+  },
+  "basis": {
+    "available": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "baseline_zeta": 0.03,
+    "cost": [
+      2.0,
+      100.0,
+      8.0,
+      20.0
+    ],
+    "evidence_class": "SYNTHETIC",
+    "id": "AHIS-SYNTHETIC-INFLUENCE-4.0",
+    "resource_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        8.0,
+        200.0,
+        80.0,
+        30.0
+      ]
+    ],
+    "resource_names": [
+      "agent_a_ml",
+      "agent_b_ml",
+      "electrical_j"
+    ],
+    "response_scale_ml": 8.0,
+    "state": [
+      1.0,
+      1.0,
+      25.0,
+      1.0
+    ],
+    "upper": [
+      22.5,
+      0.12,
+      1.0,
+      1.0
+    ]
+  },
+  "budget": {
+    "cycles_remaining": 10,
+    "resources": [
+      50.0,
+      50.0,
+      500.0
+    ]
+  },
+  "calibration_identities": {
+    "evidence_class": "SYNTHETIC",
+    "influence": "AHIS-SYNTHETIC-INFLUENCE-4.0",
+    "localization": "AHIS-ANISOTROPIC-2450-012-20",
+    "mass_density": "AHIS-HIL-1-G-PER-ML",
+    "measurement_noise": "AHIS-HIL-2-MICROSECOND"
+  },
+  "containment_confirmed": true,
+  "envelope": {
+    "lower": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "names": [
+      "leak_ratio",
+      "vibration_ratio",
+      "temperature_c",
+      "strain_ratio"
+    ],
+    "scales": [
+      1.0,
+      1.0,
+      40.0,
+      1.0
+    ],
+    "units": [
+      "ratio",
+      "ratio",
+      "degC",
+      "ratio"
+    ],
+    "upper": [
+      0.2,
+      0.4,
+      65.0,
+      0.7
+    ]
+  },
+  "event_id": "AHIS-V4-SYNTHETIC-001",
+  "exact_protected_matrix": [],
+  "frame": {
+    "estop_closed": true,
+    "head_mm": 500.0,
+    "leak_ml_min": 60.0,
+    "pressure_kpa": 4.9,
+    "sensor_valid": true,
+    "supply_v": 12.0,
+    "timestamp_s": 0.0
+  },
+  "fusion": {
+    "channels": [
+      {
+        "damage_score": 0.91,
+        "name": "guided_wave",
+        "quality": 0.95
+      },
+      {
+        "damage_score": 0.96,
+        "name": "pressure_leak",
+        "quality": 1.0
+      },
+      {
+        "damage_score": 0.8,
+        "name": "strain",
+        "quality": 0.9
+      }
+    ],
+    "minimum_weight": 2.5,
+    "threshold": 0.65
+  },
+  "interlock_limits": {
+    "max_head_mm": 800.0,
+    "max_pressure_kpa": 8.0,
+    "max_supply_v": 13.0
+  },
+  "localization": {
+    "arrivals": [
+      {
+        "arrival_s": 0.02029722255527504,
+        "quality": 1.0,
+        "sensor_id": "A1",
+        "x_m": 0.0,
+        "y_m": 0.0
+      },
+      {
+        "arrival_s": 0.020406559267736473,
+        "quality": 1.0,
+        "sensor_id": "A2",
+        "x_m": 1.0,
+        "y_m": 0.0
+      },
+      {
+        "arrival_s": 0.020270245303072452,
+        "quality": 1.0,
+        "sensor_id": "A3",
+        "x_m": 1.0,
+        "y_m": 1.0
+      },
+      {
+        "arrival_s": 0.02021891652878118,
+        "quality": 1.0,
+        "sensor_id": "A4",
+        "x_m": 0.0,
+        "y_m": 1.0
+      },
+      {
+        "arrival_s": 0.020308157664573098,
+        "quality": 1.0,
+        "sensor_id": "A5",
+        "x_m": 0.5,
+        "y_m": 0.0
+      }
+    ],
+    "bounds_m": [
+      0.0,
+      1.0,
+      0.0,
+      1.0
+    ],
+    "grid_points": 41,
+    "max_rms_s": 6e-05,
+    "model": {
+      "anisotropy_fraction": 0.12,
+      "base_speed_m_s": 2450.0,
+      "principal_axis_deg": 20.0
+    }
+  },
+  "optimizer": {
+    "margin": 1e-05,
+    "max_iterations": 300
+  },
+  "planning_channels": [
+    {
+      "coordinate": "leak_ratio",
+      "group": "planning-leak_ratio",
+      "healthy": true,
+      "id": "P-leak_ratio",
+      "unit": "ratio",
+      "value": 1.0
+    },
+    {
+      "coordinate": "vibration_ratio",
+      "group": "planning-vibration_ratio",
+      "healthy": true,
+      "id": "P-vibration_ratio",
+      "unit": "ratio",
+      "value": 1.0
+    },
+    {
+      "coordinate": "temperature_c",
+      "group": "planning-temperature_c",
+      "healthy": true,
+      "id": "P-temperature_c",
+      "unit": "degC",
+      "value": 25.0
+    },
+    {
+      "coordinate": "strain_ratio",
+      "group": "planning-strain_ratio",
+      "healthy": true,
+      "id": "P-strain_ratio",
+      "unit": "ratio",
+      "value": 1.0
+    }
+  ],
+  "propagation": {
+    "closed_barriers": [
+      "B-pressure",
+      "B-thermal",
+      "B-load"
+    ],
+    "critical_nodes": [
+      "pressure_compartment",
+      "sensor_bus"
+    ],
+    "edges": [
+      {
+        "barrier": "B-pressure",
+        "delay_s": 2.0,
+        "from": "damage_zone",
+        "kind": "leak",
+        "to": "pressure_compartment"
+      },
+      {
+        "barrier": "B-thermal",
+        "delay_s": 5.0,
+        "from": "damage_zone",
+        "kind": "thermal",
+        "to": "sensor_bus"
+      },
+      {
+        "barrier": "B-load",
+        "delay_s": 0.2,
+        "from": "damage_zone",
+        "kind": "load",
+        "to": "frame_support"
+      },
+      {
+        "barrier": "B-crack",
+        "delay_s": 10.0,
+        "from": "frame_support",
+        "kind": "crack",
+        "to": "thermal_guard"
+      }
+    ],
+    "horizon_s": 30.0,
+    "nodes": [
+      "damage_zone",
+      "pressure_compartment",
+      "sensor_bus",
+      "frame_support",
+      "thermal_guard"
+    ],
+    "origin": "damage_zone"
+  },
+  "protection": {
+    "adaptive_phase": {
+      "dt_s": 0.01,
+      "off_threshold": 0.5,
+      "on_threshold": 1.0,
+      "phase": 0.0,
+      "response_time_s": 0.1,
+      "stress": 2.0
+    },
+    "architectures": {
+      "candidates": [
+        {
+          "areal_mass_kg_m2": 12.0,
+          "declared_utility": 0.5,
+          "id": "uniform",
+          "relative_stiffness": 1.0
+        },
+        {
+          "areal_mass_kg_m2": 13.0,
+          "declared_utility": 0.6,
+          "id": "graded",
+          "relative_stiffness": 0.95
+        },
+        {
+          "areal_mass_kg_m2": 30.0,
+          "declared_utility": 0.9,
+          "id": "too_heavy",
+          "relative_stiffness": 1.1
+        }
+      ],
+      "mass_cap": 15.0,
+      "minimum_stiffness": 0.9
+    },
+    "stack": {
+      "layers": [
+        {
+          "density_kg_m3": 2700.0,
+          "role": "sacrificial_bumper",
+          "status": "DESIGN_ONLY",
+          "thickness_m": 0.001
+        },
+        {
+          "density_kg_m3": 200.0,
+          "role": "energy_distribution_core",
+          "status": "DESIGN_ONLY",
+          "thickness_m": 0.01
+        },
+        {
+          "density_kg_m3": 1100.0,
+          "role": "stress_adaptive_interphase",
+          "status": "DESIGN_ONLY",
+          "thickness_m": 0.001
+        },
+        {
+          "density_kg_m3": 1600.0,
+          "role": "load_bearing_rear_wall",
+          "status": "DESIGN_ONLY",
+          "thickness_m": 0.002
+        },
+        {
+          "density_kg_m3": 950.0,
+          "role": "fast_sealing",
+          "status": "DESIGN_ONLY",
+          "thickness_m": 0.001
+        },
+        {
+          "density_kg_m3": 1100.0,
+          "role": "vascular_repair_network",
+          "status": "DESIGN_ONLY",
+          "thickness_m": 0.0005
+        },
+        {
+          "density_kg_m3": 1200.0,
+          "role": "diagnostic_sensor_layer",
+          "status": "DESIGN_ONLY",
+          "thickness_m": 0.0002
+        },
+        {
+          "density_kg_m3": 950.0,
+          "role": "secondary_containment",
+          "status": "DESIGN_ONLY",
+          "thickness_m": 0.001
+        }
+      ],
+      "max_areal_mass_kg_m2": 15.0
+    }
+  },
+  "response": {
+    "agent_density_g_ml": [
+      1.0,
+      1.0
+    ],
+    "consumed_resources": [
+      14.531617811418734,
+      14.531617811418734,
+      171.81779197181385
+    ],
+    "executed_command": [
+      14.531617811418734,
+      0.05189091406908799,
+      0.5648333333330796,
+      0.0
+    ]
+  },
+  "schema": "ahis.survival/4.0",
+  "sensing": {
+    "candidates": [
+      {
+        "hardware_present": true,
+        "healthy": true,
+        "id": "A6",
+        "noise_std": 2e-06,
+        "x_m": 0.5,
+        "y_m": 1.0
+      },
+      {
+        "hardware_present": true,
+        "healthy": true,
+        "id": "A7",
+        "noise_std": 2e-06,
+        "x_m": 0.9,
+        "y_m": 0.8
+      },
+      {
+        "hardware_present": true,
+        "healthy": true,
+        "id": "A8",
+        "noise_std": 2e-06,
+        "x_m": 0.1,
+        "y_m": 0.2
+      }
+    ],
+    "prior_information": [
+      [
+        0.001,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.001,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.001
+      ]
+    ],
+    "timing_noise_std_s": 2e-06
+  },
+  "timestamp_utc": "2026-10-01T16:41:36Z",
+  "uncertainty": [
+    {
+      "bias": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gain": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "id": "nominal"
+    },
+    {
+      "bias": [
+        0.005,
+        0.005,
+        1.0,
+        0.005
+      ],
+      "gain": [
+        0.9,
+        0.9,
+        0.9,
+        0.9
+      ],
+      "id": "weak_response"
+    },
+    {
+      "bias": [
+        0.0,
+        0.0,
+        3.0,
+        0.0
+      ],
+      "gain": [
+        1.0,
+        1.0,
+        1.1,
+        1.0
+      ],
+      "id": "hot_response"
+    }
+  ],
+  "verification_channels": [
+    {
+      "coordinate": "leak_ratio",
+      "group": "heldout-leak_ratio",
+      "healthy": true,
+      "id": "V-leak_ratio",
+      "lower": 0.0,
+      "required": true,
+      "unit": "ratio",
+      "upper": 0.2,
+      "value": 0.16260160250261713
+    },
+    {
+      "coordinate": "vibration_ratio",
+      "group": "heldout-vibration_ratio",
+      "healthy": true,
+      "id": "V-vibration_ratio",
+      "lower": 0.0,
+      "required": true,
+      "unit": "ratio",
+      "upper": 0.4,
+      "value": 0.37055554644476235
+    },
+    {
+      "coordinate": "temperature_c",
+      "group": "heldout-temperature_c",
+      "healthy": true,
+      "id": "V-temperature_c",
+      "lower": 0.0,
+      "required": true,
+      "unit": "degC",
+      "upper": 65.0,
+      "value": 42.360127312545096
+    },
+    {
+      "coordinate": "strain_ratio",
+      "group": "heldout-strain_ratio",
+      "healthy": true,
+      "id": "V-strain_ratio",
+      "lower": 0.0,
+      "required": true,
+      "unit": "ratio",
+      "upper": 0.7,
+      "value": 0.6611000000001522
+    }
+  ]
+}

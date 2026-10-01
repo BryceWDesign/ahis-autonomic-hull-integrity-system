@@ -1,0 +1,268 @@
+{
+  "schema": "ahis.claims/4.0",
+  "physical_credit": false,
+  "claims": [
+    {
+      "id": "V4-01",
+      "capability": "unit-aware survival envelope",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/survival_envelope.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-02",
+      "capability": "local remaining authority and exact safe modes",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/controllability.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-03",
+      "capability": "synthetic influence maps linked to legacy models",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/influence_basis.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-04",
+      "capability": "bounded joint resource plan",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/survival_optimizer.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-05",
+      "capability": "fixed-command finite uncertainty set",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/uncertainty.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-06",
+      "capability": "preservation and isolation transitions",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/adaptive_state.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-07",
+      "capability": "anisotropic D-optimal sensing advice",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/active_sensing.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-08",
+      "capability": "declared hazard-graph reachability",
+      "status": "IMPLEMENTED_SCREEN",
+      "implementation": [
+        "src/ahis/survival/propagation.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-09",
+      "capability": "conservation accounting",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/accounting.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-10",
+      "capability": "held-out policy-bound verification",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/independent_verify.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-11",
+      "capability": "raw evidence decision integration",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/controller.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-12",
+      "capability": "source-bound replay audit",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/replay_audit.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-13",
+      "capability": "multilayer mass/reversible-state/geometry screens",
+      "status": "IMPLEMENTED_SCREEN",
+      "implementation": [
+        "src/ahis/survival/protection_stack.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-14",
+      "capability": "research record completeness gates",
+      "status": "IMPLEMENTED_SOFTWARE",
+      "implementation": [
+        "src/ahis/survival/research_programs.py"
+      ],
+      "tests": [
+        "tests/test_survival_math_v4.py",
+        "tests/test_survival_assurance_v4.py"
+      ],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-15",
+      "capability": "qualified structural-strength recovery",
+      "status": "NOT_IMPLEMENTED",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-16",
+      "capability": "ballistic and hypervelocity material model",
+      "status": "NOT_IMPLEMENTED",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-17",
+      "capability": "continuum crack/leak/load/thermal propagation",
+      "status": "NOT_IMPLEMENTED",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-18",
+      "capability": "active charged-particle radiation shielding",
+      "status": "NOT_IMPLEMENTED",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-19",
+      "capability": "operational hull requalification",
+      "status": "NOT_IMPLEMENTED",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-20",
+      "capability": "hard real-time hardware dispatch",
+      "status": "NOT_IMPLEMENTED",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-21",
+      "capability": "R6 material performance",
+      "status": "NOT_RUN",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-22",
+      "capability": "R7 shield impact performance",
+      "status": "NOT_RUN",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-23",
+      "capability": "R8 physical geometry validation",
+      "status": "NOT_RUN",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    },
+    {
+      "id": "V4-24",
+      "capability": "R9 damaged hardware recovery",
+      "status": "NOT_RUN",
+      "implementation": [],
+      "tests": [],
+      "physical_credit": false
+    }
+  ]
+}

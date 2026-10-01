@@ -1,0 +1,2 @@
+# Preserve released file bytes so SHA-256 integrity survives Git checkout.
+* -text

@@ -1,0 +1,34 @@
+AHIS v4.0.0 RELEASE QUALITY GATE
+Release version................... PASS
+  package, project and release version agree
+Python compile.................... PASS
+Pytest............................ PASS
+  222 tests passed
+V3 deterministic campaign......... PASS
+  all_pass_conditions=True
+V4 Ruff lint...................... PASS
+  All checks passed!
+V4 Ruff format.................... PASS
+  21 files already formatted
+V4 campaign and replay............ PASS
+  29 cases replayed; fresh campaign and rehashed-tamper controls pass
+V4 claims and research............ PASS
+  claim evidence mapped; R1-R10 physical flags remain false
+Campaign receipt.................. PASS
+  deterministic v3 campaign and authority valid
+Evaluation license................ PASS
+  evaluation-only v4 licensing boundary explicit
+Physical claim firewall........... PASS
+  15 physical claim flags remain false
+P1 build package.................. PASS
+  P1 reference build complete; 54 procurement rows
+P1 CAD envelope................... PASS
+  six generated P1 STL envelopes match dimensional registry
+GREEN status artifact............. PASS
+  explicit v4 GREEN status artifact valid
+Release hygiene................... PASS
+  no unresolved markers, symlinks or runtime caches
+Complete manifest................. PASS
+  all released files accounted for
+FINAL............................. GREEN
+PHYSICAL STATUS................... AWAITING_PHYSICAL_VALIDATION

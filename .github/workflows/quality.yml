@@ -1,0 +1,37 @@
+name: AHIS v4 release quality gate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: '3.11'
+          - os: ubuntu-latest
+            python: '3.12'
+          - os: windows-latest
+            python: '3.13'
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install pinned validation environment
+        run: python -m pip install -r requirements-validation.txt
+      - name: Install AHIS
+        run: python -m pip install --no-build-isolation -e "."
+      - name: Check dependency consistency
+        run: python -m pip check
+      - name: Run authoritative release gate
+        run: python check_green.py
+      - name: Build distribution
+        run: python -m build --no-isolation --outdir ../ahis-dist

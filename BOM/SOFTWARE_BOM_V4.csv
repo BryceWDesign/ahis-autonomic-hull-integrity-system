@@ -1,0 +1,12 @@
+name,version,scope,notice_files
+numpy,2.3.5,runtime,BOM/third_party_notices/numpy/LICENSE.txt
+scipy,1.17.0,runtime,BOM/third_party_notices/scipy/LICENSE.txt
+pytest,9.1.1,validation/build,BOM/third_party_notices/pytest/LICENSE
+ruff,0.16.9,validation/build,BOM/third_party_notices/ruff/LICENSE
+build,1.6.1,validation/build,BOM/third_party_notices/build/LICENSE
+setuptools,84.0.0,validation/build,BOM/third_party_notices/setuptools/LICENSE;BOM/third_party_notices/setuptools/autocommand-2.2.2.dist-info_LICENSE;BOM/third_party_notices/setuptools/LICENSE;BOM/third_party_notices/setuptools/licenses_LICENSE;BOM/third_party_notices/setuptools/LICENSE;BOM/third_party_notices/setuptools/licenses_LICENSE;BOM/third_party_notices/setuptools/licenses_LICENSE;BOM/third_party_notices/setuptools/licenses_LICENSE;BOM/third_party_notices/setuptools/licenses_LICENSE;BOM/third_party_notices/setuptools/LICENSE.APACHE;BOM/third_party_notices/setuptools/LICENSE.BSD;BOM/third_party_notices/setuptools/licenses_LICENSE;BOM/third_party_notices/setuptools/licenses_LICENSE;BOM/third_party_notices/setuptools/LICENSE.txt;BOM/third_party_notices/setuptools/licenses_LICENSE
+iniconfig,2.3.0,validation/build,BOM/third_party_notices/iniconfig/LICENSE
+packaging,26.3,validation/build,BOM/third_party_notices/packaging/LICENSE;BOM/third_party_notices/packaging/LICENSE.APACHE;BOM/third_party_notices/packaging/LICENSE.BSD
+pluggy,1.6.0,validation/build,BOM/third_party_notices/pluggy/LICENSE
+pygments,2.21.0,validation/build,BOM/third_party_notices/pygments/AUTHORS;BOM/third_party_notices/pygments/LICENSE
+pyproject_hooks,1.3.3,validation/build,BOM/third_party_notices/pyproject_hooks/LICENSE

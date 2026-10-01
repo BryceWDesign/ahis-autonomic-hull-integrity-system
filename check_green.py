@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Authoritative AHIS v3 repository/software release gate.
+"""Authoritative AHIS v4 repository/software release gate.
 
 GREEN means the delivered repository, deterministic software/HIL campaign and release
 integrity checks pass. It does not promote any physical demonstration flag.
@@ -13,6 +13,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "src"
@@ -21,10 +22,10 @@ if str(SRC) not in sys.path:
 
 from ahis.evidence import verify_manifest
 
-EXPECTED_VERSION = "3.0.0"
+EXPECTED_VERSION = "4.0.0"
 EXPECTED_AUTHORITY = "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT"
 EXPECTED_CAMPAIGN_SHA = "1991c991b5fbbc3d9275abfb4e1e8f7d6c610a6ac07714f616dd6df8b5911977"
-EXPECTED_TESTS = 112
+EXPECTED_TESTS = 222
 LICENSE_CONTACT = "https://www.linkedin.com/in/brycewdesign/"
 
 
@@ -75,11 +76,11 @@ def check_license() -> tuple[bool, str]:
     missing = [value for value in required if value not in text]
     if missing:
         return False, f"evaluation-license boundary missing: {missing}"
-    if "v3.0.0" not in notice or LICENSE_CONTACT not in notice:
-        return False, "NOTICE does not carry v3 licensing boundary/contact"
+    if "v4.0.0" not in notice or LICENSE_CONTACT not in notice:
+        return False, "NOTICE does not carry v4 licensing boundary/contact"
     if not (ROOT / "LICENSES/Apache-2.0-historical.txt").is_file():
         return False, "historical Apache license record missing"
-    return True, "evaluation-only v3 licensing boundary explicit"
+    return True, "evaluation-only v4 licensing boundary explicit"
 
 
 def check_physical_status() -> tuple[bool, str]:
@@ -205,7 +206,7 @@ def check_no_unfinished_or_junk() -> tuple[bool, str]:
         rel = path.relative_to(ROOT).as_posix()
         if path.is_symlink():
             symlinks.append(rel)
-        if not path.is_file() or rel in skip or path.suffix.lower() not in text_suffixes:
+        if not path.is_file() or rel in skip or rel.startswith("BOM/third_party_notices/") or path.suffix.lower() not in text_suffixes:
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         if any(marker in text.upper() for marker in marker_parts):
@@ -231,11 +232,57 @@ def check_green_status(test_count: int) -> tuple[bool, str]:
         return False, "GREEN_STATUS campaign digest mismatch"
     if raw.get("physical_status") != "AWAITING_PHYSICAL_VALIDATION":
         return False, "GREEN_STATUS physical boundary mismatch"
-    return True, "explicit v3 GREEN status artifact valid"
+    return True, "explicit v4 GREEN status artifact valid"
+
+
+def check_v4_campaign() -> tuple[bool, str]:
+    from ahis.survival.numeric import load_json
+    from ahis.survival.campaign import run_campaign
+    from ahis.survival.replay_audit import audit
+    archived = ROOT / "results/v4_survival_campaign"
+    summary = load_json(archived / "campaign.json")
+    if summary.get("authority") != EXPECTED_AUTHORITY or summary.get("all_pass") is not True:
+        return False, "archived v4 campaign boundary or outcome invalid"
+    if len(summary.get("cases", [])) != 29:
+        return False, "v4 campaign case count mismatch"
+    for row in summary["cases"]:
+        bundle = load_json(archived / (row["case"] + ".json"))
+        verdict = audit(bundle)
+        if row["digest"] != bundle["sha256"] or not verdict["passed"]:
+            return False, f"archived replay failed: {row['case']}: {verdict['errors'][:3]}"
+    with tempfile.TemporaryDirectory(prefix="ahis-v4-") as temp:
+        fresh = run_campaign(load_json(ROOT / "configs/survival_reference.json"), Path(temp))
+    passed = fresh["all_pass"] and [(r["case"],r["actual"]) for r in fresh["cases"]] == [(r["case"],r["actual"]) for r in summary["cases"]]
+    return passed, "29 cases replayed; fresh campaign and rehashed-tamper controls pass" if passed else "fresh v4 campaign failed"
+
+
+def check_v4_claims() -> tuple[bool, str]:
+    from ahis.survival.numeric import load_json
+    claims = load_json(ROOT / "docs/claims_v4.json")
+    if claims.get("physical_credit") is not False:
+        return False, "claims physical credit changed"
+    rows = claims.get("claims", [])
+    if not rows or len({r["id"] for r in rows}) != len(rows):
+        return False, "claims identifiers missing/duplicated"
+    for row in rows:
+        if row["status"] not in {"IMPLEMENTED_SOFTWARE", "IMPLEMENTED_SCREEN", "NOT_IMPLEMENTED", "NOT_RUN"}:
+            return False, "unsupported claim status"
+        for field in ("implementation", "tests"):
+            for rel in row[field]:
+                if not (ROOT / rel).is_file(): return False, "claim evidence file missing: " + rel
+    registry = load_json(ROOT / "configs/research_programs.json")
+    if len(registry["programs"]) != 10 or any(p["physical_status"] != "NOT_RUN" or p["physical_credit"] is not False for p in registry["programs"]):
+        return False, "research program physical firewall changed"
+    return True, "claim evidence mapped; R1-R10 physical flags remain false"
 
 
 def main() -> int:
     checks: list[tuple[str, bool, str]] = []
+    import ahis
+    import tomllib
+    package_version = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]["version"]
+    version_ok = ahis.__version__ == package_version == (ROOT / "VERSION").read_text().strip() == EXPECTED_VERSION
+    checks.append(("Release version", version_ok, "package, project and release version agree" if version_ok else "version mismatch"))
 
     compile_proc = run([sys.executable, "-m", "compileall", "-q", "src", "scripts", "hardware/firmware/pico2", "check_green.py"])
     checks.append(("Python compile", compile_proc.returncode == 0, compile_proc.stderr.strip()))
@@ -248,6 +295,12 @@ def main() -> int:
 
     campaign_proc = run([sys.executable, "scripts/run_v3_campaign.py"])
     checks.append(("V3 deterministic campaign", campaign_proc.returncode == 0, campaign_proc.stdout.strip().splitlines()[-1] if campaign_proc.stdout.strip() else campaign_proc.stderr.strip()))
+    lint = run([sys.executable, "-m", "ruff", "check", "src/ahis/survival", "src/ahis/__main__.py", "tests/test_survival_math_v4.py", "tests/test_survival_assurance_v4.py"])
+    checks.append(("V4 Ruff lint", lint.returncode == 0, lint.stdout.strip() or lint.stderr.strip()))
+    formatting = run([sys.executable, "-m", "ruff", "format", "--check", "src/ahis/survival", "src/ahis/__main__.py", "tests/test_survival_math_v4.py", "tests/test_survival_assurance_v4.py"])
+    checks.append(("V4 Ruff format", formatting.returncode == 0, formatting.stdout.strip() or formatting.stderr.strip()))
+    v4_ok, v4_message = check_v4_campaign(); checks.append(("V4 campaign and replay", v4_ok, v4_message))
+    claims_ok, claims_message = check_v4_claims(); checks.append(("V4 claims and research", claims_ok, claims_message))
     campaign_ok, campaign_msg = check_campaign(); checks.append(("Campaign receipt", campaign_ok, campaign_msg))
     license_ok, license_msg = check_license(); checks.append(("Evaluation license", license_ok, license_msg))
     physical_ok, physical_msg = check_physical_status(); checks.append(("Physical claim firewall", physical_ok, physical_msg))
@@ -262,7 +315,7 @@ def main() -> int:
     manifest_errors = verify_manifest(ROOT, manifest_path) if manifest_path.is_file() else ("manifest missing",)
     checks.append(("Complete manifest", not manifest_errors, "; ".join(manifest_errors[:3]) if manifest_errors else "all released files accounted for"))
 
-    print("AHIS v3.0.0 RELEASE QUALITY GATE")
+    print("AHIS v4.0.0 RELEASE QUALITY GATE")
     ok = True
     for name, passed, detail in checks:
         ok &= passed

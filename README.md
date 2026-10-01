@@ -1,136 +1,88 @@
-# AHIS — Autonomic Hull Integrity System v3.0.0
+# AHIS, Autonomic Hull Integrity System v4.0.0
 
-**Evaluation-licensed autonomic structural-repair and survivability research testbed.**
+**Evaluation-licensed adaptive structural-survivability software/HIL research platform.**
 
-AHIS v3 advances the original passive protection + structural-health-monitoring proof of concept into an executable closed-loop research architecture:
+AHIS v4 implements the Adaptive Survival Envelope: characterize damage, enter preservation, assess remaining control authority, coordinate bounded responses, verify using held-out evidence, and recover only to a limited state or isolate.
 
-`detect -> localize -> fuse evidence -> assess uncertainty -> check resources/interlocks -> command bounded repair -> measure response -> verify -> retain structural history`
+**Current physical status: AWAITING_PHYSICAL_VALIDATION.** This release demonstrates software behavior in a manufactured reference experiment. It does not demonstrate material healing strength, physical impact protection, pressure-hull survival, radiation shielding, certification or operational return to service.
 
-The release includes a concrete low-energy physical reference article, **AHIS-P1**, so the repository can be taken beyond software/HIL into reproducible bench testing without claiming results that have not been measured.
+## What changed from v3
 
-## Current status
+| v3 foundation retained | v4 addition |
+|---|---|
+| Fixed two-agent recipe planner | Joint bounded response/resource planner with declared uncertainty cases |
+| Mechanism eligibility | Scaled reachable/unreachable objective decomposition and exact protected modes |
+| Repair/degraded-state decisions | Explicit preservation, confirmed containment, repair, verification and isolation transitions |
+| Fixed sensor geometry/localization | Anisotropic D-optimal advisory among surviving declared sensors |
+| Resource reservation | Archived command/consumption binding, conservation and measured-loss accounting |
+| Post-repair acceptance | Required held-out coordinates using exact policy limits and distinct acquisition groups |
+| Hash-chained history | Source-bound replay from the complete archived raw request |
+| R1-R5 research lanes | R6-R9 protection/network screens and program-specific review gates |
 
-- Repository/software release gate: see `GREEN_STATUS.json` and `FINAL_STATUS.md`.
-- Physical status: `PHYSICAL_STATUS.json` remains **AWAITING_PHYSICAL_VALIDATION**.
-- P1 physical leak-seal performance: **not demonstrated by this repository release**.
-- Structural self-healing strength recovery: **not demonstrated**.
-- Full-scale hull survivability, operational return-to-service, depth rating and certification: **not claimed**.
+The four-action reference basis uses paired repair-agent volume, separate modal damping, a synthetic heater/strain coordinate and synthetic isolation. Leak and modal responses call the retained AHIS models. Heater/isolation coefficients are manufactured for the experiment, not empirically calibrated. Sensing stays diagnostic; there is no integrated piezoelectric sensor/actuator fiber-mesh implementation.
 
-Synthetic/HIL results never receive physical credit.
+## Executable proof
 
-## What v3 contains
+The 29-case campaign exercises successful limited recovery and required refusals: lost actuators, depleted resources, unsafe heating, exact-lock overconstraint, failed containment, insufficient sensing, failed/reused verification channels, conservation failures, mismatched commands and resource overdraw. A rejected proposal has zero authorized commands. A failed post-response verification preserves consumed resources rather than pretending they were never used.
 
-### Autonomic control and assurance
-- finite repair-agent, electrical-energy, thermal-margin and actuator-cycle accounting;
-- fail-closed hardware interlocks;
-- bounded repair recipes and executable repair planning;
-- deterministic HIL rig and negative-control campaign;
-- strict host/Pico JSONL hardware protocol;
-- hard E-stop architecture that physically removes actuator relay-coil power while the controller remains alive to report the fault;
-- paired repair-agent delivery with independent measured pump calibrations.
+The local authority diagnostic only assesses currently violated objectives using surviving command coordinates. The nonlinear optimizer separately enforces all two-sided protected limits and action/resource bounds. Neither an inverse solution nor a full-rank matrix automatically earns acceptance.
 
-### Structural intelligence
-- anisotropic damage localization with an explicit uncertainty radius;
-- quality-weighted multimodal evidence fusion;
-- digital-twin discrepancy checks;
-- uncertainty-bounded relative remaining-life screening;
-- tamper-evident SHA-256 structural event history.
+The optimizer is a local constrained solver; no global optimum is claimed. Its uncertainty result covers only the declared finite cases. Graph propagation, layer-mass accounting, reversible phase and supplied geometry-candidate ranking are explicit research screens, not validated fracture/CFD/FEA or ballistic models.
 
-These are research tools. The digital twin and prognostics are not certified life predictions.
+## Run
 
-### AHIS-P1 physical reference article
-P1 is a deliberately low-energy gravity-head leak-seal demonstrator. It includes:
-
-- procurement BOM: `BOM/AHIS-P1-procurement.csv`;
-- generated STEP/STL fixture CAD under `hardware/cad/`;
-- dimensional build traveler and inspection record;
-- exact wiring netlist and Pico 2 firmware;
-- pressure, load-cell and actual-agent pump calibration tools;
-- live physical run controller with no synthetic mode;
-- raw telemetry hashing and evidence receipts;
-- objective per-run acceptance and a fixed three-run campaign rule.
-
-P1 uses sodium alginate + calcium chloride as a **system-level sealing surrogate**. Passing P1 would demonstrate only the bounded low-energy autonomous leak-seal response. It does not establish structural-strength restoration or hull self-healing.
-
-## Repair research programs
-
-The repository separately defines physical validation programs for:
-
-1. puncture-responsive ionomer/self-sealing layers;
-2. replenishable microvascular composite repair;
-3. electrothermal vitrimer repair;
-4. SMA + low-melting-phase metal-matrix repair;
-5. recovery of damaged sensing/electrical networks.
-
-They remain at zero physical claim credit until their own specimens and measurements exist. See `docs/09_Repair_Mechanism_Research_Programs.md` and `provenance/TECHNICAL_BASIS_V3_2026.json`.
-
-## Software verification
-
-Python 3.11+:
+Python 3.11 through 3.13 are the validation targets. Use a virtual environment and the pinned dependency file:
 
 ```bash
-python -m pip install -e '.[dev]'
-python -m pytest -q
-python scripts/run_v3_campaign.py
+python -m pip install -r requirements-validation.txt
+python -m pip install --no-build-isolation -e .
+python -m pip check
 python check_green.py
 ```
 
-`check_green.py` is the release authority for repository/software status. It verifies compilation, tests, deterministic campaign behavior and claim boundary, evaluation-license boundary, P1 BOM/CAD/status integrity, absence of release junk/unresolved markers, and the complete SHA-256 manifest.
+The authoritative release gate requires **222 passing tests**, both campaigns, archived replay, claim boundaries, new code lint/format, P1 BOM/CAD integrity, release hygiene and a complete file manifest. GREEN is software/repository status only. See VALIDATION_REPORT.md for executed checks and limits. GitHub CI is configured; its actual run is not claimed in this handoff.
 
-## Building and running P1
-
-Read in this order:
-
-1. `docs/02_Claim_Boundary.md`
-2. `docs/03_P1_Reference_Design.md`
-3. `BOM/README.md`
-4. `docs/04_P1_Fabrication_Traveler.md`
-5. `docs/05_P1_Wiring_and_Electronics.md`
-6. `docs/06_P1_Calibration.md`
-7. `docs/07_P1_Autonomous_Test_Procedure.md`
-8. `docs/08_Physical_Acceptance_and_Promotion.md`
-
-Physical host dependency:
+Generate your own work outside the release tree:
 
 ```bash
-python -m pip install -e '.[hardware]'
+python -m ahis decide configs/survival_reference.json --out ../nominal-evidence.json
+python -m ahis audit ../nominal-evidence.json
+python -m ahis campaign --config configs/survival_reference.json --out ../my-survival-campaign
 ```
 
-A live run requires an actual Pico serial port and measured calibration artifacts:
+The installed `ahis` command exposes the same interface. `decide` exits 0 for limited recovery, 2 for rejection/isolation and 1 for invalid input. Audit/campaign exit nonzero on failure. Every new-path result has zero physical credit and zero hardware authority. No device dispatch is performed.
 
-```bash
-python scripts/p1_run_controller.py \
-  --port <physical-serial-port> \
-  --run-id P1-RUN-001 \
-  --sensor-calibration sensor-calibration.json \
-  --pump-calibration pump-calibration.json \
-  --fixture-leak-check pass
-```
+SHA-256 supplies integrity relative to a trusted reference, not signatures or authentication. Retain the printed digest separately and use `audit --trusted-digest` when an external reference is available. Numerical replay uses declared tolerances and exact structural/boolean checks; source hashes and bundle integrity are exact.
 
-There is intentionally no HIL/synthetic switch in the physical-run controller.
+## Complete P1 handoff retained
+
+The v3 low-energy gravity-head leak-seal reference article remains included: 54-row procurement BOM, STEP/STL fixture CAD, wiring, dimensional build record, Pico 2 firmware, actual-agent pump/sensor calibration tools, physical-only run controller and physical acceptance scripts.
+
+P1 uses a sealing surrogate. No P1 physical run is claimed here. The new synthetic multi-action planner is not connected to P1 hardware. Begin physical-reference review with docs/02_Claim_Boundary.md and docs/03_P1_Reference_Design.md, then the fabrication, wiring, calibration and acceptance documents.
+
+## Protection and research scope
+
+R1-R5 cover fast sealing, vascular repair, vitrimer repair, SMA metal-matrix repair and sensing restoration. R6 is Stress-Adaptive Protective Interphase; R7 is Multilayer Impact Protection; R8 is Adaptive Structural Architecture; R9 is Resilient Diagnostic Network. All physical programs remain NOT_RUN. Their required measurement/test categories and completeness gates are executable, but eligibility for human review grants no physical credit.
+
+R10, Active Charged-Particle Shield Integrity, is **NOT_IMPLEMENTED** and separate from core AHIS. No fusion, plasma, magnetic debris barrier or radiation-shield performance claim is imported from SymmetryLock. Biological inspiration is documented in research provenance only; the engineering architecture does not depend on biological material.
+
+## Read next
+
+- HANDOFF.md: PowerShell/Linux setup, reproducible commands and existing-Git-checkout instructions.
+- PROOF_OF_CONCEPT.md: concrete campaign comparisons and rejection evidence.
+- docs/19_Adaptive_Survival_Architecture.md: implementation and integration map.
+- docs/20_Mathematics_and_Model_Limits.md: equations, scales, assumptions and boundaries.
+- docs/21_Evidence_Replay_and_Threat_Model.md: replay, held-out evidence and external trust.
+- docs/22_Protection_and_Research_Programs.md: R6-R10 and physical work still required.
+- docs/claims_v4.json: machine-readable implemented/screened/unimplemented claims.
+- BOM/: complete P1 procurement list and recorded software dependencies/notices.
 
 ## License
 
-**AHIS v3.0.0 and later in this release are source-available for evaluation under `LICENSE`; they are not open source.**
+AHIS v4 retains **AHIS Evaluation License 1.0**, source-available for evaluation rather than open source. Commercial, operational, manufacturing, integration, deployment, paid-consulting and redistribution uses require separate written permission from **Bryce Lovell**.
 
-Commercial, operational, manufacturing, integration, deployment, paid-consulting and redistribution uses require separate written permission from **Bryce Lovell**.
+Licensing contact: https://www.linkedin.com/in/brycewdesign/
 
-Preferred licensing contact: <https://www.linkedin.com/in/brycewdesign/>
+Earlier copies actually distributed under Apache License 2.0 retain their existing rights. The historical text remains in LICENSES/Apache-2.0-historical.txt. Third-party distributions retain their own terms. There is no patent freedom-to-operate guarantee.
 
-Earlier copies that were actually distributed under Apache License 2.0 retain the rights granted with those copies. The historical Apache text is retained in `LICENSES/Apache-2.0-historical.txt`; it does not license v3.
-
-## Repository map
-
-- `src/ahis/` — executable AHIS logic
-- `tests/` — unit and invariant tests
-- `scripts/` — campaigns, calibration, physical evidence and release tooling
-- `hardware/` — P1 CAD, wiring, build record and Pico firmware
-- `BOM/` — canonical P1 procurement list
-- `configs/` — reference article configuration
-- `docs/` — architecture, fabrication, testing, safety, licensing and validation path
-- `provenance/` — technical basis/source traceability
-- `results/v3_extreme_campaign/` — deterministic software/HIL evidence only
-
-## Core rule
-
-**Software can prove software behavior. Hardware measurements can prove only what was actually measured. Neither is allowed to silently promote the other.**
+**Software evidence proves software behavior; physical claims require measured physical evidence and explicit review.**

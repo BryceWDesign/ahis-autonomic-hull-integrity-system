@@ -15,3 +15,10 @@ inside this repository unless the applicable terms expressly permit redistributi
 Historical AHIS releases were distributed under Apache License 2.0. The historical
 license text is retained in `LICENSES/Apache-2.0-historical.txt` solely to preserve the
 version boundary.
+
+
+## v4 numerical and validation dependencies
+
+NumPy and SciPy are runtime dependencies. Pytest, Ruff, build and setuptools plus their recorded supporting distributions are validation/build dependencies. Their own distribution notices govern them; see `BOM/SOFTWARE_BOM_V4.json` and `BOM/third_party_notices/`. The AHIS evaluation license does not restrict those distributions.
+
+IX-SymmetryLock supplied design context for established control mathematics. The AHIS implementation is documented in `provenance/UPGRADE_V4.json`; no fusion-field implementation is bundled into AHIS.

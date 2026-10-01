@@ -1,0 +1,32 @@
+{
+  "version": "4.0.0",
+  "source_archives": [
+    {
+      "filename": "IX-SymmetryLock-main(1).zip",
+      "sha256": "c6689044d18a66d25cbd318ab570babd6d559df56c5eb37bed33584b9d6360f8"
+    },
+    {
+      "filename": "ahis-autonomic-hull-integrity-system-main(20261001-145045).zip",
+      "sha256": "41140c7ff745cd9e7b323819241a7a68fb3b44bf6fdc47c4adf4dbe3379d5b16"
+    }
+  ],
+  "donor": "IX-SymmetryLock",
+  "donor_license": "IX-SymmetryLock Research & Evaluation License 1.1, Bryce Lovell",
+  "design_transfer": [
+    "scaled SVD reachable/unreachable decomposition",
+    "exact protected null-space diagnostic",
+    "bounded correction with post-solve checks",
+    "finite fixed-command uncertainty campaign",
+    "D-optimal sensing information gain",
+    "conservation closure",
+    "held-out validation and recomputation"
+  ],
+  "implementation": "New AHIS expression of established mathematical methods; no imported magnetic-field, fusion or reactor module. Existing AHIS leak, modal, localization, fusion and history modules are reused.",
+  "biological_inspiration": "Tardigrade survival-state analogy informed preservation-first discussion only. No biological material or CAHS performance claim.",
+  "baseline_verification": {
+    "AHIS_v3_tests": 112,
+    "AHIS_v3_gate": "GREEN",
+    "SymmetryLock_unittest": 45
+  },
+  "patent_scope": "Architecture uses diagnostic sensing with separate protective mechanisms; no legal non-infringement or freedom-to-operate claim."
+}

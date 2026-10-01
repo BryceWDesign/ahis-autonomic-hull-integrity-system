@@ -1,4 +1,4 @@
-"""AHIS v2 autonomic integrity research package."""
+"""AHIS v4 autonomic integrity and survival-envelope research package."""
 
 from .damage import DamageEstimate, SensorReading, localize_event
 from .healing import DamageCase, HealingMechanism, HealingDecision, select_healing_response
@@ -26,4 +26,4 @@ __all__ = [
     "verify_repair",
 ]
 
-__version__ = "2.0.0"
+__version__ = "4.0.0"

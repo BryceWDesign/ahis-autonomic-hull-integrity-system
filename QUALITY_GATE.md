@@ -1,22 +1,11 @@
-# AHIS v3.0.0 Quality Gate
+# AHIS v4.0.0 quality gate
 
-The authoritative command is:
+Run `python check_green.py` from the repository root after installing the pinned validation dependencies.
 
-```bash
-python check_green.py
-```
+GREEN requires exactly 222 passing release tests; compilation; v4 lint/format; the retained v3 campaign and canonical digest; 29 fresh v4 case outcomes and archived replay; successful tamper negative controls; machine-readable claim/test mapping; all R1-R10 physical flags false; evaluation licensing; P1's 54-row procurement/build/control package; six CAD envelopes; release hygiene; and a complete unchanged manifest.
 
-A GREEN result requires all of the following in the delivered tree:
+Lint and format gates cover the new survival package, CLI entry and v4 tests. They do not claim a new whole-repository lint certification for inherited source. The entire tree is compiled and its complete tests run.
 
-- Python compilation;
-- exactly 112 passing repository tests for this release;
-- deterministic v3 software/HIL campaign with all pass conditions true;
-- unchanged software/HIL-only campaign authority and canonical receipt;
-- explicit AHIS Evaluation License 1.0 boundary and Bryce Lovell licensing contact;
-- all physical demonstration/certification flags false;
-- complete P1 procurement/build/control/CAD package;
-- generated P1 CAD envelopes matching the registered dimensions;
-- no unresolved release markers, symlinks or runtime cache junk;
-- complete SHA-256 manifest with no missing, modified or unmanifested released files.
+The gate does not silently repair a release, refresh its manifest or promote a physical claim. `scripts/run_v4_campaign.py` and `scripts/make_manifest.py` are explicit developer regeneration tools, not a way to override a failure without investigation.
 
-GREEN is a repository/software release status. `PHYSICAL_STATUS.json` remains the independent physical-claim authority.
+A GREEN local gate is not evidence that GitHub Actions ran. The included matrix targets Linux Python 3.11/3.12 and Windows Python 3.13. Check its actual run after pushing.

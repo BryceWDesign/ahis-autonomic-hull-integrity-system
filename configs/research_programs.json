@@ -1,0 +1,183 @@
+{
+  "schema": "ahis.research/4.0",
+  "programs": [
+    {
+      "id": "R1",
+      "name": "Fast puncture sealing",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "Inherited eligibility and P1 leak-seal surrogate",
+      "required_measurements": [
+        "puncture_geometry",
+        "temperature_history",
+        "leak_before_after",
+        "repeatability"
+      ],
+      "required_test_groups": [
+        "controlled_puncture",
+        "post_event_mechanical"
+      ]
+    },
+    {
+      "id": "R2",
+      "name": "Replenishable microvascular repair",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "Inherited eligibility and finite reservoir accounting",
+      "required_measurements": [
+        "network_geometry",
+        "agent_mass_balance",
+        "cure_state",
+        "fracture_before_after"
+      ],
+      "required_test_groups": [
+        "damage_repair_cycles",
+        "nde"
+      ]
+    },
+    {
+      "id": "R3",
+      "name": "Vitrimer electrothermal repair",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "Thermal bounds in synthetic influence planning",
+      "required_measurements": [
+        "formulation_identity",
+        "thermal_history",
+        "fracture_before_after",
+        "sensor_integrity"
+      ],
+      "required_test_groups": [
+        "thermal_uniformity",
+        "repeated_cycles"
+      ]
+    },
+    {
+      "id": "R4",
+      "name": "SMA assisted metal matrix repair",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "Synthetic heater/strain coordinate; no alloy model",
+      "required_measurements": [
+        "alloy_process_identity",
+        "crack_geometry",
+        "thermal_history",
+        "metallography",
+        "fatigue_before_after"
+      ],
+      "required_test_groups": [
+        "crack_closure",
+        "tensile_fatigue"
+      ]
+    },
+    {
+      "id": "R5",
+      "name": "Sensing network restoration",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "Diagnostic health flags and candidate eligibility",
+      "required_measurements": [
+        "signal_before_after",
+        "electrical_continuity",
+        "calibration_after_repair"
+      ],
+      "required_test_groups": [
+        "damage_restoration",
+        "measurement_fidelity"
+      ]
+    },
+    {
+      "id": "R6",
+      "name": "Stress-Adaptive Protective Interphase",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "Bounded reversible hysteretic phase screen only",
+      "required_measurements": [
+        "strain_rate_history",
+        "stress_strain_loops",
+        "reversibility",
+        "temperature_history",
+        "damage_area"
+      ],
+      "required_test_groups": [
+        "dynamic_mechanical",
+        "impact_controls",
+        "environmental_cycles"
+      ]
+    },
+    {
+      "id": "R7",
+      "name": "Multilayer impact protection",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "Layer mass registry and energy accounting only",
+      "required_measurements": [
+        "projectile_mass_velocity",
+        "layer_geometry",
+        "debris_distribution",
+        "rear_wall_damage",
+        "energy_balance"
+      ],
+      "required_test_groups": [
+        "impact_controls",
+        "hypervelocity_if_claimed",
+        "rear_wall_integrity"
+      ]
+    },
+    {
+      "id": "R8",
+      "name": "Adaptive structural architecture",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "Ranking supplied mass/stiffness/utility surrogate candidates",
+      "required_measurements": [
+        "geometry_identity",
+        "areal_mass",
+        "stiffness",
+        "damage_area",
+        "repair_access"
+      ],
+      "required_test_groups": [
+        "matched_mass_controls",
+        "structural_fatigue",
+        "manufacturing_variability"
+      ]
+    },
+    {
+      "id": "R9",
+      "name": "Resilient diagnostic network",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "D-optimal selection among declared surviving independent sensors",
+      "required_measurements": [
+        "sensor_wiring_identity",
+        "fault_injection_log",
+        "timing_noise",
+        "localization_error",
+        "post_event_calibration"
+      ],
+      "required_test_groups": [
+        "sensor_loss",
+        "wire_loss",
+        "held_out_localization"
+      ]
+    },
+    {
+      "id": "R10",
+      "name": "Active charged-particle shield integrity",
+      "physical_status": "NOT_RUN",
+      "physical_credit": false,
+      "software_scope": "NOT_IMPLEMENTED; separate optional research direction",
+      "required_measurements": [
+        "coil_geometry",
+        "field_map",
+        "particle_transport",
+        "power_thermal_balance"
+      ],
+      "required_test_groups": [
+        "radiation_transport",
+        "quench_faults"
+      ]
+    }
+  ]
+}

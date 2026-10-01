@@ -1,15 +1,11 @@
-AHIS — Autonomic Hull Integrity System
-AHIS v3.0.0 Autonomic Structural Repair & Survivability Testbed
-Copyright (c) 2026 Bryce Lovell
+AHIS v4.0.0, Adaptive Survival Envelope
+Copyright (c) 2026 Bryce Lovell. All rights reserved.
 
-LICENSE BOUNDARY
-AHIS v3.0.0 is distributed under the AHIS Evaluation License 1.0 in the root LICENSE.
-It is source-available for evaluation and is not open source.
+Evaluation-only release under AHIS Evaluation License 1.0.
+Licensing contact: https://www.linkedin.com/in/brycewdesign/
 
-Historical AHIS copies previously published under Apache License 2.0 retain the rights
-that accompanied those copies. The historical Apache text is preserved at
-LICENSES/Apache-2.0-historical.txt for clarity only.
+The v3.0.0 P1 reference article and research programs are retained.
+Earlier actually distributed Apache-2.0 versions retain their existing grants.
 
-Commercial, operational, manufacturing, integration, consulting, production, or
-redistribution rights for v3 require separate written permission from Bryce Lovell.
-Preferred licensing contact: https://www.linkedin.com/in/brycewdesign/
+IX-SymmetryLock informed the mathematical design, as recorded in provenance/UPGRADE_V4.json.
+No fusion field, tracing, reactor, plasma or energy-production claim is imported.

@@ -1,9 +1,9 @@
 {
-  "project": "AHIS — Autonomic Hull Integrity System",
-  "version": "3.0.0",
+  "project": "AHIS \u2014 Autonomic Hull Integrity System",
+  "version": "4.0.0",
   "license": "AHIS Evaluation License 1.0",
   "local_repository_quality": "GREEN",
-  "pytest_passed": 112,
+  "pytest_passed": 222,
   "campaign": "AHIS-V3-AUTONOMIC-REPAIR-SOFTWARE-HIL-CAMPAIGN",
   "campaign_status": "PASS",
   "campaign_authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
@@ -12,5 +12,14 @@
   "github_actions_status": "NOT_RUN_UNTIL_PUSHED",
   "physical_status": "AWAITING_PHYSICAL_VALIDATION",
   "p1_reference_build": "COMPLETE_REFERENCE_PACKAGE__PHYSICAL_RESULT_NOT_YET_MEASURED",
-  "claim_boundary": "GREEN validates repository logic, deterministic software/HIL evidence and release integrity only. It does not grant physical self-healing, structural-strength, hull-survivability, return-to-service or certification credit."
+  "claim_boundary": "GREEN validates repository logic, deterministic software/HIL evidence and release integrity only. It does not grant physical self-healing, structural-strength, hull-survivability, return-to-service or certification credit.",
+  "v4_campaign_cases": 29,
+  "github_ci_observed": false,
+  "local_validation_platform": "Linux, Python 3.11/3.12/3.13",
+  "authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
+  "local_interpreter_gate_results": {
+    "3.11": "GREEN",
+    "3.12": "GREEN",
+    "3.13": "GREEN"
+  }
 }

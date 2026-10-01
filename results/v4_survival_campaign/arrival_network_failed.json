@@ -1,0 +1,923 @@
+{
+  "authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
+  "request": {
+    "accounting": {
+      "agent_a_g": {
+        "absolute_tolerance": 1e-06,
+        "incoming": 50.0,
+        "relative_tolerance": 1e-06,
+        "terms": {
+          "delivered": 14.531617811418734,
+          "measured_loss": 0.0,
+          "remaining": 35.468382188581266
+        }
+      },
+      "agent_b_g": {
+        "absolute_tolerance": 1e-06,
+        "incoming": 50.0,
+        "relative_tolerance": 1e-06,
+        "terms": {
+          "delivered": 14.531617811418734,
+          "measured_loss": 0.0,
+          "remaining": 35.468382188581266
+        }
+      },
+      "electrical_j": {
+        "absolute_tolerance": 1e-06,
+        "incoming": 500.0,
+        "relative_tolerance": 1e-06,
+        "terms": {
+          "consumed": 171.81779197181385,
+          "measured_loss": 0.0,
+          "remaining": 328.18220802818615
+        }
+      },
+      "impact_j": {
+        "absolute_tolerance": 1.0,
+        "incoming": 1000.0,
+        "relative_tolerance": 0.001,
+        "terms": {
+          "bumper_deformation": 200.0,
+          "fracture": 250.0,
+          "residual_debris": 100.0,
+          "thermal": 150.0,
+          "transmitted": 300.0
+        }
+      }
+    },
+    "basis": {
+      "available": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "baseline_zeta": 0.03,
+      "cost": [
+        2.0,
+        100.0,
+        8.0,
+        20.0
+      ],
+      "evidence_class": "SYNTHETIC",
+      "id": "AHIS-SYNTHETIC-INFLUENCE-4.0",
+      "resource_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          8.0,
+          200.0,
+          80.0,
+          30.0
+        ]
+      ],
+      "resource_names": [
+        "agent_a_ml",
+        "agent_b_ml",
+        "electrical_j"
+      ],
+      "response_scale_ml": 8.0,
+      "state": [
+        1.0,
+        1.0,
+        25.0,
+        1.0
+      ],
+      "upper": [
+        22.5,
+        0.12,
+        1.0,
+        1.0
+      ]
+    },
+    "budget": {
+      "cycles_remaining": 10,
+      "resources": [
+        50.0,
+        50.0,
+        500.0
+      ]
+    },
+    "calibration_identities": {
+      "evidence_class": "SYNTHETIC",
+      "influence": "AHIS-SYNTHETIC-INFLUENCE-4.0",
+      "localization": "AHIS-ANISOTROPIC-2450-012-20",
+      "mass_density": "AHIS-HIL-1-G-PER-ML",
+      "measurement_noise": "AHIS-HIL-2-MICROSECOND"
+    },
+    "containment_confirmed": true,
+    "envelope": {
+      "lower": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "names": [
+        "leak_ratio",
+        "vibration_ratio",
+        "temperature_c",
+        "strain_ratio"
+      ],
+      "scales": [
+        1.0,
+        1.0,
+        40.0,
+        1.0
+      ],
+      "units": [
+        "ratio",
+        "ratio",
+        "degC",
+        "ratio"
+      ],
+      "upper": [
+        0.2,
+        0.4,
+        65.0,
+        0.7
+      ]
+    },
+    "event_id": "arrival_network_failed",
+    "exact_protected_matrix": [],
+    "frame": {
+      "estop_closed": true,
+      "head_mm": 500.0,
+      "leak_ml_min": 60.0,
+      "pressure_kpa": 4.9,
+      "sensor_valid": true,
+      "supply_v": 12.0,
+      "timestamp_s": 0.0
+    },
+    "fusion": {
+      "channels": [
+        {
+          "damage_score": 0.91,
+          "name": "guided_wave",
+          "quality": 0.95
+        },
+        {
+          "damage_score": 0.96,
+          "name": "pressure_leak",
+          "quality": 1.0
+        },
+        {
+          "damage_score": 0.8,
+          "name": "strain",
+          "quality": 0.9
+        }
+      ],
+      "minimum_weight": 2.5,
+      "threshold": 0.65
+    },
+    "interlock_limits": {
+      "max_head_mm": 800.0,
+      "max_pressure_kpa": 8.0,
+      "max_supply_v": 13.0
+    },
+    "localization": {
+      "arrivals": [
+        {
+          "arrival_s": 0.02029722255527504,
+          "quality": 0.0,
+          "sensor_id": "A1",
+          "x_m": 0.0,
+          "y_m": 0.0
+        },
+        {
+          "arrival_s": 0.020406559267736473,
+          "quality": 0.0,
+          "sensor_id": "A2",
+          "x_m": 1.0,
+          "y_m": 0.0
+        },
+        {
+          "arrival_s": 0.020270245303072452,
+          "quality": 0.0,
+          "sensor_id": "A3",
+          "x_m": 1.0,
+          "y_m": 1.0
+        },
+        {
+          "arrival_s": 0.02021891652878118,
+          "quality": 0.0,
+          "sensor_id": "A4",
+          "x_m": 0.0,
+          "y_m": 1.0
+        },
+        {
+          "arrival_s": 0.020308157664573098,
+          "quality": 0.0,
+          "sensor_id": "A5",
+          "x_m": 0.5,
+          "y_m": 0.0
+        }
+      ],
+      "bounds_m": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "grid_points": 41,
+      "max_rms_s": 6e-05,
+      "model": {
+        "anisotropy_fraction": 0.12,
+        "base_speed_m_s": 2450.0,
+        "principal_axis_deg": 20.0
+      }
+    },
+    "optimizer": {
+      "margin": 1e-05,
+      "max_iterations": 300
+    },
+    "planning_channels": [
+      {
+        "coordinate": "leak_ratio",
+        "group": "planning-leak_ratio",
+        "healthy": true,
+        "id": "P-leak_ratio",
+        "unit": "ratio",
+        "value": 1.0
+      },
+      {
+        "coordinate": "vibration_ratio",
+        "group": "planning-vibration_ratio",
+        "healthy": true,
+        "id": "P-vibration_ratio",
+        "unit": "ratio",
+        "value": 1.0
+      },
+      {
+        "coordinate": "temperature_c",
+        "group": "planning-temperature_c",
+        "healthy": true,
+        "id": "P-temperature_c",
+        "unit": "degC",
+        "value": 25.0
+      },
+      {
+        "coordinate": "strain_ratio",
+        "group": "planning-strain_ratio",
+        "healthy": true,
+        "id": "P-strain_ratio",
+        "unit": "ratio",
+        "value": 1.0
+      }
+    ],
+    "propagation": {
+      "closed_barriers": [
+        "B-pressure",
+        "B-thermal",
+        "B-load"
+      ],
+      "critical_nodes": [
+        "pressure_compartment",
+        "sensor_bus"
+      ],
+      "edges": [
+        {
+          "barrier": "B-pressure",
+          "delay_s": 2.0,
+          "from": "damage_zone",
+          "kind": "leak",
+          "to": "pressure_compartment"
+        },
+        {
+          "barrier": "B-thermal",
+          "delay_s": 5.0,
+          "from": "damage_zone",
+          "kind": "thermal",
+          "to": "sensor_bus"
+        },
+        {
+          "barrier": "B-load",
+          "delay_s": 0.2,
+          "from": "damage_zone",
+          "kind": "load",
+          "to": "frame_support"
+        },
+        {
+          "barrier": "B-crack",
+          "delay_s": 10.0,
+          "from": "frame_support",
+          "kind": "crack",
+          "to": "thermal_guard"
+        }
+      ],
+      "horizon_s": 30.0,
+      "nodes": [
+        "damage_zone",
+        "pressure_compartment",
+        "sensor_bus",
+        "frame_support",
+        "thermal_guard"
+      ],
+      "origin": "damage_zone"
+    },
+    "protection": {
+      "adaptive_phase": {
+        "dt_s": 0.01,
+        "off_threshold": 0.5,
+        "on_threshold": 1.0,
+        "phase": 0.0,
+        "response_time_s": 0.1,
+        "stress": 2.0
+      },
+      "architectures": {
+        "candidates": [
+          {
+            "areal_mass_kg_m2": 12.0,
+            "declared_utility": 0.5,
+            "id": "uniform",
+            "relative_stiffness": 1.0
+          },
+          {
+            "areal_mass_kg_m2": 13.0,
+            "declared_utility": 0.6,
+            "id": "graded",
+            "relative_stiffness": 0.95
+          },
+          {
+            "areal_mass_kg_m2": 30.0,
+            "declared_utility": 0.9,
+            "id": "too_heavy",
+            "relative_stiffness": 1.1
+          }
+        ],
+        "mass_cap": 15.0,
+        "minimum_stiffness": 0.9
+      },
+      "stack": {
+        "layers": [
+          {
+            "density_kg_m3": 2700.0,
+            "role": "sacrificial_bumper",
+            "status": "DESIGN_ONLY",
+            "thickness_m": 0.001
+          },
+          {
+            "density_kg_m3": 200.0,
+            "role": "energy_distribution_core",
+            "status": "DESIGN_ONLY",
+            "thickness_m": 0.01
+          },
+          {
+            "density_kg_m3": 1100.0,
+            "role": "stress_adaptive_interphase",
+            "status": "DESIGN_ONLY",
+            "thickness_m": 0.001
+          },
+          {
+            "density_kg_m3": 1600.0,
+            "role": "load_bearing_rear_wall",
+            "status": "DESIGN_ONLY",
+            "thickness_m": 0.002
+          },
+          {
+            "density_kg_m3": 950.0,
+            "role": "fast_sealing",
+            "status": "DESIGN_ONLY",
+            "thickness_m": 0.001
+          },
+          {
+            "density_kg_m3": 1100.0,
+            "role": "vascular_repair_network",
+            "status": "DESIGN_ONLY",
+            "thickness_m": 0.0005
+          },
+          {
+            "density_kg_m3": 1200.0,
+            "role": "diagnostic_sensor_layer",
+            "status": "DESIGN_ONLY",
+            "thickness_m": 0.0002
+          },
+          {
+            "density_kg_m3": 950.0,
+            "role": "secondary_containment",
+            "status": "DESIGN_ONLY",
+            "thickness_m": 0.001
+          }
+        ],
+        "max_areal_mass_kg_m2": 15.0
+      }
+    },
+    "response": {
+      "agent_density_g_ml": [
+        1.0,
+        1.0
+      ],
+      "consumed_resources": [
+        14.531617811418734,
+        14.531617811418734,
+        171.81779197181385
+      ],
+      "executed_command": [
+        14.531617811418734,
+        0.05189091406908799,
+        0.5648333333330796,
+        0.0
+      ]
+    },
+    "schema": "ahis.survival/4.0",
+    "sensing": {
+      "candidates": [
+        {
+          "hardware_present": true,
+          "healthy": true,
+          "id": "A6",
+          "noise_std": 2e-06,
+          "x_m": 0.5,
+          "y_m": 1.0
+        },
+        {
+          "hardware_present": true,
+          "healthy": true,
+          "id": "A7",
+          "noise_std": 2e-06,
+          "x_m": 0.9,
+          "y_m": 0.8
+        },
+        {
+          "hardware_present": true,
+          "healthy": true,
+          "id": "A8",
+          "noise_std": 2e-06,
+          "x_m": 0.1,
+          "y_m": 0.2
+        }
+      ],
+      "prior_information": [
+        [
+          0.001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.001
+        ]
+      ],
+      "timing_noise_std_s": 2e-06
+    },
+    "timestamp_utc": "2026-10-01T16:41:36Z",
+    "uncertainty": [
+      {
+        "bias": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gain": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "id": "nominal"
+      },
+      {
+        "bias": [
+          0.005,
+          0.005,
+          1.0,
+          0.005
+        ],
+        "gain": [
+          0.9,
+          0.9,
+          0.9,
+          0.9
+        ],
+        "id": "weak_response"
+      },
+      {
+        "bias": [
+          0.0,
+          0.0,
+          3.0,
+          0.0
+        ],
+        "gain": [
+          1.0,
+          1.0,
+          1.1,
+          1.0
+        ],
+        "id": "hot_response"
+      }
+    ],
+    "verification_channels": [
+      {
+        "coordinate": "leak_ratio",
+        "group": "heldout-leak_ratio",
+        "healthy": true,
+        "id": "V-leak_ratio",
+        "lower": 0.0,
+        "required": true,
+        "unit": "ratio",
+        "upper": 0.2,
+        "value": 0.16260160250261713
+      },
+      {
+        "coordinate": "vibration_ratio",
+        "group": "heldout-vibration_ratio",
+        "healthy": true,
+        "id": "V-vibration_ratio",
+        "lower": 0.0,
+        "required": true,
+        "unit": "ratio",
+        "upper": 0.4,
+        "value": 0.37055554644476235
+      },
+      {
+        "coordinate": "temperature_c",
+        "group": "heldout-temperature_c",
+        "healthy": true,
+        "id": "V-temperature_c",
+        "lower": 0.0,
+        "required": true,
+        "unit": "degC",
+        "upper": 65.0,
+        "value": 42.360127312545096
+      },
+      {
+        "coordinate": "strain_ratio",
+        "group": "heldout-strain_ratio",
+        "healthy": true,
+        "id": "V-strain_ratio",
+        "lower": 0.0,
+        "required": true,
+        "unit": "ratio",
+        "upper": 0.7,
+        "value": 0.6611000000001522
+      }
+    ]
+  },
+  "result": {
+    "accounting": {
+      "agent_a_g": {
+        "accepted": true,
+        "incoming": 50.0,
+        "residual": 0.0,
+        "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
+        "terms": {
+          "delivered": 14.531617811418734,
+          "measured_loss": 0.0,
+          "remaining": 35.468382188581266
+        },
+        "tolerance": 5.099999999999999e-05
+      },
+      "agent_b_g": {
+        "accepted": true,
+        "incoming": 50.0,
+        "residual": 0.0,
+        "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
+        "terms": {
+          "delivered": 14.531617811418734,
+          "measured_loss": 0.0,
+          "remaining": 35.468382188581266
+        },
+        "tolerance": 5.099999999999999e-05
+      },
+      "electrical_j": {
+        "accepted": true,
+        "incoming": 500.0,
+        "residual": 0.0,
+        "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
+        "terms": {
+          "consumed": 171.81779197181385,
+          "measured_loss": 0.0,
+          "remaining": 328.18220802818615
+        },
+        "tolerance": 0.000501
+      },
+      "impact_j": {
+        "accepted": true,
+        "incoming": 1000.0,
+        "residual": 0.0,
+        "scope": "CONSERVATION_ACCOUNTING__NOT_A_PERFORMANCE_PREDICTION",
+        "terms": {
+          "bumper_deformation": 200.0,
+          "fracture": 250.0,
+          "residual_debris": 100.0,
+          "thermal": 150.0,
+          "transmitted": 300.0
+        },
+        "tolerance": 2.0
+      }
+    },
+    "authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
+    "commands": {
+      "damping_delta_zeta": 0.0,
+      "heater_fraction": 0.0,
+      "isolation_fraction": 0.0,
+      "paired_agent_ml": 0.0
+    },
+    "controllability": {
+      "assessed_objectives": [
+        "leak_ratio",
+        "vibration_ratio",
+        "strain_ratio"
+      ],
+      "available_actions": [
+        "paired_agent_ml",
+        "damping_delta_zeta",
+        "heater_fraction"
+      ],
+      "protected_rank": 0,
+      "rank": 3,
+      "reachable_scaled": [
+        0.8,
+        0.6,
+        0.30000000000000004
+      ],
+      "safe_mode_count": 3,
+      "scope": "LOCAL_LINEAR_UNBOUNDED_DIAGNOSTIC",
+      "singular_values": [
+        33.21243290369905,
+        0.5999999999950489,
+        0.12499824220382451
+      ],
+      "unreachable_fraction": 0.0,
+      "unreachable_scaled": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "cycles_remaining": 10,
+    "fusion": {
+      "accepted": true,
+      "disagreement": 0.058614958448753425,
+      "effective_weight": 2.85,
+      "fused_damage_score": 0.8666410944258153,
+      "reason": "multimodal evidence accepted"
+    },
+    "hardware_authority": false,
+    "history": [
+      {
+        "event_hash": "839eae82ef34bff4ef148602bf28e1608bc30cff7561499d2e56cacdb564f68c",
+        "event_type": "raw_evidence",
+        "payload": {
+          "event_id": "arrival_network_failed",
+          "request_digest": "1eb4d75ae6484913938dcdd7a172762c38c666b7fa911df9529161b7b8afa1df"
+        },
+        "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "sequence": 0,
+        "timestamp_utc": "2026-10-01T16:41:36Z"
+      },
+      {
+        "event_hash": "c03a2f471e41950f810f11f19f169ebc8feb1b661ff5a37016c510d42a2c7320",
+        "event_type": "survival_transition",
+        "payload": {
+          "event": "stress",
+          "from": "NOMINAL",
+          "to": "PRESERVATION"
+        },
+        "previous_hash": "839eae82ef34bff4ef148602bf28e1608bc30cff7561499d2e56cacdb564f68c",
+        "sequence": 1,
+        "timestamp_utc": "2026-10-01T16:41:36Z"
+      },
+      {
+        "event_hash": "92f543988cd163feb5e2fed5d0e907e7beff116e5f18dca0e6bb6c9cfb6fbc5b",
+        "event_type": "survival_transition",
+        "payload": {
+          "event": "evidence_failed",
+          "from": "PRESERVATION",
+          "to": "ISOLATED"
+        },
+        "previous_hash": "c03a2f471e41950f810f11f19f169ebc8feb1b661ff5a37016c510d42a2c7320",
+        "sequence": 2,
+        "timestamp_utc": "2026-10-01T16:41:36Z"
+      },
+      {
+        "event_hash": "7e88ab9442c63f02bcd052ab472c41fb5b3bd948570d37bc360ca60febabf5f0",
+        "event_type": "verdict",
+        "payload": {
+          "reasons": [
+            "DAMAGE_EVIDENCE_INSUFFICIENT"
+          ],
+          "state": "ISOLATED"
+        },
+        "previous_hash": "92f543988cd163feb5e2fed5d0e907e7beff116e5f18dca0e6bb6c9cfb6fbc5b",
+        "sequence": 3,
+        "timestamp_utc": "2026-10-01T16:41:36Z"
+      }
+    ],
+    "interlock": {
+      "allowed": true,
+      "reasons": []
+    },
+    "inventory_verified": false,
+    "localization": {
+      "accepted": false,
+      "confidence_radius_m": null,
+      "effective_sensor_weight": 0,
+      "event_time_s": null,
+      "reason": "insufficient sensor quality",
+      "weighted_rms_s": null,
+      "x_m": null,
+      "y_m": null
+    },
+    "next_repair_allowed": false,
+    "physical_credit": false,
+    "plan": null,
+    "propagation_after": {
+      "reachable": [
+        {
+          "earliest_s": 0.0,
+          "node": "damage_zone",
+          "via": null
+        }
+      ],
+      "scope": "DECLARED_GRAPH_REACHABILITY__NOT_PHYSICAL_PROPAGATION"
+    },
+    "propagation_before": {
+      "reachable": [
+        {
+          "earliest_s": 0.0,
+          "node": "damage_zone",
+          "via": null
+        },
+        {
+          "earliest_s": 0.2,
+          "node": "frame_support",
+          "via": {
+            "from": "damage_zone",
+            "kind": "load"
+          }
+        },
+        {
+          "earliest_s": 2.0,
+          "node": "pressure_compartment",
+          "via": {
+            "from": "damage_zone",
+            "kind": "leak"
+          }
+        },
+        {
+          "earliest_s": 5.0,
+          "node": "sensor_bus",
+          "via": {
+            "from": "damage_zone",
+            "kind": "thermal"
+          }
+        },
+        {
+          "earliest_s": 10.2,
+          "node": "thermal_guard",
+          "via": {
+            "from": "frame_support",
+            "kind": "crack"
+          }
+        }
+      ],
+      "scope": "DECLARED_GRAPH_REACHABILITY__NOT_PHYSICAL_PROPAGATION"
+    },
+    "protection": {
+      "adaptive_phase": {
+        "phase": 0.09516258196404037,
+        "physical_credit": false,
+        "scope": "PHENOMENOLOGICAL_SCREEN_ONLY"
+      },
+      "architectures": {
+        "ranking": [
+          {
+            "declared_utility": 0.6,
+            "eligible": true,
+            "id": "graded",
+            "physical_credit": false
+          },
+          {
+            "declared_utility": 0.5,
+            "eligible": true,
+            "id": "uniform",
+            "physical_credit": false
+          },
+          {
+            "declared_utility": 0.9,
+            "eligible": false,
+            "id": "too_heavy",
+            "physical_credit": false
+          }
+        ],
+        "scope": "SUPPLIED_SURROGATE_CO_DESIGN__NOT_MATERIAL_DISCOVERY"
+      },
+      "stack": {
+        "areal_mass_kg_m2": 11.69,
+        "hypervelocity_model_implemented": false,
+        "layer_roles": [
+          "sacrificial_bumper",
+          "energy_distribution_core",
+          "stress_adaptive_interphase",
+          "load_bearing_rear_wall",
+          "fast_sealing",
+          "vascular_repair_network",
+          "diagnostic_sensor_layer",
+          "secondary_containment"
+        ],
+        "mass_budget_pass": true,
+        "physical_protection_credit": false
+      }
+    },
+    "reasons": [
+      "DAMAGE_EVIDENCE_INSUFFICIENT"
+    ],
+    "resource_remaining": [
+      50.0,
+      50.0,
+      500.0
+    ],
+    "return_to_service_allowed": false,
+    "schema": "ahis.survival/4.0",
+    "sensing": {
+      "hardware_authority": false,
+      "ranking": [],
+      "recommended": null
+    },
+    "state": "ISOLATED",
+    "transitions": [
+      {
+        "event": "stress",
+        "from": "NOMINAL",
+        "to": "PRESERVATION"
+      },
+      {
+        "event": "evidence_failed",
+        "from": "PRESERVATION",
+        "to": "ISOLATED"
+      }
+    ],
+    "verification": null
+  },
+  "schema": "ahis.survival/4.0",
+  "sha256": "7ecf351c8ad6a5877ac9dd31e1b6e9e8180e7614196390c3a1be411ca540bd2e",
+  "software": {
+    "dependencies": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0"
+    },
+    "files": {
+      "__init__.py": "aff86010613f961637b159b761f581e318590e32c2e611ca5f357ca8f15b3603",
+      "__main__.py": "d2a219ef6796686745f564d7011cf48b1517f26b8d8bbd176a3236b354b0b234",
+      "barriers.py": "e1bab1954a1b79fd69a8fd49c887cbbe1d4850d26533302c481b064bd68f119d",
+      "campaign.py": "903a545a861588f5646f68fc6e8b96dfd78a457311396847e1e10f20afb1152a",
+      "campaign_v3.py": "12e3e8a01a80a017c85da54d8112a68e9db25259114344a1effa1828eabd9a33",
+      "control.py": "f3b07dfed83208bb6073ab9ef40a3abbe79788d6c30312ecba6e0b3546b10ad6",
+      "damage.py": "dbd9e65861c4978ae0f994a9a43155fdb20d280246967e7d35ddba2cf3ce1761",
+      "digital_twin.py": "d018f687f96a568dccdd9a0dbad2c12c748c92e4414ab70df3acc02b5e3a2e76",
+      "evidence.py": "fe6bb26810072d88480b542f1c87b990c25a985403c5af4cc6522e03bc1bd410",
+      "fatigue.py": "c7eb3c3fef1ebd238621678b5f4afba5d690dd3354ee32962778d7022cf318f2",
+      "fusion.py": "f763def422e8a54f55ad854c2b6a780ae8c53742f585e0c7433446ad41d06756",
+      "hardware.py": "585d96aab63972d295475937030d0a4749491b6edc5026528f769c0298350a62",
+      "healing.py": "feded90d832aa4935e903e2cbc46d03bd21d9299dd7a76fad260a76caf1d1fab",
+      "history.py": "943193856ef8034e2d4da42295d0a3486bf135a6343d9878c4fee03dc5215e3f",
+      "localization_v3.py": "ec3cb464de23814564b95f9a148a11a4d5c5be576a2765c3fa923f8dccd88358",
+      "mission.py": "e8d2fd5b7805df24d27b845baf0ab1022ca1f8495e5d733cdcf0d4d8b7335b9a",
+      "p1_host.py": "14df3dee8e905510fba9545b2f621589f2ec20ba7634feb3a5cf1e83d6cf2281",
+      "physical.py": "7c32ee563c8891ea2f6f12bfefaf716415aa1249364514676303b58b49c62d4e",
+      "prognostics.py": "c80c3319335f55e93917cc55530ce00260b11a28213b60a9253733d7f7572fe8",
+      "protocol.py": "a0fa6686b62beb5c564e9b2f1fee28e3205d7bcce9f2d8404e37d223fced0670",
+      "repair_control.py": "8790ed82742fdc68b984746c5e0550575581c2d04c0692dc2b079574e3278375",
+      "resources.py": "3c1a8f340047c9c8564a1868e95413b3aa9fe457d05372487a9139b58af47cf4",
+      "survival/__init__.py": "c87f484605f734eb188dbb675865fe86fb25ce31bbec46e9467fce5cf788bc2c",
+      "survival/accounting.py": "94688ca1c8a7f6a4e0b7fe1797991bfbd2797302017f9186e6843ae45f4a215c",
+      "survival/active_sensing.py": "f21edeb47ab702d63b505671e3e05771d302efab77e01a33b14ef7b673c9ef38",
+      "survival/adaptive_state.py": "275fa2c768d436b5c77da32dde1ad0786a77e3b59ddb89781781c33540545be0",
+      "survival/campaign.py": "e9c2cdfe6029e00ca93d422f3f40f48646fcdb9514173c5599800812e2685531",
+      "survival/cli.py": "5905ec250860f40fef7fce46a480b9d9144bfe292a608338d4549739ffdfb383",
+      "survival/controllability.py": "741b65901a4d3029f9f6a1928e88136c39ace726aa8c42080ec86e2acb9cb0ce",
+      "survival/controller.py": "39216bf62431f34ad5da66162b21c9af672927340999b3e330edebebc14d987a",
+      "survival/independent_verify.py": "37a718d1e29a67cc7738ebce54d463306a51e28413b9ef57bb83207f8fbcf19a",
+      "survival/influence_basis.py": "bffbd8cbbf9373688fc4a9376ad4f90fcd78f3755a090edb412a141be5d905d2",
+      "survival/numeric.py": "ed8f726c2bd1ce77ba1479b7b8218896fdbfe115d2aa5aefe032c4c46d97e2e7",
+      "survival/propagation.py": "c217fdecbaf71f129f240de9eb09f30205c1c7c8b2e2d626361618077b2ea6ac",
+      "survival/protection_stack.py": "d37057bc69ce9f90599bf2facce3fdfe865cf73506e212e54f1b989adb13afb7",
+      "survival/replay_audit.py": "cb17e86e42b223f9aeabc8c663476f72cc2a1c185379ca7ce7405d7e99465953",
+      "survival/research_programs.py": "30759b7a96ee14213721a6836fbba9f998516d0cd573748719413f5add4416e0",
+      "survival/survival_envelope.py": "46647c6c22e4d11144c103f3bb1e88b1866ed3c98c48d724c1811de4fa77977b",
+      "survival/survival_optimizer.py": "89411d9c3f6ded68e99014c93177a36385ccaa5e14c7df34efa08c86c5efc2e1",
+      "survival/uncertainty.py": "322b952b0f441a103671740e6f0f1d6ebfd7801436938a5e9a6c4b15a8c8be63",
+      "verification.py": "c48319770ce589b7710a3b05fa5ca6ea2e4ce2f1a70a46219595b4c91b310c93"
+    },
+    "source_sha256": "38a46ed431d7e1ab7064468f9bdc5a326dab7f09ebefc4263796330900441cf2"
+  }
+}
