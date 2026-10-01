@@ -1,3 +1,12 @@
+# AHIS v4.0.1, 2026-10-01
+
+- Hardened held-out verification against safe-looking but executed-command-inconsistent responses.
+- Added finite-uncertainty response bands derived from the actual executed command.
+- Added `heldout_model_inconsistent` adversarial campaign coverage.
+- Preserved policy-envelope verification as a separate acceptance condition.
+- Explicitly avoids claiming a physically calibrated sensor-noise model.
+- Release suite increased to 223 tests and the v4 campaign to 30 cases.
+
 # AHIS v4.0.0, 2026-10-01
 
 Added the integrated Adaptive Survival Envelope software/HIL research path, bounded four-action reference model, SVD authority and safe-mode diagnostics, fixed-command robustness, active sensing, preservation/isolation state policy, hazard graphs, conservation ledgers, policy-bound held-out verification, source-bound replay and research completeness gates. Retained P1 hardware/CAD/firmware/calibration and v3 campaign. Added pinned validation dependencies and a Linux/Windows CI matrix. All physical capabilities remain unvalidated.

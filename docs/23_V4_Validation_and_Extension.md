@@ -2,7 +2,7 @@
 
 The release gate is `python check_green.py`. It covers the entire inherited test suite, v4 tests, the retained v3 deterministic campaign, fresh v4 campaign, archived v4 replay, source/claim boundaries, v4 lint and formatting, P1 build/CAD package and full-tree SHA-256 integrity.
 
-The v4 campaign contains 29 cases. Acceptance means the expected decision happened, including expected rejections. It does not mean all requested repairs succeeded. The nominal, alternative-isolation and held-out weak-response cases recover only to RECOVERED_LIMITED. The remaining cases isolate. Tampered and rehashed-tampered evidence must fail audit.
+The v4 campaign contains 30 cases. Acceptance means the expected decision happened, including expected rejections. It does not mean all requested repairs succeeded. The nominal, alternative-isolation and held-out weak-response cases recover only to RECOVERED_LIMITED. The remaining cases isolate. Tampered and rehashed-tampered evidence must fail audit.
 
 The suite includes analytic leak-volume comparison, orthogonal SVD reconstruction, independently computed information-determinant gain, isotropic arrival-gradient comparison, zero-authority rejection, full local authority with infeasible resource bounds, exact lock rejection, fixed-command uncertainty failure, held-out limit enforcement, failed-verification consumption, measured-loss subtraction and physical-credit firewall tests.
 

@@ -1,4 +1,4 @@
-# AHIS v4.0.0 validation report
+# AHIS v4.0.1 validation report
 
 This report distinguishes executed local checks from configured future CI and unperformed physical work.
 
@@ -6,13 +6,13 @@ This report distinguishes executed local checks from configured future CI and un
 |---|---|---|
 | Supplied AHIS v3 release gate | GREEN, 112 tests | Baseline reproduced before modification |
 | Supplied SymmetryLock tests | 45 passing | Donor mathematical repository independently exercised |
-| v4 complete repository tests | 222 passing | Inherited suite plus new numerical/adversarial assurance checks |
+| v4 complete repository tests | 223 passing | Inherited suite plus new numerical/adversarial assurance checks |
 | Retained v3 campaign | All pass conditions true | Original canonical digest retained |
 | v4 survival campaign | 29/29 expected outcomes | Three limited-recovery cases and 26 isolation controls |
 | Evidence audit | All 29 archived decisions replay | Integrity/source binding and decision reconstruction |
 | Tamper controls | Altered and rehashed altered decisions rejected | SHA-256 alone is not treated as authentication |
 | New code/test lint and format | PASS | Scope explicitly defined in QUALITY_GATE.md |
-| Local interpreter matrix | Full release gate GREEN on Linux Python 3.11, 3.12 and 3.13 | Separate environments, 222 tests and 29-case replay on each |
+| Local interpreter matrix | Full release gate GREEN on Linux Python 3.11, 3.12 and 3.13 | Separate environments, 223 tests and 30-case replay on each |
 | Isolated dependency consistency | PASS | Pinned validation environments |
 | Wheel installation and CLI | PASS outside source checkout | Decision, replay audit and dependency consistency |
 | P1 reference package | 54 BOM rows; six CAD envelopes pass | Package integrity, no physical run |

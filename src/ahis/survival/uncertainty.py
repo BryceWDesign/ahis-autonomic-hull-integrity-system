@@ -33,3 +33,23 @@ def campaign(basis, envelope, command, rows):
         "scope": "DECLARED_FINITE_SET_ONLY",
         "fixed_command": finite(command).tolist(),
     }
+
+
+def response_bounds(basis, command, rows):
+    """Expected response band for one executed command over the declared finite uncertainty set.
+
+    This is model consistency only. It does not include a physical sensor-noise model.
+    """
+    states = []
+    scenario_ids = []
+    for name, gain, bias in scenarios(rows):
+        states.append(basis.predict(command, gain, bias))
+        scenario_ids.append(name)
+    matrix = np.vstack(states)
+    return {
+        "lower": np.min(matrix, axis=0).tolist(),
+        "upper": np.max(matrix, axis=0).tolist(),
+        "scenario_ids": scenario_ids,
+        "scope": "DECLARED_FINITE_SET_ONLY",
+        "measurement_noise_included": False,
+    }

@@ -1,5 +1,5 @@
 {
-  "version": "4.0.0",
+  "version": "4.0.1",
   "source_archives": [
     {
       "filename": "IX-SymmetryLock-main(1).zip",
@@ -28,5 +28,6 @@
     "AHIS_v3_gate": "GREEN",
     "SymmetryLock_unittest": 45
   },
-  "patent_scope": "Architecture uses diagnostic sensing with separate protective mechanisms; no legal non-infringement or freedom-to-operate claim."
+  "patent_scope": "Architecture uses diagnostic sensing with separate protective mechanisms; no legal non-infringement or freedom-to-operate claim.",
+  "v4_0_1_hardening": "Held-out post-response verification now requires consistency with the executed-command response band across the declared finite uncertainty set. No physical measurement-noise calibration is claimed."
 }

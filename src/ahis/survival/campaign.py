@@ -110,6 +110,7 @@ def cases(template):
     )
     add("solver_iteration_limit", lambda r: r["optimizer"].update(max_iterations=1))
     add("heldout_failed", lambda r: r["verification_channels"][0].update(value=0.8))
+    add("heldout_model_inconsistent", lambda r: r["verification_channels"][0].update(value=0.1))
     add("heldout_unavailable", lambda r: r["verification_channels"][0].update(healthy=False))
     add(
         "heldout_reuses_planning_sensor",

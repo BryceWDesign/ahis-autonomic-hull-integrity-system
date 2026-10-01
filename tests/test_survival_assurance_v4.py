@@ -63,9 +63,12 @@ def test_rejected_plan_cannot_consume_an_inventory():
 
 def test_failed_post_response_verification_retains_consumption():
     r = deepcopy(CASES[0][1])
-    r["verification_channels"][0]["value"] = 0.9
+    channel = r["verification_channels"][0]
+    channel["value"] = 0.1  # Inside policy envelope, outside executed-command response band.
+    assert channel["lower"] <= channel["value"] <= channel["upper"]
     result = decide(r)
     assert result["state"] == "ISOLATED"
+    assert "RESPONSE_MODEL_INCONSISTENT:V-leak_ratio" in result["reasons"]
     assert result["resource_remaining"][0] < r["budget"]["resources"][0]
 
 

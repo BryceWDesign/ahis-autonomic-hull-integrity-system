@@ -148,7 +148,7 @@
         0.7
       ]
     },
-    "event_id": "barrier_failure",
+    "event_id": "heldout_model_inconsistent",
     "exact_protected_matrix": [],
     "frame": {
       "estop_closed": true,
@@ -276,7 +276,11 @@
       }
     ],
     "propagation": {
-      "closed_barriers": [],
+      "closed_barriers": [
+        "B-pressure",
+        "B-thermal",
+        "B-load"
+      ],
       "critical_nodes": [
         "pressure_compartment",
         "sensor_bus"
@@ -530,7 +534,7 @@
         "required": true,
         "unit": "ratio",
         "upper": 0.2,
-        "value": 0.16260160250262268
+        "value": 0.1
       },
       {
         "coordinate": "vibration_ratio",
@@ -622,10 +626,10 @@
     },
     "authority": "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT",
     "commands": {
-      "damping_delta_zeta": 0.0,
-      "heater_fraction": 0.0,
+      "damping_delta_zeta": 0.05189091406909102,
+      "heater_fraction": 0.5648333333328719,
       "isolation_fraction": 0.0,
-      "paired_agent_ml": 0.0
+      "paired_agent_ml": 14.53161781141846
     },
     "controllability": {
       "assessed_objectives": [
@@ -659,7 +663,7 @@
         0.0
       ]
     },
-    "cycles_remaining": 10,
+    "cycles_remaining": 6,
     "fusion": {
       "accepted": true,
       "disagreement": 0.058614958448753425,
@@ -670,51 +674,87 @@
     "hardware_authority": false,
     "history": [
       {
-        "event_hash": "4dcb7ed025e362b3734b1b94af4b759cdcb16bf4ce202dd7f3347809cb93838c",
+        "event_hash": "3ab08bd93fe7d09cf73902fe2c9d926e5f9b1f045b578b363f57ce32b0bd852a",
         "event_type": "raw_evidence",
         "payload": {
-          "event_id": "barrier_failure",
-          "request_digest": "c67024a0f5c9c738ffc634e2e11da60a66210a0c0b310872d79ff7669de2ee3f"
+          "event_id": "heldout_model_inconsistent",
+          "request_digest": "80667e20788fdbf0599bc8dec0f8362c26458eed4a0faba5b11ce004819ddc55"
         },
         "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
         "sequence": 0,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "6d45193e86b06bf99a0885938e2d95778557f4ffebc3cded85e325711ccb8ff0",
+        "event_hash": "4757d85a136455af728edb5d66816daf1aa4a7cbbbc5888fe41685040bc18eb7",
         "event_type": "survival_transition",
         "payload": {
           "event": "stress",
           "from": "NOMINAL",
           "to": "PRESERVATION"
         },
-        "previous_hash": "4dcb7ed025e362b3734b1b94af4b759cdcb16bf4ce202dd7f3347809cb93838c",
+        "previous_hash": "3ab08bd93fe7d09cf73902fe2c9d926e5f9b1f045b578b363f57ce32b0bd852a",
         "sequence": 1,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "82969082764a440137659fd66c7be02a74eb86800262d0a186c4d9fbb28b6f99",
+        "event_hash": "91577e3ec3cdeb431aeba83292a58a4158027279bcae7335e1354f809fa9964a",
         "event_type": "survival_transition",
         "payload": {
-          "event": "evidence_failed",
+          "event": "containment_confirmed",
           "from": "PRESERVATION",
-          "to": "ISOLATED"
+          "to": "CONTAINED"
         },
-        "previous_hash": "6d45193e86b06bf99a0885938e2d95778557f4ffebc3cded85e325711ccb8ff0",
+        "previous_hash": "4757d85a136455af728edb5d66816daf1aa4a7cbbbc5888fe41685040bc18eb7",
         "sequence": 2,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "616c810979a8e54d6e979e6ebdb9091a029407185b660a2bccc056fce3ef7405",
+        "event_hash": "4bcca9f8402bb082750588fed6db2e324c81f5a4700f3d8a7a35bd77c249c601",
+        "event_type": "survival_transition",
+        "payload": {
+          "event": "plan_accepted",
+          "from": "CONTAINED",
+          "to": "REPAIRING"
+        },
+        "previous_hash": "91577e3ec3cdeb431aeba83292a58a4158027279bcae7335e1354f809fa9964a",
+        "sequence": 3,
+        "timestamp_utc": "2026-10-01T16:41:36Z"
+      },
+      {
+        "event_hash": "7fb1a3814625fe92a17c3bdba2171a74ff5ba1e220989ec6f2ebc7678cbf9837",
+        "event_type": "survival_transition",
+        "payload": {
+          "event": "response_recorded",
+          "from": "REPAIRING",
+          "to": "VERIFYING"
+        },
+        "previous_hash": "4bcca9f8402bb082750588fed6db2e324c81f5a4700f3d8a7a35bd77c249c601",
+        "sequence": 4,
+        "timestamp_utc": "2026-10-01T16:41:36Z"
+      },
+      {
+        "event_hash": "352962732f30ba60fc49572681341c51d653677e6d29b7ecece2e6ec773734ad",
+        "event_type": "survival_transition",
+        "payload": {
+          "event": "verification_failed",
+          "from": "VERIFYING",
+          "to": "ISOLATED"
+        },
+        "previous_hash": "7fb1a3814625fe92a17c3bdba2171a74ff5ba1e220989ec6f2ebc7678cbf9837",
+        "sequence": 5,
+        "timestamp_utc": "2026-10-01T16:41:36Z"
+      },
+      {
+        "event_hash": "97cf700a3124fae21579b5f16aa872ad6cd9ea58a01b8590a0f717797901042f",
         "event_type": "verdict",
         "payload": {
           "reasons": [
-            "CONTAINMENT_NOT_ESTABLISHED"
+            "RESPONSE_MODEL_INCONSISTENT:V-leak_ratio"
           ],
           "state": "ISOLATED"
         },
-        "previous_hash": "82969082764a440137659fd66c7be02a74eb86800262d0a186c4d9fbb28b6f99",
-        "sequence": 3,
+        "previous_hash": "352962732f30ba60fc49572681341c51d653677e6d29b7ecece2e6ec773734ad",
+        "sequence": 6,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       }
     ],
@@ -722,7 +762,7 @@
       "allowed": true,
       "reasons": []
     },
-    "inventory_verified": false,
+    "inventory_verified": true,
     "localization": {
       "accepted": true,
       "confidence_radius_m": 0.0,
@@ -735,45 +775,87 @@
     },
     "next_repair_allowed": false,
     "physical_credit": false,
-    "plan": null,
+    "plan": {
+      "accepted": true,
+      "authorized_command": [
+        14.53161781141846,
+        0.05189091406909102,
+        0.5648333333328719,
+        0.0
+      ],
+      "cycle_demand": 4,
+      "hardware_authority": false,
+      "iterations": 12,
+      "objective": 38.77099369640899,
+      "optimality_scope": "LOCAL_CONSTRAINED_SOLUTION__NO_GLOBAL_OPTIMUM_CLAIM",
+      "proposal": [
+        14.53161781141846,
+        0.05189091406909102,
+        0.5648333333328719,
+        0.0
+      ],
+      "reasons": [],
+      "resource_demand": [
+        14.53161781141846,
+        14.53161781141846,
+        171.81779197179563
+      ],
+      "resource_remaining": [
+        35.46838218858154,
+        35.46838218858154,
+        328.1822080282044
+      ],
+      "robustness": {
+        "all_pass": true,
+        "fixed_command": [
+          14.53161781141846,
+          0.05189091406909102,
+          0.5648333333328719,
+          0.0
+        ],
+        "scenarios": [
+          {
+            "id": "nominal",
+            "state": [
+              0.16260160250262268,
+              0.370555546444749,
+              42.36012731253888,
+              0.6611000000002769
+            ],
+            "violations": []
+          },
+          {
+            "id": "weak_response",
+            "state": [
+              0.19999000000001266,
+              0.3999899999999776,
+              41.62411458128499,
+              0.6999900000002491
+            ],
+            "violations": []
+          },
+          {
+            "id": "hot_response",
+            "state": [
+              0.16260160250262268,
+              0.370555546444749,
+              47.054627312537505,
+              0.6272100000003045
+            ],
+            "violations": []
+          }
+        ],
+        "scope": "DECLARED_FINITE_SET_ONLY"
+      },
+      "solver_message": "Optimization terminated successfully",
+      "solver_success": true
+    },
     "propagation_after": {
       "reachable": [
         {
           "earliest_s": 0.0,
           "node": "damage_zone",
           "via": null
-        },
-        {
-          "earliest_s": 0.2,
-          "node": "frame_support",
-          "via": {
-            "from": "damage_zone",
-            "kind": "load"
-          }
-        },
-        {
-          "earliest_s": 2.0,
-          "node": "pressure_compartment",
-          "via": {
-            "from": "damage_zone",
-            "kind": "leak"
-          }
-        },
-        {
-          "earliest_s": 5.0,
-          "node": "sensor_bus",
-          "via": {
-            "from": "damage_zone",
-            "kind": "thermal"
-          }
-        },
-        {
-          "earliest_s": 10.2,
-          "node": "thermal_guard",
-          "via": {
-            "from": "frame_support",
-            "kind": "crack"
-          }
         }
       ],
       "scope": "DECLARED_GRAPH_REACHABILITY__NOT_PHYSICAL_PROPAGATION"
@@ -867,12 +949,12 @@
       }
     },
     "reasons": [
-      "CONTAINMENT_NOT_ESTABLISHED"
+      "RESPONSE_MODEL_INCONSISTENT:V-leak_ratio"
     ],
     "resource_remaining": [
-      50.0,
-      50.0,
-      500.0
+      35.46838218858154,
+      35.46838218858154,
+      328.1822080282044
     ],
     "return_to_service_allowed": false,
     "schema": "ahis.survival/4.0",
@@ -905,15 +987,61 @@
         "to": "PRESERVATION"
       },
       {
-        "event": "evidence_failed",
+        "event": "containment_confirmed",
         "from": "PRESERVATION",
+        "to": "CONTAINED"
+      },
+      {
+        "event": "plan_accepted",
+        "from": "CONTAINED",
+        "to": "REPAIRING"
+      },
+      {
+        "event": "response_recorded",
+        "from": "REPAIRING",
+        "to": "VERIFYING"
+      },
+      {
+        "event": "verification_failed",
+        "from": "VERIFYING",
         "to": "ISOLATED"
       }
     ],
-    "verification": null
+    "verification": {
+      "healthy_channels": 4,
+      "independent_groups": 4,
+      "passed": false,
+      "physical_credit": false,
+      "reasons": [
+        "RESPONSE_MODEL_INCONSISTENT:V-leak_ratio"
+      ],
+      "response_consistency": {
+        "lower": [
+          0.16260160250262268,
+          0.370555546444749,
+          41.62411458128499,
+          0.6272100000003045
+        ],
+        "measurement_noise_included": false,
+        "numerical_relative_tolerance": 1e-09,
+        "scenario_ids": [
+          "nominal",
+          "weak_response",
+          "hot_response"
+        ],
+        "scope": "DECLARED_FINITE_SET_ONLY",
+        "upper": [
+          0.19999000000001266,
+          0.3999899999999776,
+          47.054627312537505,
+          0.6999900000002491
+        ]
+      },
+      "return_to_service_allowed": false
+    }
   },
   "schema": "ahis.survival/4.0",
-  "sha256": "7d0f137063ebafb0b8d5a3b7fd50436408be48de32798ee1672dd53e1c23ea61",
+  "sha256": "86f0461bae72e4908430aaccfaab98bcf03515649955115d46bd4fb441a4a304",
   "software": {
     "dependencies": {
       "numpy": "2.3.5",

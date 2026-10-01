@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ahis-autonomic-hull-integrity-system"
-version = "4.0.0"
+version = "4.0.1"
 description = "Evaluation-licensed autonomic structural repair and survivability research testbed"
 requires-python = ">=3.11"
 dependencies = ["numpy>=2.0,<3", "scipy>=1.14,<2"]

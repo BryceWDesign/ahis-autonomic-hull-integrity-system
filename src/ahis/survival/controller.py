@@ -17,6 +17,7 @@ from .active_sensing import advise, arrival_jacobian
 from .propagation import trace_hazards
 from .accounting import closure
 from .independent_verify import verify
+from .uncertainty import response_bounds
 from .protection_stack import stack_screen, protective_phase, rank_architectures
 
 
@@ -263,11 +264,6 @@ def decide(request):
             machine.advance("plan_accepted")
             commands = plan["authorized_command"]
             machine.advance("response_recorded")
-            verification = verify(
-                [{k: v for k, v in c.items() if k not in {"coordinate", "unit"}} for c in heldout],
-                planning_ids=ids + [o.sensor_id for o in observations] + [r["name"] for r in fusion_rows],
-                planning_groups=groups + ["arrival_bus", "fusion_bus"],
-            )
             response_errors = []
             if not np.allclose(executed, commands, rtol=1e-6, atol=1e-7):
                 response_errors.append("EXECUTED_COMMAND_MISMATCH")
@@ -281,17 +277,26 @@ def decide(request):
                 sink = "delivered" if i < 2 else "consumed"
                 if sink not in row["terms"] or abs(row["terms"][sink] - consumed[i] * scale) > 1e-6:
                     response_errors.append("ACCOUNT_MEASURED_CONSUMPTION:" + key)
+
             if response_errors:
                 reasons.extend(response_errors)
                 machine.advance("evidence_failed")
             elif not all(a["accepted"] for a in accounts.values()):
                 reasons.append("CONSERVATION_ACCOUNTING_FAILED")
                 machine.advance("accounting_failed")
-            elif not verification["passed"]:
-                reasons.extend(verification["reasons"])
-                machine.advance("verification_failed")
             else:
-                machine.advance("held_out_pass")
+                expected_response = response_bounds(basis, executed, request["uncertainty"])
+                verification = verify(
+                    [{k: v for k, v in c.items() if k not in {"coordinate", "unit"}} for c in heldout],
+                    planning_ids=ids + [o.sensor_id for o in observations] + [r["name"] for r in fusion_rows],
+                    planning_groups=groups + ["arrival_bus", "fusion_bus"],
+                    response_bounds=expected_response,
+                )
+                if not verification["passed"]:
+                    reasons.extend(verification["reasons"])
+                    machine.advance("verification_failed")
+                else:
+                    machine.advance("held_out_pass")
     history = StructuralHistory()
     history.append(
         "raw_evidence",
