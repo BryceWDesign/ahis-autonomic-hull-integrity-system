@@ -978,14 +978,14 @@
     "verification": null
   },
   "schema": "ahis.survival/4.0",
-  "sha256": "331c31c8c49f3cb472dda261ba668f9c10813b26a69f1db245a4e47891bb1374",
+  "sha256": "bbe255a27bbe43fa2193e90de17c6add30f233c73f9cff813c060398ff3c570f",
   "software": {
     "dependencies": {
       "numpy": "2.3.5",
       "scipy": "1.17.0"
     },
     "files": {
-      "__init__.py": "4a5d26141355d40f28328138c711ad5d344f3e5da48f8e196ee06b6fbf8c0c10",
+      "__init__.py": "9b2555a78fa783676498e96c9c9752d63f70e13c38d30ebeb11b61e7204a805f",
       "__main__.py": "d2a219ef6796686745f564d7011cf48b1517f26b8d8bbd176a3236b354b0b234",
       "barriers.py": "e1bab1954a1b79fd69a8fd49c887cbbe1d4850d26533302c481b064bd68f119d",
       "campaign.py": "903a545a861588f5646f68fc6e8b96dfd78a457311396847e1e10f20afb1152a",
@@ -1011,11 +1011,11 @@
       "survival/accounting.py": "94688ca1c8a7f6a4e0b7fe1797991bfbd2797302017f9186e6843ae45f4a215c",
       "survival/active_sensing.py": "f21edeb47ab702d63b505671e3e05771d302efab77e01a33b14ef7b673c9ef38",
       "survival/adaptive_state.py": "275fa2c768d436b5c77da32dde1ad0786a77e3b59ddb89781781c33540545be0",
-      "survival/campaign.py": "508013efe43ab12bfb7f334952576bd56b3f6b9a1ff8576accbd3e06e929f2c2",
+      "survival/campaign.py": "0ca1383f4539b8fefc9e5dc0b2465bf404edd693af337d8dfba3abe78577a4a5",
       "survival/cli.py": "5905ec250860f40fef7fce46a480b9d9144bfe292a608338d4549739ffdfb383",
       "survival/controllability.py": "741b65901a4d3029f9f6a1928e88136c39ace726aa8c42080ec86e2acb9cb0ce",
       "survival/controller.py": "5d1494c88be97d77dd26eb46554bb2a39ddbbb416202c04e13f0be4c8061a78c",
-      "survival/independent_verify.py": "ad0257d1bcf28289386ace2f21cb83c38abc8d9e661847fb726762503c0fc80d",
+      "survival/independent_verify.py": "d68eb0633c2e66a7bc82f848376c681466acac088166761a7e0a7308e1230f10",
       "survival/influence_basis.py": "bffbd8cbbf9373688fc4a9376ad4f90fcd78f3755a090edb412a141be5d905d2",
       "survival/numeric.py": "ed8f726c2bd1ce77ba1479b7b8218896fdbfe115d2aa5aefe032c4c46d97e2e7",
       "survival/propagation.py": "c217fdecbaf71f129f240de9eb09f30205c1c7c8b2e2d626361618077b2ea6ac",
@@ -1024,9 +1024,9 @@
       "survival/research_programs.py": "30759b7a96ee14213721a6836fbba9f998516d0cd573748719413f5add4416e0",
       "survival/survival_envelope.py": "46647c6c22e4d11144c103f3bb1e88b1866ed3c98c48d724c1811de4fa77977b",
       "survival/survival_optimizer.py": "89411d9c3f6ded68e99014c93177a36385ccaa5e14c7df34efa08c86c5efc2e1",
-      "survival/uncertainty.py": "85b51494c392ea1d9f752061f3ea267ad2b327b455e7eed424bd47498e65b180",
+      "survival/uncertainty.py": "8e5312be9f4c471d6d73c105e468e5d729119eca29356930ffedd6204d27e83a",
       "verification.py": "c48319770ce589b7710a3b05fa5ca6ea2e4ce2f1a70a46219595b4c91b310c93"
     },
-    "source_sha256": "2863758cb97dad142f7fac0bce207a62d96dc5e498067f1514435252fb3132a5"
+    "source_sha256": "011916c5f66143942b81f6d1cf83a71c03ebb8fdb70c892902ddc8e13da93ce1"
   }
 }

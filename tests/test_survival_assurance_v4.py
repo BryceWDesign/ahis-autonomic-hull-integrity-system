@@ -62,14 +62,21 @@ def test_rejected_plan_cannot_consume_an_inventory():
 
 
 def test_failed_post_response_verification_retains_consumption():
-    r = deepcopy(CASES[0][1])
-    channel = r["verification_channels"][0]
-    channel["value"] = 0.1  # Inside policy envelope, outside executed-command response band.
-    assert channel["lower"] <= channel["value"] <= channel["upper"]
-    result = decide(r)
-    assert result["state"] == "ISOLATED"
-    assert "RESPONSE_MODEL_INCONSISTENT:V-leak_ratio" in result["reasons"]
-    assert result["resource_remaining"][0] < r["budget"]["resources"][0]
+    by_name = {name: evidence for name, evidence, _ in CASES}
+
+    single = deepcopy(by_name["heldout_model_inconsistent"])
+    single_result = decide(single)
+    assert single_result["state"] == "ISOLATED"
+    assert "RESPONSE_MODEL_INCONSISTENT:V-leak_ratio" in single_result["reasons"]
+    assert single_result["resource_remaining"][0] < single["budget"]["resources"][0]
+
+    mixed = deepcopy(by_name["heldout_scenario_inconsistent"])
+    assert all(c["lower"] <= c["value"] <= c["upper"] for c in mixed["verification_channels"])
+    mixed_result = decide(mixed)
+    assert mixed_result["state"] == "ISOLATED"
+    assert "RESPONSE_SCENARIO_INCONSISTENT" in mixed_result["reasons"]
+    assert not any(reason.startswith("RESPONSE_MODEL_INCONSISTENT:") for reason in mixed_result["reasons"])
+    assert mixed_result["resource_remaining"][0] < mixed["budget"]["resources"][0]
 
 
 def test_replay_survives_json_roundtrip():

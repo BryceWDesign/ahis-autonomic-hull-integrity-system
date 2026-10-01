@@ -1,3 +1,13 @@
+# AHIS v4.0.2, 2026-10-01
+
+- Hardened executed-command verification from independent per-coordinate bounds to full-vector scenario coherence.
+- Preserves complete response predictions for every declared finite uncertainty scenario.
+- Rejects mixed-scenario held-out vectors with `RESPONSE_SCENARIO_INCONSISTENT`.
+- Retains per-coordinate `RESPONSE_MODEL_INCONSISTENT` diagnostics for out-of-band responses.
+- Adds `heldout_scenario_inconsistent` adversarial campaign coverage.
+- Explicitly makes no physical sensor-noise or continuous uncertainty interpolation claim.
+- Release suite increased to 224 tests and the v4 campaign to 31 cases.
+
 # AHIS v4.0.1, 2026-10-01
 
 - Hardened held-out verification against safe-looking but executed-command-inconsistent responses.

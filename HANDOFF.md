@@ -1,6 +1,6 @@
-# AHIS v4.0.1 full handoff
+# AHIS v4.0.2 full handoff
 
-The archive contains the complete repository, retained P1 hardware package, both campaigns, validation records and an installable Python wheel. Begin in the `AHIS-v4.0.1` directory. The repository has no included `.git` directory and does not overwrite your existing Git history.
+The archive contains the complete repository, retained P1 hardware package, both campaigns, validation records and an installable Python wheel. Begin in the `AHIS-v4.0.2` directory. The repository has no included `.git` directory and does not overwrite your existing Git history.
 
 ## Windows PowerShell
 
@@ -38,6 +38,6 @@ Run generated work outside the release tree so the integrity manifest continues 
 
 ## Updating an existing Git checkout
 
-Create an upgrade branch in your existing clone. Copy the contents of `AHIS-v4.0.1` into that clone, preserving its `.git` directory. The v3 workflow is replaced by `.github/workflows/quality.yml`; remove any remaining duplicate v3 release workflow. Review `git diff --stat`, run the gate, then commit and push the branch. Do not reinitialize an existing repository or force-push.
+Create an upgrade branch in your existing clone. Copy the contents of `AHIS-v4.0.2` into that clone, preserving its `.git` directory. The v3 workflow is replaced by `.github/workflows/quality.yml`; remove any remaining duplicate v3 release workflow. Review `git diff --stat`, run the gate, then commit and push the branch. Do not reinitialize an existing repository or force-push.
 
 The evaluation license and Bryce Lovell contact are retained. No patent freedom-to-operate guarantee or operational approval is supplied. Read `VALIDATION_REPORT.md` for what was actually run locally, and `docs/claims_v4.json` for implemented versus screened versus unimplemented capabilities.

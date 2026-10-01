@@ -1,4 +1,4 @@
-# AHIS v4.0.1 release status
+# AHIS v4.0.2 release status
 
 Repository/software authority: `python check_green.py`. The delivered validation records identify the local test and campaign outcome. `GREEN_STATUS.json` is checked by that command rather than treated as proof on its own.
 

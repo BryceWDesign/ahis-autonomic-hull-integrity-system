@@ -36,20 +36,20 @@ def campaign(basis, envelope, command, rows):
 
 
 def response_bounds(basis, command, rows):
-    """Expected response band for one executed command over the declared finite uncertainty set.
+    """Expected response set for one executed command over the declared finite uncertainty set.
 
-    This is model consistency only. It does not include a physical sensor-noise model.
+    Per-channel bounds support diagnostics, while full scenario vectors preserve
+    cross-coordinate coherence. This does not include a physical sensor-noise model.
     """
-    states = []
-    scenario_ids = []
+    scenario_rows = []
     for name, gain, bias in scenarios(rows):
-        states.append(basis.predict(command, gain, bias))
-        scenario_ids.append(name)
-    matrix = np.vstack(states)
+        scenario_rows.append({"id": name, "state": basis.predict(command, gain, bias).tolist()})
+    matrix = np.vstack([row["state"] for row in scenario_rows])
     return {
         "lower": np.min(matrix, axis=0).tolist(),
         "upper": np.max(matrix, axis=0).tolist(),
-        "scenario_ids": scenario_ids,
+        "scenarios": scenario_rows,
+        "scenario_ids": [row["id"] for row in scenario_rows],
         "scope": "DECLARED_FINITE_SET_ONLY",
         "measurement_noise_included": False,
     }

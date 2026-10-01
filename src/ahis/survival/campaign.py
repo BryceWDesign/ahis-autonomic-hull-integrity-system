@@ -10,6 +10,7 @@ import numpy as np
 from .influence_basis import InfluenceBasis, COORDINATES
 from .survival_envelope import Envelope
 from .survival_optimizer import solve
+from .uncertainty import scenarios
 from .numeric import write_json, digest
 from .replay_audit import record, audit
 from . import AUTHORITY
@@ -111,6 +112,17 @@ def cases(template):
     add("solver_iteration_limit", lambda r: r["optimizer"].update(max_iterations=1))
     add("heldout_failed", lambda r: r["verification_channels"][0].update(value=0.8))
     add("heldout_model_inconsistent", lambda r: r["verification_channels"][0].update(value=0.1))
+
+    def mix_declared_scenarios(r):
+        basis = InfluenceBasis(r["basis"])
+        command = r["response"]["executed_command"]
+        predicted = {
+            name: basis.predict(command, gain, bias) for name, gain, bias in scenarios(r["uncertainty"])
+        }
+        r["verification_channels"][0]["value"] = float(predicted["weak_response"][0])
+        r["verification_channels"][2]["value"] = float(predicted["hot_response"][2])
+
+    add("heldout_scenario_inconsistent", mix_declared_scenarios)
     add("heldout_unavailable", lambda r: r["verification_channels"][0].update(healthy=False))
     add(
         "heldout_reuses_planning_sensor",

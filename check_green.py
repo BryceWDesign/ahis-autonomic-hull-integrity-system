@@ -22,10 +22,10 @@ if str(SRC) not in sys.path:
 
 from ahis.evidence import verify_manifest
 
-EXPECTED_VERSION = "4.0.1"
+EXPECTED_VERSION = "4.0.2"
 EXPECTED_AUTHORITY = "SOFTWARE_AND_HIL_ONLY__NO_PHYSICAL_HEALING_OR_HULL_SURVIVABILITY_CREDIT"
 EXPECTED_CAMPAIGN_SHA = "1991c991b5fbbc3d9275abfb4e1e8f7d6c610a6ac07714f616dd6df8b5911977"
-EXPECTED_TESTS = 223
+EXPECTED_TESTS = 224
 LICENSE_CONTACT = "https://www.linkedin.com/in/brycewdesign/"
 
 
@@ -76,7 +76,7 @@ def check_license() -> tuple[bool, str]:
     missing = [value for value in required if value not in text]
     if missing:
         return False, f"evaluation-license boundary missing: {missing}"
-    if "v4.0.1" not in notice or LICENSE_CONTACT not in notice:
+    if "v4.0.2" not in notice or LICENSE_CONTACT not in notice:
         return False, "NOTICE does not carry v4 licensing boundary/contact"
     if not (ROOT / "LICENSES/Apache-2.0-historical.txt").is_file():
         return False, "historical Apache license record missing"
@@ -243,7 +243,7 @@ def check_v4_campaign() -> tuple[bool, str]:
     summary = load_json(archived / "campaign.json")
     if summary.get("authority") != EXPECTED_AUTHORITY or summary.get("all_pass") is not True:
         return False, "archived v4 campaign boundary or outcome invalid"
-    if len(summary.get("cases", [])) != 30:
+    if len(summary.get("cases", [])) != 31:
         return False, "v4 campaign case count mismatch"
     for row in summary["cases"]:
         bundle = load_json(archived / (row["case"] + ".json"))
@@ -253,7 +253,7 @@ def check_v4_campaign() -> tuple[bool, str]:
     with tempfile.TemporaryDirectory(prefix="ahis-v4-") as temp:
         fresh = run_campaign(load_json(ROOT / "configs/survival_reference.json"), Path(temp))
     passed = fresh["all_pass"] and [(r["case"],r["actual"]) for r in fresh["cases"]] == [(r["case"],r["actual"]) for r in summary["cases"]]
-    return passed, "30 cases replayed; fresh campaign and rehashed-tamper controls pass" if passed else "fresh v4 campaign failed"
+    return passed, "31 cases replayed; fresh campaign and rehashed-tamper controls pass" if passed else "fresh v4 campaign failed"
 
 
 def check_v4_claims() -> tuple[bool, str]:
@@ -315,7 +315,7 @@ def main() -> int:
     manifest_errors = verify_manifest(ROOT, manifest_path) if manifest_path.is_file() else ("manifest missing",)
     checks.append(("Complete manifest", not manifest_errors, "; ".join(manifest_errors[:3]) if manifest_errors else "all released files accounted for"))
 
-    print("AHIS v4.0.1 RELEASE QUALITY GATE")
+    print("AHIS v4.0.2 RELEASE QUALITY GATE")
     ok = True
     for name, passed, detail in checks:
         ok &= passed

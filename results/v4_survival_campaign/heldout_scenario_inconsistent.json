@@ -148,7 +148,7 @@
         0.7
       ]
     },
-    "event_id": "heldout_reuses_acquisition_group",
+    "event_id": "heldout_scenario_inconsistent",
     "exact_protected_matrix": [],
     "frame": {
       "estop_closed": true,
@@ -527,14 +527,14 @@
     "verification_channels": [
       {
         "coordinate": "leak_ratio",
-        "group": "planning-leak_ratio",
+        "group": "heldout-leak_ratio",
         "healthy": true,
         "id": "V-leak_ratio",
         "lower": 0.0,
         "required": true,
         "unit": "ratio",
         "upper": 0.2,
-        "value": 0.16260160250262268
+        "value": 0.19999000000001266
       },
       {
         "coordinate": "vibration_ratio",
@@ -556,7 +556,7 @@
         "required": true,
         "unit": "degC",
         "upper": 65.0,
-        "value": 42.36012731253888
+        "value": 47.054627312537505
       },
       {
         "coordinate": "strain_ratio",
@@ -674,86 +674,86 @@
     "hardware_authority": false,
     "history": [
       {
-        "event_hash": "09f3b8a9333ead75ab6417f956425d8b86b2ae76fdbba77e560b72af97759de0",
+        "event_hash": "f61135f92bf151be7150c08aeb8a2176f653b5d4ae26f6b1d6461ddb3d4153e2",
         "event_type": "raw_evidence",
         "payload": {
-          "event_id": "heldout_reuses_acquisition_group",
-          "request_digest": "d0a8b2a7379c107a4f235f8b032912eb2265eec15fa10e27a0c5c673e9d43636"
+          "event_id": "heldout_scenario_inconsistent",
+          "request_digest": "45f11769db89b46003beadfae7de13edf6d0c0a76aa47adf6bcb7289c9d344df"
         },
         "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
         "sequence": 0,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "2c3b5f66488e87700ffe37d95d12878eae7408e5ee89e2cb57c8788e19abb711",
+        "event_hash": "68af2fc635ce03ea3e675b2ae55c54dab4823223ea17732ea2f5c579b9cd4a7f",
         "event_type": "survival_transition",
         "payload": {
           "event": "stress",
           "from": "NOMINAL",
           "to": "PRESERVATION"
         },
-        "previous_hash": "09f3b8a9333ead75ab6417f956425d8b86b2ae76fdbba77e560b72af97759de0",
+        "previous_hash": "f61135f92bf151be7150c08aeb8a2176f653b5d4ae26f6b1d6461ddb3d4153e2",
         "sequence": 1,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "23064b6cb761a19fc40c9a21528d83e2a02b4a3e5f68344e8447b10fda7efa18",
+        "event_hash": "d498c97feef48d350fdb75ab755e05b9176533981e6444f7ff7cc09a316f9ee7",
         "event_type": "survival_transition",
         "payload": {
           "event": "containment_confirmed",
           "from": "PRESERVATION",
           "to": "CONTAINED"
         },
-        "previous_hash": "2c3b5f66488e87700ffe37d95d12878eae7408e5ee89e2cb57c8788e19abb711",
+        "previous_hash": "68af2fc635ce03ea3e675b2ae55c54dab4823223ea17732ea2f5c579b9cd4a7f",
         "sequence": 2,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "50eb2478b02c7d8150eecf03a4e4056b3ed9855cf27f4fd777a543a94d39da9b",
+        "event_hash": "f65f7a8688a4f84a4cf2224aa70825467fddf5581a017e3358b079a9d13024a3",
         "event_type": "survival_transition",
         "payload": {
           "event": "plan_accepted",
           "from": "CONTAINED",
           "to": "REPAIRING"
         },
-        "previous_hash": "23064b6cb761a19fc40c9a21528d83e2a02b4a3e5f68344e8447b10fda7efa18",
+        "previous_hash": "d498c97feef48d350fdb75ab755e05b9176533981e6444f7ff7cc09a316f9ee7",
         "sequence": 3,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "d0a36f5d6aec8da57e6b06d5e953848b5517c45805a11c6f8ba2c3fac93480ff",
+        "event_hash": "aac004d691ea230f1ea3d651da2a89a0be0d0445969f93e4410a60d2f9946ebd",
         "event_type": "survival_transition",
         "payload": {
           "event": "response_recorded",
           "from": "REPAIRING",
           "to": "VERIFYING"
         },
-        "previous_hash": "50eb2478b02c7d8150eecf03a4e4056b3ed9855cf27f4fd777a543a94d39da9b",
+        "previous_hash": "f65f7a8688a4f84a4cf2224aa70825467fddf5581a017e3358b079a9d13024a3",
         "sequence": 4,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "43943f7682efb5c20524096d65c7e88772658138d7243afb0bf96841727908aa",
+        "event_hash": "1b06d34f3f57361bd67db38f751211c727ae8bc11dcf773878caf014e99e2c8b",
         "event_type": "survival_transition",
         "payload": {
           "event": "verification_failed",
           "from": "VERIFYING",
           "to": "ISOLATED"
         },
-        "previous_hash": "d0a36f5d6aec8da57e6b06d5e953848b5517c45805a11c6f8ba2c3fac93480ff",
+        "previous_hash": "aac004d691ea230f1ea3d651da2a89a0be0d0445969f93e4410a60d2f9946ebd",
         "sequence": 5,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       },
       {
-        "event_hash": "4f8e2938164028abaebb5208a0e57c5c20c8e22fc28126ce5297bc702fd18a2b",
+        "event_hash": "c68626f32be2d95614d4dd02799aa462d89e01ba1b2ad10f091a18be8c9882d1",
         "event_type": "verdict",
         "payload": {
           "reasons": [
-            "PLANNING_EVIDENCE_REUSED:V-leak_ratio"
+            "RESPONSE_SCENARIO_INCONSISTENT"
           ],
           "state": "ISOLATED"
         },
-        "previous_hash": "43943f7682efb5c20524096d65c7e88772658138d7243afb0bf96841727908aa",
+        "previous_hash": "1b06d34f3f57361bd67db38f751211c727ae8bc11dcf773878caf014e99e2c8b",
         "sequence": 6,
         "timestamp_utc": "2026-10-01T16:41:36Z"
       }
@@ -949,7 +949,7 @@
       }
     },
     "reasons": [
-      "PLANNING_EVIDENCE_REUSED:V-leak_ratio"
+      "RESPONSE_SCENARIO_INCONSISTENT"
     ],
     "resource_remaining": [
       35.46838218858154,
@@ -1008,12 +1008,12 @@
       }
     ],
     "verification": {
-      "healthy_channels": 3,
-      "independent_groups": 3,
+      "healthy_channels": 4,
+      "independent_groups": 4,
       "passed": false,
       "physical_credit": false,
       "reasons": [
-        "PLANNING_EVIDENCE_REUSED:V-leak_ratio"
+        "RESPONSE_SCENARIO_INCONSISTENT"
       ],
       "response_consistency": {
         "lower": [
@@ -1042,7 +1042,7 @@
     }
   },
   "schema": "ahis.survival/4.0",
-  "sha256": "dd04ef7077d26dc8692d87b6d294e581936c39f10c9bf17bf262b670476feed5",
+  "sha256": "b4a77743ea6294442a90fe41985d971afd849c935959ce679eee44cba5b0d2ad",
   "software": {
     "dependencies": {
       "numpy": "2.3.5",

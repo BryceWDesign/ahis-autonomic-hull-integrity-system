@@ -1,4 +1,4 @@
-# AHIS, Autonomic Hull Integrity System v4.0.1
+# AHIS, Autonomic Hull Integrity System v4.0.2
 
 **Evaluation-licensed adaptive structural-survivability software/HIL research platform.**
 
@@ -23,7 +23,7 @@ The four-action reference basis uses paired repair-agent volume, separate modal 
 
 ## Executable proof
 
-The 30-case campaign exercises successful limited recovery and required refusals: lost actuators, depleted resources, unsafe heating, exact-lock overconstraint, failed containment, insufficient sensing, failed/reused verification channels, conservation failures, mismatched commands and resource overdraw. A rejected proposal has zero authorized commands. A failed post-response verification preserves consumed resources rather than pretending they were never used.
+The 31-case campaign exercises successful limited recovery and required refusals: lost actuators, depleted resources, unsafe heating, exact-lock overconstraint, failed containment, insufficient sensing, failed/reused verification channels, conservation failures, mismatched commands and resource overdraw. A rejected proposal has zero authorized commands. A failed post-response verification preserves consumed resources rather than pretending they were never used.
 
 The local authority diagnostic only assesses currently violated objectives using surviving command coordinates. The nonlinear optimizer separately enforces all two-sided protected limits and action/resource bounds. Neither an inverse solution nor a full-rank matrix automatically earns acceptance.
 
@@ -40,7 +40,7 @@ python -m pip check
 python check_green.py
 ```
 
-The authoritative release gate requires **223 passing tests**, both campaigns, archived replay, claim boundaries, new code lint/format, P1 BOM/CAD integrity, release hygiene and a complete file manifest. GREEN is software/repository status only. See VALIDATION_REPORT.md for executed checks and limits. GitHub CI is configured; its actual run is not claimed in this handoff.
+The authoritative release gate requires **224 passing tests**, both campaigns, archived replay, claim boundaries, new code lint/format, P1 BOM/CAD integrity, release hygiene and a complete file manifest. GREEN is software/repository status only. See VALIDATION_REPORT.md for executed checks and limits. GitHub CI is configured; its actual run is not claimed in this handoff.
 
 Generate your own work outside the release tree:
 

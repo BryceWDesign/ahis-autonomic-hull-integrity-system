@@ -1,5 +1,5 @@
 {
-  "version": "4.0.1",
+  "version": "4.0.2",
   "source_archives": [
     {
       "filename": "IX-SymmetryLock-main(1).zip",
@@ -29,5 +29,6 @@
     "SymmetryLock_unittest": 45
   },
   "patent_scope": "Architecture uses diagnostic sensing with separate protective mechanisms; no legal non-infringement or freedom-to-operate claim.",
-  "v4_0_1_hardening": "Held-out post-response verification now requires consistency with the executed-command response band across the declared finite uncertainty set. No physical measurement-noise calibration is claimed."
+  "v4_0_1_hardening": "Held-out post-response verification now requires consistency with the executed-command response band across the declared finite uncertainty set. No physical measurement-noise calibration is claimed.",
+  "v4_0_2_hardening": "Held-out post-response verification now preserves complete predicted response vectors for every declared finite uncertainty scenario and requires the measured vector to be coherent with at least one complete scenario. Mixed-scenario coordinate combinations are rejected. No physical measurement-noise model or continuous uncertainty interpolation is claimed."
 }
